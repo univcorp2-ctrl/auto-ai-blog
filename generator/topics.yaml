@@ -1,22 +1,106 @@
 topics:
-  - topic: "ChatGPTを業務に導入して劇的に効率を上げる5つのステップ"
-    keywords: ["ChatGPT", "業務効率化", "AI導入", "自動化"]
-    category: "AI・テック"
-  - topic: "Claude 3とGeminiをプログラミングで比較してみた結果"
-    keywords: ["Claude 3", "Gemini", "プログラミング", "AI比較"]
-    category: "AI・テック"
-  - topic: "Pythonで面倒なExcel作業を全自動化する方法まとめ"
-    keywords: ["Python", "自動化", "Excel", "業務効率化"]
-    category: "AI・テック"
-  - topic: "新築アパート投資で利回りを最大化するエリア選定の極意"
-    keywords: ["新築アパート", "利回り", "不動産投資", "エリア選定"]
+  - topic: "ChatGPTを不動産投資に活用する5つの方法"
+    keywords: ["ChatGPT", "不動産投資", "AI活用"]
+    category: "AI×不動産"
+  - topic: "新築アパート投資の利回り計算完全ガイド"
+    keywords: ["新築アパート", "利回り計算", "不動産投資"]
     category: "不動産投資"
-  - topic: "初心者が不動産投資で失敗しないための銀行融資の引き方"
-    keywords: ["不動産投資", "銀行融資", "初心者", "ローン"]
+  - topic: "Python自動化で業務効率を10倍にする実践テクニック"
+    keywords: ["Python", "自動化", "業務効率化"]
+    category: "AI・テック"
+  - topic: "Claude vs GPT vs Gemini 徹底比較2026年版"
+    keywords: ["Claude", "GPT", "Gemini", "AI比較"]
+    category: "AI・テック"
+  - topic: "不動産管理会社がAIを導入する前に整理すべき業務フロー"
+    keywords: ["不動産管理", "AI導入", "業務フロー"]
+    category: "AI×不動産"
+  - topic: "空室対策にAIを使うメリットと注意点"
+    keywords: ["空室対策", "AI", "賃貸経営"]
+    category: "賃貸経営"
+  - topic: "家賃査定をデータで改善するための基本ステップ"
+    keywords: ["家賃査定", "データ分析", "不動産"]
+    category: "AI×不動産"
+  - topic: "不動産投資初心者が知っておきたいキャッシュフローの考え方"
+    keywords: ["不動産投資", "キャッシュフロー", "初心者"]
     category: "不動産投資"
-  - topic: "サラリーマンが副業で月10万円稼ぐためのおすすめビジネス3選"
-    keywords: ["副業", "サラリーマン", "月10万円", "ビジネス"]
-    category: "ビジネス・副業"
-  - topic: "AIツールを活用して副業ブログを爆速で立ち上げる方法"
-    keywords: ["AIツール", "副業", "ブログ", "自動化"]
-    category: "ビジネス・副業"
+  - topic: "Excel業務をPythonに置き換える判断基準"
+    keywords: ["Excel", "Python", "業務自動化"]
+    category: "AI・テック"
+  - topic: "AIエージェントで営業資料作成を自動化する方法"
+    keywords: ["AIエージェント", "営業資料", "自動化"]
+    category: "AI・テック"
+  - topic: "不動産広告文をAIで改善する実践プロンプト集"
+    keywords: ["不動産広告", "AI", "プロンプト"]
+    category: "AI×不動産"
+  - topic: "物件写真の見せ方で反響率を上げるチェックリスト"
+    keywords: ["物件写真", "反響率", "不動産広告"]
+    category: "不動産マーケティング"
+  - topic: "賃貸管理の問い合わせ対応を自動化する前に決めるべきルール"
+    keywords: ["賃貸管理", "問い合わせ対応", "自動化"]
+    category: "賃貸経営"
+  - topic: "AI時代の不動産営業に必要なスキル"
+    keywords: ["不動産営業", "AI時代", "スキル"]
+    category: "AI×不動産"
+  - topic: "PythonでCSVを自動集計する基本パターン"
+    keywords: ["Python", "CSV", "自動集計"]
+    category: "AI・テック"
+  - topic: "GitHub Actionsで業務スクリプトを安全に運用する考え方"
+    keywords: ["GitHub Actions", "業務自動化", "CI"]
+    category: "AI・テック"
+  - topic: "Cloudflare PagesでHugoブログを高速配信するメリット"
+    keywords: ["Cloudflare Pages", "Hugo", "静的サイト"]
+    category: "AI・テック"
+  - topic: "HugoとWordPressの違いを不動産ブログ目線で比較"
+    keywords: ["Hugo", "WordPress", "不動産ブログ"]
+    category: "不動産マーケティング"
+  - topic: "不動産投資で見るべきKPIとダッシュボード設計"
+    keywords: ["不動産投資", "KPI", "ダッシュボード"]
+    category: "不動産投資"
+  - topic: "AIで議事録からTODOを自動抽出する方法"
+    keywords: ["AI", "議事録", "TODO自動抽出"]
+    category: "AI・テック"
+  - topic: "賃貸オーナー向け月次レポートを自動生成する設計"
+    keywords: ["賃貸オーナー", "月次レポート", "自動生成"]
+    category: "賃貸経営"
+  - topic: "物件情報入力を減らすためのデータ連携設計"
+    keywords: ["物件情報", "データ連携", "業務効率化"]
+    category: "AI×不動産"
+  - topic: "AIブログ運用で品質を落とさないレビュー体制"
+    keywords: ["AIブログ", "品質管理", "レビュー"]
+    category: "AI・テック"
+  - topic: "ローカルAI CLIを業務自動化に使うメリット"
+    keywords: ["AI CLI", "ローカル自動化", "業務効率化"]
+    category: "AI・テック"
+  - topic: "不動産投資シミュレーションでよくある入力ミス"
+    keywords: ["不動産投資", "シミュレーション", "入力ミス"]
+    category: "不動産投資"
+  - topic: "AIを使った競合物件リサーチの進め方"
+    keywords: ["競合物件", "AIリサーチ", "不動産"]
+    category: "AI×不動産"
+  - topic: "PythonでPDF帳票から必要情報を抽出する基本設計"
+    keywords: ["Python", "PDF", "情報抽出"]
+    category: "AI・テック"
+  - topic: "不動産会社のためのSEO記事設計入門"
+    keywords: ["不動産SEO", "記事設計", "Web集客"]
+    category: "不動産マーケティング"
+  - topic: "AIでメール返信文を標準化するテンプレート運用"
+    keywords: ["AI", "メール返信", "テンプレート"]
+    category: "AI・テック"
+  - topic: "空室期間を短縮するためのデータ分析入門"
+    keywords: ["空室期間", "データ分析", "賃貸経営"]
+    category: "賃貸経営"
+  - topic: "不動産業務におけるノーコードとPythonの使い分け"
+    keywords: ["ノーコード", "Python", "不動産業務"]
+    category: "AI×不動産"
+  - topic: "AI生成記事のリスクと人間レビューの重要性"
+    keywords: ["AI生成記事", "リスク", "人間レビュー"]
+    category: "AI・テック"
+  - topic: "収益物件の比較表を自動作成するワークフロー"
+    keywords: ["収益物件", "比較表", "自動作成"]
+    category: "不動産投資"
+  - topic: "賃貸募集条件を見直すためのAIチェックリスト"
+    keywords: ["賃貸募集", "AI", "チェックリスト"]
+    category: "賃貸経営"
+  - topic: "不動産ブログを毎日更新するための自動化設計"
+    keywords: ["不動産ブログ", "毎日更新", "自動化"]
+    category: "不動産マーケティング"

@@ -5,6 +5,9 @@ generator/logs/
 .venv/
 hugo-site/public/
 hugo-site/resources/
+sites/*/public/
+sites/*/resources/
+sites/*/.hugo_build.lock
 .pytest_cache/
 .ruff_cache/
 .DS_Store
