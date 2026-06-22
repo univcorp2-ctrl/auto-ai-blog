@@ -9,7 +9,7 @@ import subprocess
 import sys
 import time
 from dataclasses import dataclass
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -58,6 +58,7 @@ def setup_logging(root: Path) -> None:
             logging.StreamHandler(sys.stdout),
             logging.FileHandler(log_dir / "generate.log", encoding="utf-8"),
         ],
+        force=True,
     )
 
 
@@ -259,7 +260,7 @@ def save_post(root: Path, post_markdown: str, title: str, now: datetime) -> Path
     return path
 
 
-def run_git_command(root: Path, args: list[str], check: bool = False) -> subprocess.CompletedProcess[str]:
+def run_git_command(root: Path, args: list[str]) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
         ["git", *args],
         cwd=root,
@@ -267,7 +268,7 @@ def run_git_command(root: Path, args: list[str], check: bool = False) -> subproc
         text=True,
         encoding="utf-8",
         errors="replace",
-        check=check,
+        check=False,
     )
 
 
@@ -285,21 +286,15 @@ def commit_and_push(root: Path, title: str, git_config: dict[str, Any], dry_run:
         logging.info("git.auto_commit=false; skipping git commit")
         return
 
-    add_targets = [
-        "hugo-site/content/posts/",
-        "generator/.state.json",
-    ]
-    run_git_command(root, ["add", *add_targets], check=False)
+    run_git_command(root, ["add", "hugo-site/content/posts/", "generator/.state.json"])
 
     if not git_has_changes(root):
         logging.info("No git changes to commit")
         return
 
     template = str(git_config.get("commit_message_template", "📝 新記事: {title}"))
-    commit_message = template.format(title=title)
-    commit = run_git_command(root, ["commit", "-m", commit_message])
+    commit = run_git_command(root, ["commit", "-m", template.format(title=title)])
     if commit.returncode != 0:
-        logging.error("git commit failed: %s", commit.stderr.strip())
         raise RuntimeError(f"git commit failed: {commit.stderr.strip()}")
 
     if not bool(git_config.get("auto_push", True)):
@@ -346,11 +341,10 @@ def generate_article(root: Path, dry_run: bool = False) -> Path | None:
         logging.error("All draft CLIs failed; skipping article generation: %s", draft.error)
         return None
 
-    review_candidates = [cli for cli in ["gemini", "codex"] if cli in CLI_COMMANDS]
-    improved_result = call_with_fallback(review_candidates, review_prompt(draft.output), timeout, "review")
+    improved_result = call_with_fallback(["gemini", "codex"], review_prompt(draft.output), timeout, "review")
     improved = improved_result.output if improved_result.ok else draft.output
     if not improved_result.ok:
-        logging.warning("Review stage failed; using draft as improved version: %s", improved_result.error)
+        logging.warning("Review stage failed; using draft: %s", improved_result.error)
 
     final_result = call_with_fallback(["codex"], final_check_prompt(improved), timeout, "final_check")
     final_article = final_result.output if final_result.ok else improved
