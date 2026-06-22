@@ -1,0 +1,13 @@
+blog:
+  name: "AI × 不動産 自動ブログ"
+  author: "太田ひろし"
+  default_category: "AI・テック"
+generation:
+  min_chars: 2000
+  max_chars: 3000
+  cli_timeout_seconds: 120
+  cli_priority: ["claude", "gemini", "codex"]
+git:
+  auto_commit: true
+  auto_push: true
+  commit_message_template: "📝 新記事: {title}"
