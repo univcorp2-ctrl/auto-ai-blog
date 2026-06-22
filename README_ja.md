@@ -2,7 +2,7 @@
 
 Hugo + PaperMod + Python CLI 自動生成 + GitHub + Cloudflare Pages で動く、日本語 AI ブログ自動運用システムです。
 
-AI API は一切使いません。記事生成はローカル PC にインストール済みの `claude` / `gemini` / `codex` CLI を `subprocess` で呼び出すだけです。
+AI API は一切使いません。記事生成はローカル PC またはクラウド runner にインストール済みの `claude` / `gemini` / `codex` CLI を `subprocess` で呼び出すだけです。
 
 ---
 
@@ -24,7 +24,7 @@ Windows タスクスケジューラが `run_daily.bat` を起動し、`generator
 
 ![generator/generate.py 内部処理フロー](docs/images/03-generate-py-internal-flow.svg)
 
-`generate.py` は、設定読み込み、トピック選択、AI CLI 呼び出し、front matter 生成、記事保存、git commit & push までを担当します。記事生成ロジックが1ファイルに集約されているため、運用時の確認箇所が明確です。
+`generate.py` は、設定読み込み、トピック選択、AI CLI 呼び出し、front matter 生成、記事保存、git commit & push までを担当します。Local Mode と Cloud Mode の両方から呼ばれる共通コアです。
 
 ### 4. Claude / Gemini / Codex のフォールバック
 
@@ -70,20 +70,83 @@ CLI 失敗、レビュー失敗、最終チェック失敗、git push 失敗の�
 
 ---
 
+## Cloud Mode: クラウド側でも全部実行
+
+### 11. Local Mode + Cloud Mode の二系統構成
+
+![Local Mode と Cloud Mode の二系統アーキテクチャ](docs/images/11-dual-mode-architecture.svg)
+
+Local Mode は Windows PC から、Cloud Mode は GitHub Actions / クラウドVM / self-hosted runner から実行します。どちらも最終的には同じ `generator/generate.py` を呼ぶため、記事生成ロジックは二重管理になりません。
+
+### 12. GitHub Actions での記事生成・ビルド・push
+
+![Cloud Mode GitHub Actions 処理フロー](docs/images/12-cloud-actions-flow.svg)
+
+Cloud Mode workflow は、checkout、Python/Node セットアップ、AI CLI 準備、記事生成、commit & push、Hugo build、artifact upload まで実行します。テンプレートは `docs/workflows/cloud-daily-post.yml` にあります。
+
+### 13. Cloud Secrets と AI CLI 認証
+
+![Cloud Secrets と AI CLI 認証の流れ](docs/images/13-cloud-secrets-and-cli-auth.svg)
+
+GitHub Secrets は runner の環境変数として CLI プロセスに渡されます。Python は Secret 値を使って AI API を直接呼びません。CLI の認証方式に合わせて `CLOUD_AI_CLI_INSTALL_COMMANDS` や CLI 用 Secret を設定します。
+
+### 14. Cloudflare Pages Deploy Hook 併用
+
+![Cloudflare Pages Deploy Hook 併用フロー](docs/images/14-cloudflare-deploy-hook-flow.svg)
+
+通常は GitHub push を Cloudflare Pages が検知します。より明示的にデプロイを起動したい場合だけ、`CLOUDFLARE_PAGES_DEPLOY_HOOK_URL` を GitHub Secrets に保存し、workflow 末尾で Deploy Hook を呼びます。
+
+### 15. GitHub Actions 以外のクラウドVM / self-hosted runner
+
+![GitHub Actions以外のクラウドVM実行フロー](docs/images/15-cloud-vm-self-hosted-flow.svg)
+
+GitHub Actions に限定せず、任意のクラウドVMや self-hosted runner でも `scripts/cloud_prepare_ai_cli.sh` と `scripts/cloud_generate.sh` を使って同じ Cloud Mode を実行できます。
+
+---
+
+## 実行モード比較
+
+| 項目 | Local Mode | Cloud Mode |
+|---|---|---|
+| 実行場所 | Windows PC | GitHub Actions / Cloud VM / self-hosted runner |
+| 起動方法 | Windows タスクスケジューラ | cron / workflow_dispatch / systemd timer |
+| AI CLI | ローカルPCにインストール | runner上でインストール |
+| 認証 | ローカルCLIのログイン状態 | GitHub Secrets / runner secrets |
+| 生成コマンド | `python generator/generate.py` | `python generator/generate.py --cloud` |
+| commit & push | ローカル git 認証 | `GITHUB_TOKEN` または runner の git 認証 |
+| Cloudflare公開 | GitHub push 検知 | GitHub push 検知 + 任意で Deploy Hook |
+
+---
+
+## Cloud Mode で追加されたファイル
+
+| ファイル | 役割 |
+|---|---|
+| `scripts/cloud_prepare_ai_cli.sh` | クラウド runner 上で AI CLI のインストール確認と任意のインストールコマンド実行を行います。 |
+| `scripts/cloud_generate.sh` | `BLOG_EXECUTION_MODE=cloud`、git author、push branch を設定し、`generate.py --cloud` を実行します。 |
+| `docs/workflows/cloud-daily-post.yml` | GitHub Actions 用 Cloud Mode workflow テンプレートです。 |
+| `docs/cloud-mode.md` | Cloud Mode の詳しい設定・運用説明です。 |
+| `tests/test_cloud_mode.py` | Cloud Mode の環境判定と push branch 判定をテストします。 |
+
+---
+
 ## プログラム別の動き
 
 | ファイル | 役割 |
 |---|---|
 | `run_daily.bat` | Windows から Python を起動する入口。文字コードと作業ディレクトリを固定します。 |
+| `scripts/cloud_prepare_ai_cli.sh` | クラウド側で AI CLI の準備状態を確認します。 |
+| `scripts/cloud_generate.sh` | クラウド側で `generate.py --cloud` を実行します。 |
 | `generator/generate.py` | 記事生成の本体。トピック選択、CLI実行、front matter、保存、git pushを行います。 |
 | `generator/prompts.py` | Claude / Gemini / Codex に渡すプロンプトを生成します。 |
 | `generator/topics.yaml` | 1ヶ月分以上のトピック、SEOキーワード、カテゴリを管理します。 |
 | `generator/config.yaml` | 文字数、CLI timeout、優先順位、git commit設定を管理します。 |
 | `hugo-site/config.toml` | Hugo、PaperMod、日本語、SEO、RSS、sitemap、OGPを設定します。 |
 | `hugo-site/content/posts/` | 生成された Markdown 記事が保存されます。 |
-| `docs/daily-post.yml` | GitHub Actions workflow テンプレートです。 |
+| `docs/daily-post.yml` | ローカル生成前提のビルド検証 workflow テンプレートです。 |
+| `docs/workflows/cloud-daily-post.yml` | クラウド生成込みの workflow テンプレートです。 |
 
-さらに詳しい図解一覧は [`docs/program-flow.md`](docs/program-flow.md) にまとめています。
+さらに詳しい図解一覧は [`docs/program-flow.md`](docs/program-flow.md) にまとめています。Cloud Mode の詳細は [`docs/cloud-mode.md`](docs/cloud-mode.md) を参照してください。
 
 ---
 
@@ -92,21 +155,18 @@ CLI 失敗、レビュー失敗、最終チェック失敗、git push 失敗の�
 ```text
 auto-ai-blog/
 ├── hugo-site/
-│   ├── config.toml
-│   ├── content/posts/
-│   ├── static/
-│   ├── themes/
-│   ├── layouts/partials/extend_head.html
-│   └── archetypes/default.md
 ├── generator/
-│   ├── generate.py
-│   ├── topics.yaml
-│   ├── config.yaml
-│   └── prompts.py
+├── scripts/
+│   ├── cloud_prepare_ai_cli.sh
+│   ├── cloud_generate.sh
+│   └── register_task.ps1
 ├── tests/
 ├── docs/
 │   ├── images/
+│   ├── workflows/
+│   │   └── cloud-daily-post.yml
 │   ├── architecture.md
+│   ├── cloud-mode.md
 │   ├── program-flow.md
 │   ├── setup.md
 │   ├── review.md
@@ -164,7 +224,7 @@ pip install -r requirements-dev.txt
 
 ### 4. AI CLI
 
-Python から AI API は叩きません。以下の CLI のうち、使うものをローカル PC に入れてログインしておきます。
+Python から AI API は叩きません。以下の CLI のうち、使うものをローカル PC またはクラウド runner に入れてログイン・認証しておきます。
 
 ```powershell
 claude -p "テスト"
@@ -172,13 +232,21 @@ gemini -p "テスト"
 codex -q "テスト"
 ```
 
-### 5. 手動実行
+### 5. Local Mode 手動実行
 
 ```powershell
 .\run_daily.bat
 ```
 
-### 6. Windows タスクスケジューラ登録
+### 6. Cloud Mode 手動実行
+
+```bash
+export BLOG_EXECUTION_MODE=cloud
+bash scripts/cloud_prepare_ai_cli.sh
+bash scripts/cloud_generate.sh
+```
+
+### 7. Windows タスクスケジューラ登録
 
 ```powershell
 $action = New-ScheduledTaskAction -Execute "G:\マイドライブ\AI_Agents\github\repos\auto-ai-blog\run_daily.bat"
@@ -204,17 +272,12 @@ Cloudflare Pages の詳しい画面操作は [`docs/setup.md`](docs/setup.md) �
 
 ## GitHub Actions の役割
 
-`.github/workflows/daily-post.yml` は記事生成を行いません。GitHub Actions 上では Claude / Gemini / Codex CLI が利用できない、またはログイン状態を保持できない可能性が高いためです。
+ローカル生成だけで運用する場合、Actions はビルド検証だけを担当します。Cloud Mode を使う場合、Actions が記事生成、commit & push、Hugo build まで担当できます。
 
-Actions は以下だけを実行します。
+Workflow テンプレート:
 
-- `ruff check .`
-- `pytest`
-- PaperMod テーマ取得
-- Hugo ビルド検証
-- `hugo-site/public` artifact upload
-
-Workflow テンプレートは `docs/daily-post.yml` に保存しています。
+- ビルド検証のみ: `docs/daily-post.yml`
+- クラウド生成込み: `docs/workflows/cloud-daily-post.yml`
 
 ---
 
@@ -246,20 +309,23 @@ hugo-site/content/posts/YYYY-MM-DD-{slug}.md
 
 - GitHub リポジトリ
 - Cloudflare Pages プロジェクト
-- ローカル Windows PC
+- ローカル Windows PC またはクラウド runner
 - Hugo Extended
 - Python 3.12
 - Claude / Gemini / Codex CLI のいずれか1つ以上
-- ローカル PC で `git push origin main` できる認証状態
+- git push できる認証状態
+- Cloud Mode の場合は必要な GitHub Secrets
 
-API キーを Python へ渡す必要はありません。
+API キーを Python へ渡して API を直接呼ぶ必要はありません。
 
 ---
 
 ## 詳細ドキュメント
 
 - [`docs/architecture.md`](docs/architecture.md): アーキテクチャ詳細
+- [`docs/cloud-mode.md`](docs/cloud-mode.md): Cloud Mode 設定・運用
 - [`docs/program-flow.md`](docs/program-flow.md): プログラム別の画像解説
 - [`docs/setup.md`](docs/setup.md): セットアップ手順
 - [`docs/review.md`](docs/review.md): 実装レビュー
-- [`docs/daily-post.yml`](docs/daily-post.yml): GitHub Actions workflow テンプレート
+- [`docs/daily-post.yml`](docs/daily-post.yml): ビルド検証 workflow テンプレート
+- [`docs/workflows/cloud-daily-post.yml`](docs/workflows/cloud-daily-post.yml): Cloud Mode workflow テンプレート

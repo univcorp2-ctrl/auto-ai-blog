@@ -41,3 +41,23 @@ README に掲載している図を、プログラム単位でさらに追いや�
 ## 10. 初期設定と運用
 
 ![初期設定と運用](images/10-operation-checklist.svg)
+
+## 11. Local Mode + Cloud Mode
+
+![Local Mode と Cloud Mode](images/11-dual-mode-architecture.svg)
+
+## 12. Cloud Mode GitHub Actions
+
+![Cloud Mode GitHub Actions](images/12-cloud-actions-flow.svg)
+
+## 13. Cloud Secrets と CLI 認証
+
+![Cloud Secrets と CLI 認証](images/13-cloud-secrets-and-cli-auth.svg)
+
+## 14. Cloudflare Deploy Hook
+
+![Cloudflare Deploy Hook](images/14-cloudflare-deploy-hook-flow.svg)
+
+## 15. Cloud VM / self-hosted runner
+
+![Cloud VM self-hosted runner](images/15-cloud-vm-self-hosted-flow.svg)
