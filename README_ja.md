@@ -4,45 +4,92 @@ Hugo + PaperMod + Python CLI 自動生成 + GitHub + Cloudflare Pages で動く�
 
 AI API は一切使いません。記事生成はローカル PC にインストール済みの `claude` / `gemini` / `codex` CLI を `subprocess` で呼び出すだけです。
 
-## 全体アーキテクチャ
+---
 
-```mermaid
-flowchart TD
-    A[Windows タスクスケジューラ<br>毎日 JST 9:00] --> B[run_daily.bat]
-    B --> C[generator/generate.py]
-    C --> D[topics.yaml からトピック選択]
-    D --> E[Step 1: Claude CLI でドラフト生成]
-    E -->|失敗| E2[Gemini / Codex CLI にフォールバック]
-    E --> F[Step 2: Gemini CLI でレビュー改善]
-    F -->|失敗| F2[Codex CLI にフォールバック]
-    F --> G[Step 3: Codex CLI で最終チェック]
-    G -->|失敗| H[レビュー済み版を採用]
-    G --> I[Hugo front matter 付与]
-    H --> I
-    I --> J[hugo-site/content/posts に保存]
-    J --> K[git commit & push]
-    K --> L[GitHub Repository]
-    L --> M[Cloudflare Pages が自動デプロイ]
-    L --> N[GitHub Actions<br>Python Test + Hugo Build]
+## 画像で読む全体像
+
+### 1. システム全体アーキテクチャ
+
+![Hugo + Cloudflare Pages 全自動AIブログ 全体アーキテクチャ](docs/images/01-architecture-overview.svg)
+
+この図は、ローカル Windows PC で記事生成を行い、GitHub に push し、Cloudflare Pages が自動デプロイする全体の流れです。記事生成はローカルPCで完結し、GitHub Actions は生成ではなく検証を担当します。
+
+### 2. 毎朝9時のローカル自動実行
+
+![ローカル毎日実行フロー](docs/images/02-local-daily-flow.svg)
+
+Windows タスクスケジューラが `run_daily.bat` を起動し、`generator/generate.py` を実行します。文字コードと作業ディレクトリをバッチで固定するため、日本語パスや日本語記事でも文字化けしにくい構成です。
+
+### 3. generate.py の内部動作
+
+![generator/generate.py 内部処理フロー](docs/images/03-generate-py-internal-flow.svg)
+
+`generate.py` は、設定読み込み、トピック選択、AI CLI 呼び出し、front matter 生成、記事保存、git commit & push までを担当します。記事生成ロジックが1ファイルに集約されているため、運用時の確認箇所が明確です。
+
+### 4. Claude / Gemini / Codex のフォールバック
+
+![AI CLI フォールバック設計](docs/images/04-ai-cli-fallback.svg)
+
+Claude が失敗したら Gemini、Gemini が失敗したら Codex、Codex が失敗した場合は直前の成果物を採用する設計です。全 CLI が失敗してドラフトすら作れない場合だけ、ログを残して記事生成をスキップします。
+
+### 5. 各設定ファイルの役割
+
+![設定ファイルとデータファイルの役割](docs/images/05-data-files-roles.svg)
+
+`topics.yaml` は記事テーマ、`config.yaml` は生成条件、`prompts.py` はAIへの指示、`config.toml` はHugo公開設定を担当します。プログラムを触らずに運用調整しやすい構成です。
+
+---
+
+## プログラム別の動き
+
+| ファイル | 役割 |
+|---|---|
+| `run_daily.bat` | Windows から Python を起動する入口。文字コードと作業ディレクトリを固定します。 |
+| `generator/generate.py` | 記事生成の本体。トピック選択、CLI実行、front matter、保存、git pushを行います。 |
+| `generator/prompts.py` | Claude / Gemini / Codex に渡すプロンプトを生成します。 |
+| `generator/topics.yaml` | 1ヶ月分以上のトピック、SEOキーワード、カテゴリを管理します。 |
+| `generator/config.yaml` | 文字数、CLI timeout、優先順位、git commit設定を管理します。 |
+| `hugo-site/config.toml` | Hugo、PaperMod、日本語、SEO、RSS、sitemap、OGPを設定します。 |
+| `hugo-site/content/posts/` | 生成された Markdown 記事が保存されます。 |
+| `docs/daily-post.yml` | GitHub Actions workflow テンプレートです。 |
+
+---
+
+## ディレクトリ構成
+
+```text
+auto-ai-blog/
+├── hugo-site/
+│   ├── config.toml
+│   ├── content/posts/
+│   ├── static/
+│   ├── themes/
+│   ├── layouts/partials/extend_head.html
+│   └── archetypes/default.md
+├── generator/
+│   ├── generate.py
+│   ├── topics.yaml
+│   ├── config.yaml
+│   └── prompts.py
+├── tests/
+├── docs/
+│   ├── images/
+│   ├── architecture.md
+│   ├── setup.md
+│   ├── review.md
+│   └── daily-post.yml
+├── run_daily.bat
+├── requirements.txt
+├── requirements-dev.txt
+├── CODEX.md
+└── README_ja.md
 ```
 
-詳細は [`docs/architecture.md`](docs/architecture.md) を参照してください。
+---
 
-## できること
+## セットアップ
 
-- Hugo 静的ブログサイトの構成
-- PaperMod テーマ前提の SEO / OGP / RSS / sitemap 設定
-- 30日分以上のトピックローテーション
-- Claude → Gemini → Codex の3段階記事生成・レビュー・最終チェック
-- CLI 失敗時の自動フォールバック
-- Hugo front matter の自動付与
-- Markdown 記事の自動保存
-- `git add` / `git commit` / `git push` の自動実行
-- GitHub Actions による Python テスト、静的チェック、Hugo ビルド検証
-- Cloudflare Pages 連携用手順
-- Windows タスクスケジューラ登録手順
-
-## ローカル配置先
+### 1. ローカル配置先
 
 ```powershell
 G:\マイドライブ\AI_Agents\github\repos\auto-ai-blog
@@ -60,16 +107,20 @@ cd auto-ai-blog
 git submodule update --init --recursive
 ```
 
-このリポジトリには `.gitmodules` を入れています。GitHub Actions と Cloudflare Pages では PaperMod が存在しない場合に clone するフォールバックも入れています。
+PaperMod が取得できない場合:
 
-## Hugo Extended
+```powershell
+git clone --depth=1 https://github.com/adityatelange/hugo-PaperMod.git hugo-site/themes/PaperMod
+```
+
+### 2. Hugo Extended
 
 ```powershell
 winget install Hugo.Hugo.Extended
 hugo version
 ```
 
-## Python
+### 3. Python
 
 ```powershell
 python -m venv .venv
@@ -78,7 +129,7 @@ pip install -r requirements.txt
 pip install -r requirements-dev.txt
 ```
 
-## AI CLI
+### 4. AI CLI
 
 Python から AI API は叩きません。以下の CLI のうち、使うものをローカル PC に入れてログインしておきます。
 
@@ -88,19 +139,21 @@ gemini -p "テスト"
 codex -q "テスト"
 ```
 
-## 手動実行
+### 5. 手動実行
 
 ```powershell
 .\run_daily.bat
 ```
 
-## Windows タスクスケジューラ登録
+### 6. Windows タスクスケジューラ登録
 
 ```powershell
 $action = New-ScheduledTaskAction -Execute "G:\マイドライブ\AI_Agents\github\repos\auto-ai-blog\run_daily.bat"
 $trigger = New-ScheduledTaskTrigger -Daily -At 9:00am
 Register-ScheduledTask -TaskName "auto-ai-blog" -Action $action -Trigger $trigger
 ```
+
+---
 
 ## Cloudflare Pages 設定
 
@@ -114,6 +167,8 @@ Register-ScheduledTask -TaskName "auto-ai-blog" -Action $action -Trigger $trigge
 
 Cloudflare Pages の詳しい画面操作は [`docs/setup.md`](docs/setup.md) を参照してください。
 
+---
+
 ## GitHub Actions の役割
 
 `.github/workflows/daily-post.yml` は記事生成を行いません。GitHub Actions 上では Claude / Gemini / Codex CLI が利用できない、またはログイン状態を保持できない可能性が高いためです。
@@ -126,11 +181,9 @@ Actions は以下だけを実行します。
 - Hugo ビルド検証
 - `hugo-site/public` artifact upload
 
-スケジュールは JST 9:00、つまり UTC 0:00 です。
+Workflow テンプレートは `docs/daily-post.yml` に保存しています。
 
-```yaml
-cron: '0 0 * * *'
-```
+---
 
 ## 生成記事の front matter
 
@@ -139,8 +192,11 @@ cron: '0 0 * * *'
 title: "記事タイトル"
 date: 2026-06-22T09:00:00+09:00
 draft: false
-tags: ["AI", "不動産"]
-categories: ["AI×不動産"]
+tags:
+  - "AI"
+  - "不動産"
+categories:
+  - "AI×不動産"
 description: "150字以内の meta description"
 ---
 ```
@@ -150,6 +206,8 @@ description: "150字以内の meta description"
 ```text
 hugo-site/content/posts/YYYY-MM-DD-{slug}.md
 ```
+
+---
 
 ## 本番運用に必要なもの
 
@@ -163,6 +221,11 @@ hugo-site/content/posts/YYYY-MM-DD-{slug}.md
 
 API キーを Python へ渡す必要はありません。
 
-## レビュー
+---
 
-実装レビュー内容は [`docs/review.md`](docs/review.md) に記録しています。
+## 詳細ドキュメント
+
+- [`docs/architecture.md`](docs/architecture.md): アーキテクチャ詳細
+- [`docs/setup.md`](docs/setup.md): セットアップ手順
+- [`docs/review.md`](docs/review.md): 実装レビュー
+- [`docs/daily-post.yml`](docs/daily-post.yml): GitHub Actions workflow テンプレート
