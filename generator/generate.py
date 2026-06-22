@@ -345,7 +345,21 @@ def commit_and_push(root: Path, title: str, git_config: dict[str, Any], dry_run:
         logging.info("git.auto_commit=false; skipping git commit")
         return
 
-    run_git_command(root, ["add", "sites/*/content/posts/", "hugo-site/content/posts/", "generator/.state.json"])
+    add_paths = ["generator/.state.json"]
+    sites_root = root / "sites"
+    if sites_root.exists():
+        add_paths.extend(
+            str(path.relative_to(root)).replace("\\", "/")
+            for path in sites_root.glob("*/content/posts")
+            if path.exists()
+        )
+    legacy_posts = root / "hugo-site" / "content" / "posts"
+    if legacy_posts.exists():
+        add_paths.append(str(legacy_posts.relative_to(root)).replace("\\", "/"))
+
+    add = run_git_command(root, ["add", *add_paths])
+    if add.returncode != 0:
+        raise RuntimeError(f"git add failed: {add.stderr.strip()}")
 
     staged = run_git_command(root, ["diff", "--cached", "--quiet"])
     if staged.returncode == 0:
