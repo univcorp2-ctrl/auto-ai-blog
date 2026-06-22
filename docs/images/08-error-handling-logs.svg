@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="930" viewBox="0 0 1450 930" role="img" aria-labelledby="title desc">
+  <title id="title">エラー処理とログの流れ</title>
+  <desc id="desc">CLI失敗、レビュー失敗、push失敗、Hugoビルド失敗時の処理</desc>
+  <defs><marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#e11d48"/></marker><style>.bg{fill:#f8fafc}.title{font:700 34px system-ui,sans-serif;fill:#0f172a}.small{font:500 15px system-ui,sans-serif;fill:#475569}.err{fill:#fff1f2;stroke:#e11d48;stroke-width:3;rx:16}.safe{fill:#f0fdf4;stroke:#16a34a;stroke-width:3;rx:16}.log{fill:#eff6ff;stroke:#2563eb;stroke-width:3;rx:16}.txt{font:700 19px system-ui,sans-serif;fill:#0f172a}.code{font:600 15px ui-monospace,Consolas,monospace;fill:#334155}.arrow{stroke:#e11d48;stroke-width:4;fill:none;marker-end:url(#arrow)}.okarrow{stroke:#16a34a;stroke-width:4;fill:none;marker-end:url(#arrow)}</style></defs>
+  <rect class="bg" width="1450" height="930"/>
+  <text x="60" y="65" class="title">エラーが起きた時の安全な止まり方</text>
+  <text x="60" y="98" class="small">生成処理はできるだけ継続し、どうしても記事品質が確保できない時だけスキップします。失敗理由はログに残します。</text>
+
+  <rect x="80" y="165" width="315" height="105" class="err"/><text x="115" y="203" class="txt">Claude CLI 失敗</text><text x="115" y="232" class="small">ドラフトが作れない</text><text x="115" y="255" class="code">FileNotFound / timeout / non-zero</text>
+  <rect x="565" y="165" width="315" height="105" class="safe"/><text x="600" y="203" class="txt">Gemini へ切替</text><text x="600" y="232" class="small">同じドラフトプロンプトで再試行</text>
+  <rect x="1050" y="165" width="315" height="105" class="safe"/><text x="1085" y="203" class="txt">Codex へ切替</text><text x="1085" y="232" class="small">最後のドラフト代替</text>
+
+  <rect x="80" y="350" width="315" height="105" class="err"/><text x="115" y="388" class="txt">レビュー失敗</text><text x="115" y="417" class="small">Gemini / Codex が使えない</text>
+  <rect x="565" y="350" width="315" height="105" class="safe"/><text x="600" y="388" class="txt">ドラフト採用</text><text x="600" y="417" class="small">記事生成自体は継続</text>
+  <rect x="1050" y="350" width="315" height="105" class="safe"/><text x="1085" y="388" class="txt">最終チェックへ</text><text x="1085" y="417" class="small">Codexが使えれば最後に整える</text>
+
+  <rect x="80" y="535" width="315" height="105" class="err"/><text x="115" y="573" class="txt">最終チェック失敗</text><text x="115" y="602" class="small">Codex が失敗</text>
+  <rect x="565" y="535" width="315" height="105" class="safe"/><text x="600" y="573" class="txt">改善版を採用</text><text x="600" y="602" class="small">完成記事として保存</text>
+  <rect x="1050" y="535" width="315" height="105" class="log"/><text x="1085" y="573" class="txt">ログ出力</text><text x="1085" y="602" class="code">generator/logs/generate.log</text>
+
+  <rect x="80" y="720" width="315" height="105" class="err"/><text x="115" y="758" class="txt">git push 失敗</text><text x="115" y="787" class="small">ネットワーク・認証・競合など</text>
+  <rect x="565" y="720" width="315" height="105" class="safe"/><text x="600" y="758" class="txt">最大3回リトライ</text><text x="600" y="787" class="small">5秒間隔で再試行</text>
+  <rect x="1050" y="720" width="315" height="105" class="log"/><text x="1085" y="758" class="txt">失敗時は例外化</text><text x="1085" y="787" class="small">ログに残して原因確認</text>
+
+  <path d="M395 218 L565 218" class="arrow"/><path d="M880 218 L1050 218" class="arrow"/>
+  <path d="M395 403 L565 403" class="arrow"/><path d="M880 403 L1050 403" class="okarrow"/>
+  <path d="M395 588 L565 588" class="arrow"/><path d="M880 588 L1050 588" class="okarrow"/>
+  <path d="M395 773 L565 773" class="arrow"/><path d="M880 773 L1050 773" class="arrow"/>
+
+  <rect x="465" y="840" width="520" height="55" fill="#fff7ed" stroke="#ea580c" stroke-width="2" rx="14"/>
+  <text x="500" y="874" class="small">全ドラフトCLI失敗だけは記事生成スキップ。中途半端な記事を公開しないためです。</text>
+</svg>
