@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850" role="img" aria-labelledby="title desc">
+  <title id="title">ローカル毎日実行フロー</title>
+  <desc id="desc">Windows タスクスケジューラから run_daily.bat、Python generator までの処理</desc>
+  <defs><marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#0ea5e9"/></marker><style>.bg{fill:#f8fafc}.title{font:700 34px system-ui,sans-serif;fill:#0f172a}.sub{font:500 16px system-ui,sans-serif;fill:#475569}.box{fill:#fff;stroke:#0ea5e9;stroke-width:3;rx:18}.bat{fill:#ecfeff;stroke:#0891b2;stroke-width:3;rx:18}.py{fill:#f0fdf4;stroke:#16a34a;stroke-width:3;rx:18}.txt{font:700 20px system-ui,sans-serif;fill:#0f172a}.small{font:500 15px system-ui,sans-serif;fill:#475569}.code{font:600 16px ui-monospace,Consolas,monospace;fill:#334155}.arrow{stroke:#0ea5e9;stroke-width:4;fill:none;marker-end:url(#arrow)}.num{fill:#0ea5e9}.numText{font:700 18px system-ui,sans-serif;fill:white}</style></defs>
+  <rect class="bg" width="1400" height="850"/>
+  <text x="70" y="70" class="title">ローカルPCで毎日記事生成が始まるまで</text>
+  <text x="70" y="103" class="sub">ユーザーが毎朝操作しなくても、Windows がバッチを起動し、Python がAI CLIを呼び出します。</text>
+
+  <circle cx="110" cy="190" r="24" class="num"/><text x="104" y="197" class="numText">1</text>
+  <rect x="150" y="145" width="430" height="100" class="box"/><text x="185" y="183" class="txt">Windows タスクスケジューラ</text><text x="185" y="210" class="small">TaskName: auto-ai-blog</text><text x="185" y="232" class="small">Trigger: 毎日 09:00 JST</text>
+  <path d="M580 195 L680 195" class="arrow"/>
+
+  <circle cx="715" cy="190" r="24" class="num"/><text x="709" y="197" class="numText">2</text>
+  <rect x="755" y="145" width="500" height="100" class="bat"/><text x="790" y="183" class="txt">run_daily.bat</text><text x="790" y="210" class="code">set PYTHONIOENCODING=utf-8</text><text x="790" y="232" class="code">cd /d G:\マイドライブ\...\auto-ai-blog</text>
+  <path d="M1005 245 L1005 320" class="arrow"/>
+
+  <circle cx="715" cy="370" r="24" class="num"/><text x="709" y="377" class="numText">3</text>
+  <rect x="755" y="325" width="500" height="110" class="bat"/><text x="790" y="363" class="txt">Python 3.12 を直接実行</text><text x="790" y="392" class="code">C:\Users\user\...\Python312\python.exe</text><text x="790" y="416" class="code">generator\generate.py</text>
+  <path d="M755 380 L580 380" class="arrow"/>
+
+  <circle cx="110" cy="375" r="24" class="num"/><text x="104" y="382" class="numText">4</text>
+  <rect x="150" y="325" width="430" height="120" class="py"/><text x="185" y="363" class="txt">generator/generate.py 起動</text><text x="185" y="392" class="small">設定読み込み、トピック選択、AI CLI実行へ進む</text><text x="185" y="416" class="small">失敗時は generator/logs/generate.log に記録</text>
+  <path d="M365 445 L365 525" class="arrow"/>
+
+  <circle cx="110" cy="575" r="24" class="num"/><text x="104" y="582" class="numText">5</text>
+  <rect x="150" y="525" width="1105" height="170" class="py"/>
+  <text x="185" y="563" class="txt">この後に行う処理</text>
+  <text x="185" y="595" class="small">1. generator/topics.yaml から次のトピックを選択</text>
+  <text x="185" y="622" class="small">2. Claude / Gemini / Codex CLI を subprocess で順番に呼び出し</text>
+  <text x="185" y="649" class="small">3. Hugo front matter を付けて hugo-site/content/posts に保存</text>
+  <text x="185" y="676" class="small">4. git add / commit / push を実行し、Cloudflare Pages の自動デプロイへ渡す</text>
+
+  <rect x="150" y="735" width="1105" height="55" fill="#fff7ed" stroke="#ea580c" stroke-width="2" rx="14"/>
+  <text x="185" y="769" class="small">注意: GitHub Actionsでは記事生成しません。AI CLIのログイン状態が必要なため、生成はローカルWindowsで行います。</text>
+</svg>

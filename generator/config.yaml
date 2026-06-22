@@ -1,0 +1,13 @@
+blog:
+  author: "太田ひろし"
+  site_map:
+    "AI・テック": "sites/ai-tech"
+    "不動産投資": "sites/real-estate"
+    "ビジネス・副業": "sites/business"
+generation:
+  cli_timeout_seconds: 300
+  cli_priority: ["claude", "gemini", "codex"]
+git:
+  auto_commit: true
+  auto_push: true
+  commit_message_template: "📝 新記事: {title}"

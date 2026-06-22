@@ -1,0 +1,14 @@
+baseURL = 'https://ai-tech.example.com/'
+languageCode = 'ja'
+title = 'AI・テック専門メディア'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = 'auto'
+  ShowToc = true
+  TocOpen = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']

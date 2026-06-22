@@ -1,0 +1,29 @@
+name: Daily Post Builder
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build AI Tech Site
+        run: cd sites/ai-tech && hugo --minify
+
+      - name: Build Real Estate Site
+        run: cd sites/real-estate && hugo --minify
+
+      - name: Build Business Site
+        run: cd sites/business && hugo --minify

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="950" viewBox="0 0 1500 950" role="img" aria-labelledby="title desc">
+  <title id="title">設定ファイルとデータファイルの役割</title>
+  <desc id="desc">topics.yaml、config.yaml、prompts.py、Hugo config、Markdown posts の関係</desc>
+  <defs><marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#2563eb"/></marker><style>.bg{fill:#f8fafc}.title{font:700 34px system-ui,sans-serif;fill:#0f172a}.small{font:500 15px system-ui,sans-serif;fill:#475569}.file{fill:#fff;stroke:#2563eb;stroke-width:3;rx:16}.gen{fill:#f0fdf4;stroke:#16a34a;stroke-width:3;rx:18}.out{fill:#fff7ed;stroke:#ea580c;stroke-width:3;rx:16}.txt{font:700 19px system-ui,sans-serif;fill:#0f172a}.code{font:600 15px ui-monospace,Consolas,monospace;fill:#334155}.arrow{stroke:#2563eb;stroke-width:4;fill:none;marker-end:url(#arrow)}</style></defs>
+  <rect class="bg" width="1500" height="950"/>
+  <text x="60" y="65" class="title">各ファイルが generate.py に渡す情報</text>
+  <text x="60" y="98" class="small">ブログの方向性、記事テーマ、AIへの指示、Hugo公開設定が分かれているため、運用時に編集する場所が明確です。</text>
+
+  <rect x="70" y="170" width="360" height="135" class="file"/><text x="105" y="208" class="txt">generator/topics.yaml</text><text x="105" y="240" class="small">30件以上のトピック一覧</text><text x="105" y="265" class="code">topic / keywords / category</text><text x="105" y="288" class="small">毎日1件ずつローテーション</text>
+  <rect x="70" y="370" width="360" height="135" class="file"/><text x="105" y="408" class="txt">generator/config.yaml</text><text x="105" y="440" class="small">ブログ名、著者、文字数、timeout</text><text x="105" y="465" class="code">min_chars / max_chars / cli_priority</text><text x="105" y="488" class="small">git commit & push 設定</text>
+  <rect x="70" y="570" width="360" height="135" class="file"/><text x="105" y="608" class="txt">generator/prompts.py</text><text x="105" y="640" class="small">AI CLIに渡すプロンプトテンプレート</text><text x="105" y="665" class="code">draft / review / final_check</text><text x="105" y="688" class="small">SEO・構成・レビュー観点を定義</text>
+
+  <rect x="570" y="310" width="360" height="180" class="gen"/><text x="615" y="355" class="txt">generator/generate.py</text><text x="615" y="390" class="small">入力ファイルを読み込み、AI CLIを実行</text><text x="615" y="418" class="small">結果を整形して記事Markdownへ変換</text><text x="615" y="446" class="small">状態ファイルとGit処理も担当</text>
+
+  <rect x="1065" y="160" width="360" height="125" class="out"/><text x="1100" y="198" class="txt">hugo-site/content/posts</text><text x="1100" y="230" class="small">生成記事 Markdown</text><text x="1100" y="255" class="code">YYYY-MM-DD-slug.md</text>
+  <rect x="1065" y="355" width="360" height="125" class="out"/><text x="1100" y="393" class="txt">hugo-site/config.toml</text><text x="1100" y="425" class="small">baseURL、title、日本語、SEO</text><text x="1100" y="450" class="small">RSS、sitemap、PaperMod設定</text>
+  <rect x="1065" y="550" width="360" height="125" class="out"/><text x="1100" y="588" class="txt">generator/.state.json</text><text x="1100" y="620" class="small">次に使うトピック番号</text><text x="1100" y="645" class="small">直近生成履歴</text>
+  <rect x="1065" y="745" width="360" height="100" class="out"/><text x="1100" y="783" class="txt">generator/logs</text><text x="1100" y="815" class="small">CLI失敗・push失敗などのログ</text>
+
+  <path d="M430 237 C500 237 500 350 570 350" class="arrow"/>
+  <path d="M430 437 L570 400" class="arrow"/>
+  <path d="M430 637 C500 637 500 450 570 450" class="arrow"/>
+  <path d="M930 375 C990 320 1000 222 1065 222" class="arrow"/>
+  <path d="M930 410 C990 410 1000 418 1065 418" class="arrow"/>
+  <path d="M930 455 C990 520 1000 612 1065 612" class="arrow"/>
+  <path d="M750 490 C760 690 1000 795 1065 795" class="arrow"/>
+
+  <rect x="70" y="815" width="860" height="70" fill="#ecfeff" stroke="#0891b2" stroke-width="2" rx="14"/>
+  <text x="105" y="848" class="small">運用でよく触るのは topics.yaml と config.yaml です。プログラム変更なしでテーマ追加や文字数調整ができます。</text>
+</svg>

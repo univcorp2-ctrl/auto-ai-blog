@@ -1,0 +1,11 @@
+generator/__pycache__/
+generator/logs/
+*.pyc
+.env
+.venv/
+hugo-site/public/
+hugo-site/resources/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+Thumbs.db
