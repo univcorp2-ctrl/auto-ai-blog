@@ -1,3 +1,12 @@
 [submodule "hugo-site/themes/PaperMod"]
 	path = hugo-site/themes/PaperMod
 	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "sites/ai-tech/themes/PaperMod"]
+	path = sites/ai-tech/themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "sites/real-estate/themes/PaperMod"]
+	path = sites/real-estate/themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "sites/business/themes/PaperMod"]
+	path = sites/business/themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
