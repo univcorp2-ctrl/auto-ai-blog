@@ -8,6 +8,7 @@ import os
 import re
 import subprocess
 import sys
+import tempfile
 import time
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
@@ -26,7 +27,7 @@ JST = timezone(timedelta(hours=9))
 CLI_COMMANDS = {
     "claude": ["claude.cmd" if os.name == "nt" else "claude", "-p"],
     "gemini": ["gemini.cmd" if os.name == "nt" else "gemini", "-p"],
-    "codex": ["codex.cmd" if os.name == "nt" else "codex"],
+    "codex": ["codex.cmd" if os.name == "nt" else "codex", "exec"],
 }
 
 
@@ -106,8 +107,7 @@ def load_state(root: Path) -> dict[str, Any]:
 
 
 def save_state(root: Path, state: dict[str, Any]) -> None:
-    path = state_path(root)
-    path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    state_path(root).write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def select_topic(topics: list[Topic], state: dict[str, Any]) -> tuple[int, Topic]:
@@ -126,6 +126,18 @@ def cloud_mode_enabled(explicit_cloud: bool = False) -> bool:
 def get_push_branch(git_config: dict[str, Any] | None = None) -> str:
     git_config = git_config or {}
     return str(os.getenv("BLOG_GIT_BRANCH") or git_config.get("branch") or "main")
+
+
+def run_git_command(root: Path, args: list[str]) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        ["git", *args],
+        cwd=root,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        check=False,
+    )
 
 
 def configure_git_identity_for_cloud(root: Path) -> None:
@@ -151,11 +163,19 @@ def run_ai_cli(cli_name: str, prompt: str, timeout: int) -> CliResult:
     if cli_name not in CLI_COMMANDS:
         return CliResult(False, cli_name, "", f"Unsupported CLI: {cli_name}")
 
-    command = CLI_COMMANDS[cli_name]
+    use_stdin = cli_name == "codex"
+    output_path: Path | None = None
+    if use_stdin:
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".md") as output_file:
+            output_path = Path(output_file.name)
+        command = [*CLI_COMMANDS[cli_name], "--output-last-message", str(output_path), "-"]
+    else:
+        command = [*CLI_COMMANDS[cli_name], prompt]
+
     try:
         completed = subprocess.run(
             command,
-            input=prompt,
+            input=prompt if use_stdin else None,
             capture_output=True,
             text=True,
             encoding="utf-8",
@@ -171,6 +191,13 @@ def run_ai_cli(cli_name: str, prompt: str, timeout: int) -> CliResult:
         return CliResult(False, cli_name, "", f"CLI execution error: {exc}")
 
     output = (completed.stdout or "").strip()
+    if output_path is not None:
+        if output_path.exists():
+            output = output_path.read_text(encoding="utf-8", errors="replace").strip()
+            output_path.unlink(missing_ok=True)
+        else:
+            logging.warning("codex output file was not created: %s", output_path)
+
     error = (completed.stderr or "").strip()
     if completed.returncode != 0:
         return CliResult(False, cli_name, output, error or f"returncode={completed.returncode}")
@@ -282,9 +309,7 @@ def resolve_site_dir(root: Path, topic: Topic, blog_config: dict[str, Any]) -> P
     site_map = blog_config.get("site_map", {})
     if isinstance(site_map, dict) and topic.category in site_map:
         return root / str(site_map[topic.category])
-
-    default_site = str(blog_config.get("default_site", "hugo-site"))
-    return root / default_site
+    return root / str(blog_config.get("default_site", "hugo-site"))
 
 
 def unique_post_path(posts_dir: Path, now: datetime, title: str) -> Path:
@@ -298,25 +323,12 @@ def unique_post_path(posts_dir: Path, now: datetime, title: str) -> Path:
 
 
 def save_post(root: Path, post_markdown: str, title: str, now: datetime, topic: Topic, blog_config: dict[str, Any]) -> Path:
-    site_dir = resolve_site_dir(root, topic, blog_config)
-    posts_dir = site_dir / "content" / "posts"
+    posts_dir = resolve_site_dir(root, topic, blog_config) / "content" / "posts"
     posts_dir.mkdir(parents=True, exist_ok=True)
     path = unique_post_path(posts_dir, now, title)
     path.write_text(post_markdown, encoding="utf-8")
     logging.info("Saved post: %s", path)
     return path
-
-
-def run_git_command(root: Path, args: list[str]) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(
-        ["git", *args],
-        cwd=root,
-        capture_output=True,
-        text=True,
-        encoding="utf-8",
-        errors="replace",
-        check=False,
-    )
 
 
 def git_has_changes(root: Path) -> bool:
@@ -335,8 +347,9 @@ def commit_and_push(root: Path, title: str, git_config: dict[str, Any], dry_run:
 
     run_git_command(root, ["add", "sites/*/content/posts/", "hugo-site/content/posts/", "generator/.state.json"])
 
-    if not git_has_changes(root):
-        logging.info("No git changes to commit")
+    staged = run_git_command(root, ["diff", "--cached", "--quiet"])
+    if staged.returncode == 0:
+        logging.info("No staged post changes to commit")
         return
 
     template = str(git_config.get("commit_message_template", "📝 新記事: {title}"))
@@ -383,12 +396,7 @@ def generate_article(root: Path, dry_run: bool = False, cloud: bool = False) -> 
 
     logging.info("Selected topic %s/%s: %s", index + 1, len(topics), topic.topic)
 
-    draft = call_with_fallback(
-        priority,
-        draft_prompt(topic.topic, topic.keywords, min_chars, max_chars),
-        timeout,
-        "draft",
-    )
+    draft = call_with_fallback(priority, draft_prompt(topic.topic, topic.keywords, min_chars, max_chars), timeout, "draft")
     if not draft.ok:
         logging.error("All draft CLIs failed; skipping article generation: %s", draft.error)
         return None

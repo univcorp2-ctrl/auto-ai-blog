@@ -13,7 +13,7 @@ generation:
   min_chars: 2000
   max_chars: 3000
   cli_timeout_seconds: 120
-  cli_priority: ["claude", "gemini", "codex"]
+  cli_priority: ["codex"]
 git:
   auto_commit: true
   auto_push: true
