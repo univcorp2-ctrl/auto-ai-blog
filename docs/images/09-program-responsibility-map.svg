@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1050" viewBox="0 0 1500 1050" role="img" aria-labelledby="title desc">
+  <title id="title">各プログラムの責務マップ</title>
+  <desc id="desc">auto-ai-blog の各ファイルがどの処理を担当するか</desc>
+  <defs><style>.bg{fill:#f8fafc}.title{font:700 34px system-ui,sans-serif;fill:#0f172a}.small{font:500 15px system-ui,sans-serif;fill:#475569}.row1{fill:#eff6ff}.row2{fill:#ffffff}.head{fill:#1e293b}.line{stroke:#cbd5e1;stroke-width:2}.txt{font:700 18px system-ui,sans-serif;fill:#0f172a}.headtxt{font:700 18px system-ui,sans-serif;fill:#fff}.body{font:500 15px system-ui,sans-serif;fill:#334155}.code{font:600 15px ui-monospace,Consolas,monospace;fill:#334155}.pill{fill:#dcfce7;stroke:#16a34a;stroke-width:2;rx:12}</style></defs>
+  <rect class="bg" width="1500" height="1050"/>
+  <text x="60" y="65" class="title">各プログラム・設定ファイルの責務マップ</text>
+  <text x="60" y="98" class="small">どのファイルを見れば何が分かるかを、運用者向けに一覧化しています。</text>
+
+  <rect x="60" y="140" width="1380" height="64" class="head" rx="14"/>
+  <text x="95" y="181" class="headtxt">ファイル</text><text x="420" y="181" class="headtxt">担当する処理</text><text x="930" y="181" class="headtxt">変更するタイミング</text>
+
+  <rect x="60" y="204" width="1380" height="88" class="row1"/><text x="95" y="238" class="code">run_daily.bat</text><text x="420" y="235" class="body">Windows上でPythonを起動する入口。文字コード、作業ディレクトリ、Pythonパスを固定。</text><text x="930" y="235" class="body">ローカル保存場所やPythonのインストール先が変わった時。</text>
+  <rect x="60" y="292" width="1380" height="104" class="row2"/><text x="95" y="326" class="code">generator/generate.py</text><text x="420" y="323" class="body">トピック選択、AI CLI実行、記事整形、front matter作成、保存、git commit & push。</text><text x="930" y="323" class="body">生成ロジック、フォールバック、保存形式、git処理を変える時。</text>
+  <rect x="60" y="396" width="1380" height="88" class="row1"/><text x="95" y="430" class="code">generator/prompts.py</text><text x="420" y="427" class="body">Claude / Gemini / Codex へ渡すプロンプトを生成。</text><text x="930" y="427" class="body">記事トーン、SEO指示、レビュー観点を変える時。</text>
+  <rect x="60" y="484" width="1380" height="88" class="row2"/><text x="95" y="518" class="code">generator/topics.yaml</text><text x="420" y="515" class="body">トピック、SEOキーワード、カテゴリを管理。</text><text x="930" y="515" class="body">新しい記事テーマを追加・削除・並べ替えする時。</text>
+  <rect x="60" y="572" width="1380" height="88" class="row1"/><text x="95" y="606" class="code">generator/config.yaml</text><text x="420" y="603" class="body">ブログ名、著者、文字数、timeout、CLI優先順位、git設定。</text><text x="930" y="603" class="body">運用ポリシーやCLI順序、文字数を調整する時。</text>
+  <rect x="60" y="660" width="1380" height="88" class="row2"/><text x="95" y="694" class="code">hugo-site/config.toml</text><text x="420" y="691" class="body">Hugo、PaperMod、SEO、RSS、sitemap、OGP、メニュー。</text><text x="930" y="691" class="body">サイト名、baseURL、GA、SEO設定を変更する時。</text>
+  <rect x="60" y="748" width="1380" height="88" class="row1"/><text x="95" y="782" class="code">docs/daily-post.yml</text><text x="420" y="779" class="body">GitHub Actions のビルド検証テンプレート。</text><text x="930" y="779" class="body">CIを有効化する時に .github/workflows へ配置。</text>
+  <rect x="60" y="836" width="1380" height="88" class="row2"/><text x="95" y="870" class="code">tests/test_generate.py</text><text x="420" y="867" class="body">slug、front matter、トピックローテーション、CLIフォールバックを確認。</text><text x="930" y="867" class="body">generate.py の仕様を変えた時にテストを更新。</text>
+
+  <line x1="380" y1="140" x2="380" y2="924" class="line"/><line x1="890" y1="140" x2="890" y2="924" class="line"/>
+  <rect x="60" y="960" width="1380" height="52" class="pill"/>
+  <text x="95" y="993" class="body">運用者は通常 topics.yaml / config.yaml / hugo-site/config.toml を編集します。generate.py はロジック変更時だけ触ります。</text>
+</svg>
