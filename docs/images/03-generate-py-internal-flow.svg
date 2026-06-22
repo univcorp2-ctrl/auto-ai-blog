@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1100" viewBox="0 0 1500 1100" role="img" aria-labelledby="title desc">
+  <title id="title">generator/generate.py 内部処理フロー</title>
+  <desc id="desc">generate.py の関数単位の処理順序と入出力</desc>
+  <defs><marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#16a34a"/></marker><style>.bg{fill:#f8fafc}.title{font:700 34px system-ui,sans-serif;fill:#0f172a}.small{font:500 15px system-ui,sans-serif;fill:#475569}.box{fill:#fff;stroke:#16a34a;stroke-width:3;rx:16}.io{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.warn{fill:#fff7ed;stroke:#ea580c;stroke-width:2;rx:14}.txt{font:700 19px system-ui,sans-serif;fill:#0f172a}.code{font:600 15px ui-monospace,Consolas,monospace;fill:#334155}.arrow{stroke:#16a34a;stroke-width:4;fill:none;marker-end:url(#arrow)}.lane{fill:#ffffff;stroke:#cbd5e1;stroke-width:2;rx:22}.laneTitle{font:700 22px system-ui,sans-serif;fill:#334155}</style></defs>
+  <rect class="bg" width="1500" height="1100"/>
+  <text x="60" y="65" class="title">generator/generate.py の内部動作</text>
+  <text x="60" y="98" class="small">記事生成から保存、git push までを1本の Python スクリプトで制御します。</text>
+
+  <rect x="40" y="130" width="430" height="880" class="lane"/><text x="70" y="170" class="laneTitle">入力・状態管理</text>
+  <rect x="80" y="220" width="330" height="75" class="io"/><text x="105" y="250" class="txt">load_yaml()</text><text x="105" y="274" class="small">config.yaml / topics.yaml を読み込む</text>
+  <rect x="80" y="340" width="330" height="75" class="io"/><text x="105" y="370" class="txt">load_state()</text><text x="105" y="394" class="small">.state.json から次のトピック番号を取得</text>
+  <rect x="80" y="460" width="330" height="75" class="io"/><text x="105" y="490" class="txt">select_topic()</text><text x="105" y="514" class="small">トピックをローテーション選択</text>
+  <rect x="80" y="760" width="330" height="75" class="io"/><text x="105" y="790" class="txt">save_state()</text><text x="105" y="814" class="small">次回用 index と履歴を保存</text>
+
+  <rect x="535" y="130" width="430" height="880" class="lane"/><text x="565" y="170" class="laneTitle">AI CLI 制御</text>
+  <rect x="575" y="220" width="330" height="75" class="box"/><text x="600" y="250" class="txt">draft_prompt()</text><text x="600" y="274" class="small">SEO記事ドラフト用プロンプトを作成</text>
+  <rect x="575" y="340" width="330" height="95" class="box"/><text x="600" y="370" class="txt">call_with_fallback()</text><text x="600" y="394" class="small">Claude → Gemini → Codex</text><text x="600" y="416" class="small">全失敗時は記事生成をスキップ</text>
+  <rect x="575" y="490" width="330" height="95" class="box"/><text x="600" y="520" class="txt">review_prompt()</text><text x="600" y="544" class="small">Gemini → Codex でレビュー改善</text><text x="600" y="566" class="small">失敗時はドラフトを採用</text>
+  <rect x="575" y="640" width="330" height="95" class="box"/><text x="600" y="670" class="txt">final_check_prompt()</text><text x="600" y="694" class="small">Codex で誤字脱字・Markdown確認</text><text x="600" y="716" class="small">失敗時は改善版を採用</text>
+
+  <rect x="1030" y="130" width="430" height="880" class="lane"/><text x="1060" y="170" class="laneTitle">記事保存・Git連携</text>
+  <rect x="1070" y="220" width="330" height="95" class="box"/><text x="1095" y="250" class="txt">build_post_markdown()</text><text x="1095" y="274" class="small">title / date / tags / category</text><text x="1095" y="296" class="small">description を front matter 化</text>
+  <rect x="1070" y="370" width="330" height="75" class="box"/><text x="1095" y="400" class="txt">unique_post_path()</text><text x="1095" y="424" class="small">YYYY-MM-DD-slug.md を重複回避して作成</text>
+  <rect x="1070" y="500" width="330" height="75" class="box"/><text x="1095" y="530" class="txt">save_post()</text><text x="1095" y="554" class="small">hugo-site/content/posts に保存</text>
+  <rect x="1070" y="650" width="330" height="110" class="box"/><text x="1095" y="680" class="txt">commit_and_push()</text><text x="1095" y="704" class="small">git add / commit / push</text><text x="1095" y="726" class="small">push失敗時は最大3回リトライ</text><text x="1095" y="748" class="small">5秒間隔</text>
+  <rect x="1070" y="835" width="330" height="75" class="warn"/><text x="1095" y="865" class="txt">ログ出力</text><text x="1095" y="889" class="small">generator/logs/generate.log に記録</text>
+
+  <path d="M410 257 L575 257" class="arrow"/><path d="M245 295 L245 340" class="arrow"/><path d="M245 415 L245 460" class="arrow"/><path d="M410 497 C505 497 505 387 575 387" class="arrow"/><path d="M740 435 L740 490" class="arrow"/><path d="M740 585 L740 640" class="arrow"/><path d="M905 687 C990 687 990 267 1070 267" class="arrow"/><path d="M1235 315 L1235 370" class="arrow"/><path d="M1235 445 L1235 500" class="arrow"/><path d="M1235 575 L1235 650" class="arrow"/><path d="M1070 705 C940 705 540 797 410 797" class="arrow"/><path d="M1235 760 L1235 835" class="arrow"/>
+</svg>
