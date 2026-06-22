@@ -12,7 +12,7 @@ AI API は一切使いません。記事生成はローカル PC にインスト
 
 ![Hugo + Cloudflare Pages 全自動AIブログ 全体アーキテクチャ](docs/images/01-architecture-overview.svg)
 
-この図は、ローカル Windows PC で記事生成を行い、GitHub に push し、Cloudflare Pages が自動デプロイする全体の流れです。記事生成はローカルPCで完結し、GitHub Actions は生成ではなく検証を担当します。
+ローカル Windows PC で記事生成を行い、GitHub に push し、Cloudflare Pages が自動デプロイする全体の流れです。記事生成はローカルPCで完結し、GitHub Actions は生成ではなく検証を担当します。
 
 ### 2. 毎朝9時のローカル自動実行
 
@@ -38,6 +38,36 @@ Claude が失敗したら Gemini、Gemini が失敗したら Codex、Codex が�
 
 `topics.yaml` は記事テーマ、`config.yaml` は生成条件、`prompts.py` はAIへの指示、`config.toml` はHugo公開設定を担当します。プログラムを触らずに運用調整しやすい構成です。
 
+### 6. git push から Cloudflare Pages 公開まで
+
+![git commit push から Cloudflare Pages 公開まで](docs/images/06-git-push-cloudflare-flow.svg)
+
+生成した記事は `git add`、`git commit`、`git push origin main` で GitHub へ送られます。Cloudflare Pages は GitHub の更新を検知し、Hugo をビルドして CDN へ公開します。
+
+### 7. Hugo build の中身
+
+![Hugo ビルドと PaperMod の流れ](docs/images/07-hugo-build-flow.svg)
+
+Hugo は `content/posts`、`config.toml`、`themes/PaperMod`、`static` を読み込み、`hugo-site/public` を生成します。Cloudflare Pages ではこの `public` ディレクトリを配信します。
+
+### 8. エラー処理とログ
+
+![エラー処理とログの流れ](docs/images/08-error-handling-logs.svg)
+
+CLI 失敗、レビュー失敗、最終チェック失敗、git push 失敗のそれぞれで、安全に継続または停止する設計です。ログは `generator/logs/generate.log` に残します。
+
+### 9. 各プログラムの責務
+
+![各プログラムの責務マップ](docs/images/09-program-responsibility-map.svg)
+
+どのファイルが何を担当するかを一覧化しています。通常運用で触るのは `topics.yaml`、`config.yaml`、`hugo-site/config.toml` が中心です。
+
+### 10. 初期設定と運用チェックリスト
+
+![初期設定と運用チェックリスト](docs/images/10-operation-checklist.svg)
+
+初回セットアップ、手動実行テスト、タスクスケジューラ登録、Cloudflare Pages 接続、本番運用の順番を図にしています。
+
 ---
 
 ## プログラム別の動き
@@ -52,6 +82,8 @@ Claude が失敗したら Gemini、Gemini が失敗したら Codex、Codex が�
 | `hugo-site/config.toml` | Hugo、PaperMod、日本語、SEO、RSS、sitemap、OGPを設定します。 |
 | `hugo-site/content/posts/` | 生成された Markdown 記事が保存されます。 |
 | `docs/daily-post.yml` | GitHub Actions workflow テンプレートです。 |
+
+さらに詳しい図解一覧は [`docs/program-flow.md`](docs/program-flow.md) にまとめています。
 
 ---
 
@@ -75,6 +107,7 @@ auto-ai-blog/
 ├── docs/
 │   ├── images/
 │   ├── architecture.md
+│   ├── program-flow.md
 │   ├── setup.md
 │   ├── review.md
 │   └── daily-post.yml
@@ -226,6 +259,7 @@ API キーを Python へ渡す必要はありません。
 ## 詳細ドキュメント
 
 - [`docs/architecture.md`](docs/architecture.md): アーキテクチャ詳細
+- [`docs/program-flow.md`](docs/program-flow.md): プログラム別の画像解説
 - [`docs/setup.md`](docs/setup.md): セットアップ手順
 - [`docs/review.md`](docs/review.md): 実装レビュー
 - [`docs/daily-post.yml`](docs/daily-post.yml): GitHub Actions workflow テンプレート
