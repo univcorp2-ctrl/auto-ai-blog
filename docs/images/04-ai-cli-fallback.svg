@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="900" viewBox="0 0 1450 900" role="img" aria-labelledby="title desc">
+  <title id="title">AI CLI フォールバック設計</title>
+  <desc id="desc">Claude、Gemini、Codex CLI を使った3段階生成と失敗時の採用ルール</desc>
+  <defs><marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#7c3aed"/></marker><style>.bg{fill:#f8fafc}.title{font:700 34px system-ui,sans-serif;fill:#0f172a}.small{font:500 15px system-ui,sans-serif;fill:#475569}.stage{fill:#fff;stroke:#7c3aed;stroke-width:3;rx:18}.ok{fill:#f0fdf4;stroke:#16a34a;stroke-width:3;rx:14}.fail{fill:#fff1f2;stroke:#e11d48;stroke-width:3;rx:14}.adopt{fill:#eff6ff;stroke:#2563eb;stroke-width:3;rx:14}.txt{font:700 19px system-ui,sans-serif;fill:#0f172a}.code{font:600 16px ui-monospace,Consolas,monospace;fill:#334155}.arrow{stroke:#7c3aed;stroke-width:4;fill:none;marker-end:url(#arrow)}.green{stroke:#16a34a;stroke-width:4;fill:none;marker-end:url(#arrow)}.red{stroke:#e11d48;stroke-width:4;fill:none;marker-end:url(#arrow)}</style></defs>
+  <rect class="bg" width="1450" height="900"/>
+  <text x="60" y="65" class="title">AI CLI フォールバック設計</text>
+  <text x="60" y="98" class="small">APIは使わず、CLI が失敗したら次の CLI へ切り替えます。最後まで失敗しても、可能な限り直前の成果物を採用します。</text>
+
+  <rect x="70" y="160" width="380" height="610" class="stage"/><text x="105" y="205" class="txt">Step 1: ドラフト作成</text>
+  <rect x="120" y="250" width="280" height="70" class="ok"/><text x="150" y="282" class="txt">Claude CLI</text><text x="150" y="305" class="code">claude -p prompt</text>
+  <rect x="120" y="385" width="280" height="70" class="ok"/><text x="150" y="417" class="txt">Gemini CLI</text><text x="150" y="440" class="code">gemini -p prompt</text>
+  <rect x="120" y="520" width="280" height="70" class="ok"/><text x="150" y="552" class="txt">Codex CLI</text><text x="150" y="575" class="code">codex -q prompt</text>
+  <rect x="120" y="655" width="280" height="70" class="fail"/><text x="150" y="687" class="txt">全失敗</text><text x="150" y="710" class="small">ログを残してスキップ</text>
+
+  <rect x="535" y="160" width="380" height="610" class="stage"/><text x="570" y="205" class="txt">Step 2: レビュー＆改善</text>
+  <rect x="585" y="300" width="280" height="80" class="ok"/><text x="615" y="332" class="txt">Gemini CLI</text><text x="615" y="356" class="small">事実確認、SEO、読みやすさを改善</text>
+  <rect x="585" y="475" width="280" height="80" class="ok"/><text x="615" y="507" class="txt">Codex CLI</text><text x="615" y="531" class="small">Gemini失敗時のレビュー代替</text>
+  <rect x="585" y="655" width="280" height="70" class="adopt"/><text x="615" y="687" class="txt">レビュー失敗</text><text x="615" y="710" class="small">ドラフトをそのまま採用</text>
+
+  <rect x="1000" y="160" width="380" height="610" class="stage"/><text x="1035" y="205" class="txt">Step 3: 最終チェック</text>
+  <rect x="1050" y="330" width="280" height="90" class="ok"/><text x="1080" y="362" class="txt">Codex CLI</text><text x="1080" y="386" class="small">誤字脱字、Markdown、表現、タイトル</text>
+  <rect x="1050" y="560" width="280" height="90" class="adopt"/><text x="1080" y="592" class="txt">Codex失敗</text><text x="1080" y="616" class="small">レビュー済み版を採用</text>
+  <rect x="1050" y="700" width="280" height="70" class="adopt"/><text x="1080" y="732" class="txt">完成記事</text><text x="1080" y="755" class="small">front matter 付与へ進む</text>
+
+  <path d="M260 320 L260 385" class="red"/><path d="M260 455 L260 520" class="red"/><path d="M260 590 L260 655" class="red"/>
+  <path d="M400 285 C470 285 510 340 585 340" class="arrow"/>
+  <path d="M725 380 L725 475" class="red"/><path d="M725 555 L725 655" class="red"/>
+  <path d="M865 340 C930 340 975 375 1050 375" class="arrow"/>
+  <path d="M1190 420 L1190 560" class="red"/><path d="M1190 650 L1190 700" class="arrow"/>
+  <path d="M1330 375 C1385 375 1385 735 1330 735" class="arrow"/>
+
+  <rect x="70" y="810" width="1310" height="55" fill="#ecfeff" stroke="#0891b2" stroke-width="2" rx="14"/>
+  <text x="105" y="843" class="small">設計意図: Claudeを創作、Geminiをレビュー、Codexを最終整形に寄せつつ、どれか1つしか使えない環境でも記事生成を継続しやすくします。</text>
+</svg>
