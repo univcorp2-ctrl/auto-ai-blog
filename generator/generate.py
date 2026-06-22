@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import logging
+import os
 import re
 import subprocess
 import sys
@@ -116,6 +117,34 @@ def select_topic(topics: list[Topic], state: dict[str, Any]) -> tuple[int, Topic
     except (TypeError, ValueError):
         index = 0
     return index, topics[index]
+
+
+def cloud_mode_enabled(explicit_cloud: bool = False) -> bool:
+    return explicit_cloud or os.getenv("BLOG_EXECUTION_MODE", "").lower() == "cloud" or os.getenv("GITHUB_ACTIONS") == "true"
+
+
+def get_push_branch(git_config: dict[str, Any] | None = None) -> str:
+    git_config = git_config or {}
+    return str(os.getenv("BLOG_GIT_BRANCH") or git_config.get("branch") or "main")
+
+
+def configure_git_identity_for_cloud(root: Path) -> None:
+    name = os.getenv("GIT_AUTHOR_NAME", "github-actions[bot]")
+    email = os.getenv("GIT_AUTHOR_EMAIL", "41898282+github-actions[bot]@users.noreply.github.com")
+    run_git_command(root, ["config", "user.name", name])
+    run_git_command(root, ["config", "user.email", email])
+    logging.info("Configured git identity for cloud mode: %s <%s>", name, email)
+
+
+def log_cloud_environment() -> None:
+    safe_env = {
+        "BLOG_EXECUTION_MODE": os.getenv("BLOG_EXECUTION_MODE", ""),
+        "GITHUB_ACTIONS": os.getenv("GITHUB_ACTIONS", ""),
+        "GITHUB_WORKFLOW": os.getenv("GITHUB_WORKFLOW", ""),
+        "GITHUB_RUN_ID": os.getenv("GITHUB_RUN_ID", ""),
+        "BLOG_GIT_BRANCH": os.getenv("BLOG_GIT_BRANCH", ""),
+    }
+    logging.info("Cloud environment summary: %s", json.dumps(safe_env, ensure_ascii=False))
 
 
 def run_ai_cli(cli_name: str, prompt: str, timeout: int) -> CliResult:
@@ -301,11 +330,12 @@ def commit_and_push(root: Path, title: str, git_config: dict[str, Any], dry_run:
         logging.info("git.auto_push=false; skipping git push")
         return
 
+    branch = get_push_branch(git_config)
     last_error = ""
     for attempt in range(1, 4):
-        push = run_git_command(root, ["push", "origin", "main"])
+        push = run_git_command(root, ["push", "origin", branch])
         if push.returncode == 0:
-            logging.info("git push succeeded")
+            logging.info("git push succeeded to origin/%s", branch)
             return
         last_error = push.stderr.strip() or push.stdout.strip()
         logging.warning("git push failed attempt %s/3: %s", attempt, last_error)
@@ -314,7 +344,7 @@ def commit_and_push(root: Path, title: str, git_config: dict[str, Any], dry_run:
     raise RuntimeError(f"git push failed after 3 attempts: {last_error}")
 
 
-def generate_article(root: Path, dry_run: bool = False) -> Path | None:
+def generate_article(root: Path, dry_run: bool = False, cloud: bool = False) -> Path | None:
     setup_logging(root)
     config = load_yaml(root / "generator" / "config.yaml")
     topics = load_topics(root / "generator" / "topics.yaml")
@@ -323,6 +353,10 @@ def generate_article(root: Path, dry_run: bool = False) -> Path | None:
     generation_config = config.get("generation", {})
     blog_config = config.get("blog", {})
     git_config = config.get("git", {})
+
+    if cloud_mode_enabled(cloud):
+        log_cloud_environment()
+        configure_git_identity_for_cloud(root)
 
     timeout = int(generation_config.get("cli_timeout_seconds", 120))
     min_chars = int(generation_config.get("min_chars", 2000))
@@ -364,6 +398,7 @@ def generate_article(root: Path, dry_run: bool = False) -> Path | None:
                 "topic": topic.topic,
                 "title": title,
                 "path": str(post_path.relative_to(root)),
+                "mode": "cloud" if cloud_mode_enabled(cloud) else "local",
             }
         )
         del history[:-90]
@@ -375,8 +410,9 @@ def generate_article(root: Path, dry_run: bool = False) -> Path | None:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Generate a Hugo blog post using local AI CLIs only.")
+    parser = argparse.ArgumentParser(description="Generate a Hugo blog post using local or cloud AI CLIs only.")
     parser.add_argument("--dry-run", action="store_true", help="Generate a post but skip git commit and push.")
+    parser.add_argument("--cloud", action="store_true", help="Enable cloud execution mode defaults for GitHub Actions or cloud runners.")
     return parser.parse_args()
 
 
@@ -384,7 +420,7 @@ def main() -> int:
     args = parse_args()
     root = repo_root()
     try:
-        result = generate_article(root, dry_run=args.dry_run)
+        result = generate_article(root, dry_run=args.dry_run, cloud=args.cloud)
     except Exception as exc:
         setup_logging(root)
         logging.exception("Article generation failed: %s", exc)
