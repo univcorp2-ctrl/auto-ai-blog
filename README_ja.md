@@ -24,7 +24,7 @@ Windows タスクスケジューラが `run_daily.bat` を起動し、`generator
 
 ![generator/generate.py 内部処理フロー](docs/images/03-generate-py-internal-flow.svg)
 
-`generate.py` は、設定読み込み、トピック選択、AI CLI 呼び出し、front matter 生成、記事保存、git commit & push までを担当します。Local Mode と Cloud Mode の両方から呼ばれる共通コアです。
+`generate.py` は、設定読み込み、トピック選択、AI CLI 呼び出し、front matter 生成、記事保存、git commit & push までを担当します。Local Mode と Cloud Mode の両方から呼ばれる共通入口です。
 
 ### 4. Claude / Gemini / Codex のフォールバック
 
@@ -104,6 +104,29 @@ GitHub Actions に限定せず、任意のクラウドVMや self-hosted runner �
 
 ---
 
+## リファクタリング後の generator 構成
+
+### 16. generator モジュール分割
+
+![リファクタリング後の generator モジュール構成](docs/images/16-refactored-generator-modules.svg)
+
+`generator/generate.py` は薄いオーケストレーション層にし、設定読み込み、CLI実行、Markdown生成、git操作、Cloud Mode判定、runtime補助をモジュール分割しました。これにより、テストしやすく、変更箇所が追いやすくなっています。
+
+| ファイル | 責務 |
+|---|---|
+| `generator/generate.py` | 全体処理の順番を制御する入口。Local Mode / Cloud Mode 共通。 |
+| `generator/models.py` | `Topic`、`CliResult` の共有データ構造。 |
+| `generator/config_loader.py` | `config.yaml`、`topics.yaml`、`.state.json` の読み書き。 |
+| `generator/cli_runner.py` | `claude`、`gemini`、`codex` の `subprocess` 実行とフォールバック。 |
+| `generator/markdown_post.py` | title抽出、slug生成、front matter生成、記事保存。 |
+| `generator/git_ops.py` | git add / commit / push、push branch 解決、push retry。 |
+| `generator/cloud.py` | Cloud Mode 判定、クラウド実行時の git identity 設定。 |
+| `generator/runtime.py` | JST timezone、repo root、logging setup。 |
+
+詳細は [`docs/refactoring.md`](docs/refactoring.md) にまとめています。
+
+---
+
 ## 実行モード比較
 
 | 項目 | Local Mode | Cloud Mode |
@@ -137,7 +160,10 @@ GitHub Actions に限定せず、任意のクラウドVMや self-hosted runner �
 | `run_daily.bat` | Windows から Python を起動する入口。文字コードと作業ディレクトリを固定します。 |
 | `scripts/cloud_prepare_ai_cli.sh` | クラウド側で AI CLI の準備状態を確認します。 |
 | `scripts/cloud_generate.sh` | クラウド側で `generate.py --cloud` を実行します。 |
-| `generator/generate.py` | 記事生成の本体。トピック選択、CLI実行、front matter、保存、git pushを行います。 |
+| `generator/generate.py` | 記事生成の流れをまとめる入口です。 |
+| `generator/cli_runner.py` | AI CLI 呼び出しとフォールバックを担当します。 |
+| `generator/markdown_post.py` | Markdown記事と front matter 生成を担当します。 |
+| `generator/git_ops.py` | git commit / push を担当します。 |
 | `generator/prompts.py` | Claude / Gemini / Codex に渡すプロンプトを生成します。 |
 | `generator/topics.yaml` | 1ヶ月分以上のトピック、SEOキーワード、カテゴリを管理します。 |
 | `generator/config.yaml` | 文字数、CLI timeout、優先順位、git commit設定を管理します。 |
@@ -156,6 +182,17 @@ GitHub Actions に限定せず、任意のクラウドVMや self-hosted runner �
 auto-ai-blog/
 ├── hugo-site/
 ├── generator/
+│   ├── generate.py
+│   ├── models.py
+│   ├── config_loader.py
+│   ├── cli_runner.py
+│   ├── markdown_post.py
+│   ├── git_ops.py
+│   ├── cloud.py
+│   ├── runtime.py
+│   ├── prompts.py
+│   ├── topics.yaml
+│   └── config.yaml
 ├── scripts/
 │   ├── cloud_prepare_ai_cli.sh
 │   ├── cloud_generate.sh
@@ -168,6 +205,7 @@ auto-ai-blog/
 │   ├── architecture.md
 │   ├── cloud-mode.md
 │   ├── program-flow.md
+│   ├── refactoring.md
 │   ├── setup.md
 │   ├── review.md
 │   └── daily-post.yml
@@ -325,6 +363,7 @@ API キーを Python へ渡して API を直接呼ぶ必要はありません。
 - [`docs/architecture.md`](docs/architecture.md): アーキテクチャ詳細
 - [`docs/cloud-mode.md`](docs/cloud-mode.md): Cloud Mode 設定・運用
 - [`docs/program-flow.md`](docs/program-flow.md): プログラム別の画像解説
+- [`docs/refactoring.md`](docs/refactoring.md): リファクタリング記録
 - [`docs/setup.md`](docs/setup.md): セットアップ手順
 - [`docs/review.md`](docs/review.md): 実装レビュー
 - [`docs/daily-post.yml`](docs/daily-post.yml): ビルド検証 workflow テンプレート
