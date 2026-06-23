@@ -1,4 +1,4 @@
-name: Daily Post Builder
+name: Daily Post Builder and Deploy
 
 on:
   push:
@@ -6,8 +6,12 @@ on:
       - main
 
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -19,11 +23,41 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      # Setup Node for Wrangler
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      # AI Tech Blog
       - name: Build AI Tech Site
         run: cd sites/ai-tech && hugo --minify
 
+      - name: Deploy AI Tech to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy sites/ai-tech/public --project-name="ai-tech-blog" --commit-dirty=true
+
+      # Real Estate Blog
       - name: Build Real Estate Site
         run: cd sites/real-estate && hugo --minify
 
+      - name: Deploy Real Estate to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy sites/real-estate/public --project-name="real-estate-blog" --commit-dirty=true
+
+      # Business Blog
       - name: Build Business Site
         run: cd sites/business && hugo --minify
+
+      - name: Deploy Business to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy sites/business/public --project-name="business-blog" --commit-dirty=true
