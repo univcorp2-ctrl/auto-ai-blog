@@ -4,14 +4,14 @@ from datetime import datetime, timedelta, timezone
 
 import pytest
 
-from generator import generate
+from generator import cli_runner, generate, markdown_post
 from generator.generate import CliResult, Topic
 
 JST = timezone(timedelta(hours=9))
 
 
 def test_make_slug_has_hash_fallback(monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setattr(generate, "slugify", lambda *_args, **_kwargs: "")
+    monkeypatch.setattr(markdown_post, "slugify", lambda *_args, **_kwargs: "")
     slug = generate.make_slug("完全に日本語だけのタイトル")
     assert slug.startswith("post-")
     assert len(slug) == len("post-") + 12
@@ -55,7 +55,7 @@ def test_call_with_fallback_uses_next_cli(monkeypatch: pytest.MonkeyPatch) -> No
             return CliResult(False, cli_name, "", "failed")
         return CliResult(True, cli_name, f"ok by {cli_name}")
 
-    monkeypatch.setattr(generate, "run_ai_cli", fake_run_ai_cli)
+    monkeypatch.setattr(cli_runner, "run_ai_cli", fake_run_ai_cli)
     result = generate.call_with_fallback(["claude", "gemini"], "prompt", 1, "draft")
 
     assert result.ok is True
