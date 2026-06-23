@@ -61,3 +61,7 @@ README に掲載している図を、プログラム単位でさらに追いや�
 ## 15. Cloud VM / self-hosted runner
 
 ![Cloud VM self-hosted runner](images/15-cloud-vm-self-hosted-flow.svg)
+
+## 16. リファクタリング後の generator 構成
+
+![リファクタリング後の generator 構成](images/16-refactored-generator-modules.svg)
