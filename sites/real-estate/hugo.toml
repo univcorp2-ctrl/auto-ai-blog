@@ -1,7 +1,12 @@
-baseURL = 'https://real-estate.example.com/'
-languageCode = 'ja'
+baseURL = 'https://real-estate-blog.pages.dev/'
+defaultContentLanguage = 'ja'
 title = '不動産投資専門メディア'
 theme = 'PaperMod'
+ignoreLogs = ['warning-goldmark-raw-html']
+
+[languages.ja]
+  locale = 'ja-JP'
+  weight = 1
 
 [params]
   defaultTheme = 'auto'
@@ -9,6 +14,9 @@ theme = 'PaperMod'
   TocOpen = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
+
+[markup.goldmark.renderer]
+  unsafe = true
 
 [outputs]
   home = ['HTML', 'RSS', 'JSON']

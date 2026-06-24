@@ -20,14 +20,13 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.163.3'
           extended: true
 
-      # Setup Node for Wrangler
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       # AI Tech Blog
       - name: Build AI Tech Site

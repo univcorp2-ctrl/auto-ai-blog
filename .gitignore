@@ -15,4 +15,5 @@ Thumbs.db
 *.gdoc
 *.gsheet
 desktop.ini
+.wrangler/
 

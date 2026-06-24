@@ -1,7 +1,12 @@
-baseURL = 'https://ai-tech.example.com/'
-languageCode = 'ja'
+baseURL = 'https://ai-tech-blog-97e.pages.dev/'
+defaultContentLanguage = 'ja'
 title = 'AI・テック専門メディア'
 theme = 'PaperMod'
+ignoreLogs = ['warning-goldmark-raw-html']
+
+[languages.ja]
+  locale = 'ja-JP'
+  weight = 1
 
 [params]
   defaultTheme = 'auto'
@@ -9,6 +14,9 @@ theme = 'PaperMod'
   TocOpen = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
+
+[markup.goldmark.renderer]
+  unsafe = true
 
 [outputs]
   home = ['HTML', 'RSS', 'JSON']
