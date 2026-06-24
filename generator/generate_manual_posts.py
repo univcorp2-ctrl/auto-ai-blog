@@ -23,42 +23,49 @@ MANUALS = [
         "title": "完全放置型・投資アフィリエイト自動化マニュアル",
         "category": "AI・テック",
         "keywords": ["アフィリエイト自動化", "投資アフィリエイト", "AI活用", "不労所得"],
+        "myasp_id": "INVESTMENT_AFFILIATE_MYASP_ID",
     },
     {
         "filename": "auto_saas_affiliate_manual.md",
         "title": "海外SaaS＆ノーコードツール特化型・全自動AIブログアフィリエイト構築マニュアル",
         "category": "AI・テック",
         "keywords": ["海外SaaS", "ノーコードツール", "ブログアフィリエイト", "AI自動化"],
+        "myasp_id": "SAAS_AFFILIATE_MYASP_ID",
     },
     {
         "filename": "pinterest_passive_income_machine_manual.md",
         "title": "ピンタレスト不労所得マシーン 構築マニュアル",
         "category": "AI・テック",
         "keywords": ["Pinterest", "Etsy販売", "デジタル商品", "AI画像生成"],
+        "myasp_id": "PINTEREST_MACHINE_MYASP_ID",
     },
     {
         "filename": "niche_matching_system_manual.md",
         "title": "超ニッチ業種特化型マッチングシステム構築マニュアル",
         "category": "不動産マーケティング",
         "keywords": ["マッチングサービス", "Stripe決済", "LINE Bot", "無人化ビジネス"],
+        "myasp_id": "NICHE_MATCHING_MYASP_ID",
     },
     {
         "filename": "vps_setup_manual.md",
         "title": "完全無人AIトレードBot VPS環境構築マニュアル",
         "category": "AI・テック",
         "keywords": ["VPS構築", "Ubuntuサーバー", "自動取引Bot", "アービトラージ"],
+        "myasp_id": "VPS_SETUP_MYASP_ID",
     },
     {
         "filename": "ai_dance_video_manual.md",
         "title": "AI美女ダンス動画量産・収益化マニュアル",
         "category": "AI・テック",
         "keywords": ["AI美女", "ダンス動画", "AnimateDiff", "TikTok収益化"],
+        "myasp_id": "AI_DANCE_VIDEO_MYASP_ID",
     },
     {
         "filename": "real_estate_ghost_story_manual.md",
         "title": "不動産怪談YouTubeチャンネル立ち上げ・収益化マニュアル",
         "category": "不動産投資",
         "keywords": ["不動産怪談", "YouTube自動化", "ゆっくり解説", "ずんだもん"],
+        "myasp_id": "GHOST_STORY_MYASP_ID",
     },
 ]
 
@@ -79,7 +86,7 @@ def save_manual_state(root: Path, state: dict[str, int]) -> None:
     path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def make_manual_promo_prompt(manual_title: str, manual_content: str) -> str:
+def make_manual_promo_prompt(manual_title: str, manual_content: str, myasp_id: str) -> str:
     return f"""
 以下は販売用の有料ノウハウマニュアル「{manual_title}」の内容です。
 このマニュアルの魅力を伝え、ブログ読者に購入を促すための、高品質なSEOに配慮した紹介・販促ブログ記事（日本語）を書いてください。
@@ -100,7 +107,7 @@ def make_manual_promo_prompt(manual_title: str, manual_content: str) -> str:
 記事の最後（まとめの直後）に、以下のHTML形式の購入ボタンを正確に挿入してください。
 ---
 <div style="text-align: center; margin: 35px 0;">
-  <a href="https://www.yurubusi-web.com/dm/ent/e/REPLACE_WITH_YOUR_MYASP_LINK/s/" target="_blank" style="background-color: #28a745; color: white; padding: 15px 30px; font-size: 22px; font-weight: bold; text-decoration: none; border-radius: 5px; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: background-color 0.3s;">
+  <a href="https://www.yurubusi-web.com/dm/ent/e/{myasp_id}/s/" target="_blank" style="background-color: #28a745; color: white; padding: 15px 30px; font-size: 22px; font-weight: bold; text-decoration: none; border-radius: 5px; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: background-color 0.3s;">
     今すぐマニュアルを購入する
   </a>
   <p style="font-size: 13px; color: #666; margin-top: 10px;">※本マニュアルの購読用リンクは準備中です。詳細は <a href="https://yurui-business.com/contact/" target="_blank">お問合せ</a> よりご連絡ください。</p>
@@ -135,7 +142,11 @@ def generate_manual_promo_post(root: Path, dry_run: bool = False) -> Path | None
     git_config = config.get("git", {})
     timeout = int(generation_config.get("cli_timeout_seconds", 120))
 
-    prompt = make_manual_promo_prompt(manual_info["title"], manual_content)
+    prompt = make_manual_promo_prompt(
+        manual_info["title"],
+        manual_content,
+        manual_info.get("myasp_id", "REPLACE_WITH_YOUR_MYASP_LINK"),
+    )
 
     # Call AI CLI (Codex is the primary choice as per configs)
     result = call_with_fallback(["codex"], prompt, timeout, "manual_draft")
