@@ -107,7 +107,7 @@ def generate_article(root: Path, dry_run: bool = False, cloud: bool = False) -> 
 
     now = datetime.now(JST).replace(microsecond=0)
     post_markdown, title = build_post_markdown(final_article, topic, blog_config, now)
-    post_path = save_post(root, post_markdown, title, now)
+    post_path = save_post(root, post_markdown, title, now, topic, blog_config)
 
     history = state.setdefault("history", [])
     if isinstance(history, list):

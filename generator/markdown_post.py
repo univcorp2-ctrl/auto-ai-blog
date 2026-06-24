@@ -102,10 +102,18 @@ def unique_post_path(posts_dir: Path, now: datetime, title: str) -> Path:
     return candidate
 
 
-def save_post(root: Path, post_markdown: str, title: str, now: datetime) -> Path:
-    posts_dir = root / "hugo-site" / "content" / "posts"
+def resolve_site_dir(root: Path, topic: Topic, blog_config: dict[str, Any]) -> Path:
+    site_map = blog_config.get("site_map", {})
+    if isinstance(site_map, dict) and topic.category in site_map:
+        return root / str(site_map[topic.category])
+    return root / str(blog_config.get("default_site", "hugo-site"))
+
+
+def save_post(root: Path, post_markdown: str, title: str, now: datetime, topic: Topic, blog_config: dict[str, Any]) -> Path:
+    posts_dir = resolve_site_dir(root, topic, blog_config) / "content" / "posts"
     posts_dir.mkdir(parents=True, exist_ok=True)
     path = unique_post_path(posts_dir, now, title)
     path.write_text(post_markdown, encoding="utf-8")
     logging.info("Saved post: %s", path)
     return path
+

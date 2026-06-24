@@ -12,3 +12,7 @@ sites/*/.hugo_build.lock
 .ruff_cache/
 .DS_Store
 Thumbs.db
+*.gdoc
+*.gsheet
+desktop.ini
+
