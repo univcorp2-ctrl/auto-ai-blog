@@ -25,10 +25,14 @@ def test_products_have_free_and_paid_sections() -> None:
     for product in products:
         assert product.free_summary
         assert product.paid_includes
-        page = build_product_page(product)
+        page = build_product_page(product, "# サンプル\n\n## 第1章\n\n本文です。" * 20)
         assert "無料で読める内容" in page
         assert "購入すると手に入る内容" in page
         assert "Stripeで購入する" in page
+        assert f"![{product.title}](/images/manuals/{product.id}.png)" in page
+        assert "無料サンプル" in page
+        assert "実装ロードマップ" in page
+        assert len(page) > 2500
 
 
 def test_products_are_grouped_by_routed_site() -> None:
