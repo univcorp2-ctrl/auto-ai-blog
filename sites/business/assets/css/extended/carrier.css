@@ -1,0 +1,42 @@
+.carrier-hero {
+  margin: 2rem 0 2.5rem;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.12), rgba(244, 244, 245, 0.04));
+}
+
+.carrier-kicker {
+  margin: 0 0 0.75rem;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+.carrier-price {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.carrier-button {
+  display: inline-block;
+  padding: 0.85rem 1.2rem;
+  border-radius: 6px;
+  background: #0f766e;
+  color: #fff !important;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.carrier-button:hover {
+  filter: brightness(1.08);
+}
+
+.carrier-button-secondary {
+  background: transparent;
+  color: var(--primary) !important;
+  border: 1px solid var(--border);
+}
+
+.carrier-note {
+  color: var(--secondary);
+  font-size: 0.9rem;
+}

@@ -1,8 +1,9 @@
-import pandas as pd
+import json
 import os
 import subprocess
-import json
 import urllib.request
+
+import pandas as pd
 
 EXCEL_PATH = r"G:\マイドライブ\AI_Agents\Private\API_AWS_DB.xlsx"
 
@@ -66,7 +67,7 @@ def main():
         ("business-blog", "sites/business")
     ]
 
-    for proj_name, proj_dir in projects:
+    for proj_name, _proj_dir in projects:
         print(f"Creating Cloudflare Pages project: {proj_name}...")
         # Note: wrangler pages project create doesn't support setting framework to hugo directly from CLI if it's not interactive, 
         # but deploy command handles the upload. We just need to create the project.

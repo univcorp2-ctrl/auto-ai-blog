@@ -45,18 +45,20 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Ensure PaperMod theme
-        run: |
-          git submodule update --init --recursive || true
-          if [ ! -d "hugo-site/themes/PaperMod" ]; then
-            git clone --depth=1 https://github.com/adityatelange/hugo-PaperMod.git hugo-site/themes/PaperMod
-          fi
+      - name: Build AI Tech site
+        run: hugo --source sites/ai-tech --gc --minify
 
-      - name: Build Hugo site
-        run: hugo --source hugo-site --gc --minify
+      - name: Build Business site
+        run: hugo --source sites/business --gc --minify
+
+      - name: Build Real Estate site
+        run: hugo --source sites/real-estate --gc --minify
 
       - name: Upload Hugo public artifact
         uses: actions/upload-artifact@v4
         with:
           name: hugo-public
-          path: hugo-site/public
+          path: |
+            sites/ai-tech/public
+            sites/business/public
+            sites/real-estate/public

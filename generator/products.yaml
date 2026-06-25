@@ -1,0 +1,71 @@
+products:
+  - id: investment-affiliate
+    title: "完全放置型・投資アフィリエイト自動化マニュアル"
+    category: "ビジネス・副業"
+    price_jpy: 9800
+    stripe_payment_link: ""
+    free_summary: "AIが市況を要約し、LINEやDiscordへ自動配信する投資アフィリエイト導線の全体像を無料で確認できます。"
+    paid_includes:
+      - "市場データ取得からAI要約、配信までの自動化設計"
+      - "アフィリエイト導線と免責表現のテンプレート"
+      - "Make/Zapier/Pythonでの実装ステップ"
+  - id: saas-affiliate
+    title: "海外SaaS＆ノーコードツール特化型・全自動AIブログアフィリエイト構築マニュアル"
+    category: "AI・テック"
+    price_jpy: 9800
+    stripe_payment_link: ""
+    free_summary: "海外SaaSジャンルで継続報酬を狙うブログ自動化の考え方を無料で読めます。"
+    paid_includes:
+      - "RSS収集、SEOキーワード抽出、記事生成の自動化フロー"
+      - "比較記事とレビュー記事のプロンプト"
+      - "高単価SaaS案件へ自然に誘導するCTA設計"
+  - id: pinterest-machine
+    title: "ピンタレスト不労所得マシーン 構築マニュアル"
+    category: "ビジネス・副業"
+    price_jpy: 9800
+    stripe_payment_link: ""
+    free_summary: "AI画像、Pinterest、Etsyを組み合わせたデジタル商品販売の入口を無料で解説します。"
+    paid_includes:
+      - "AI画像の商品化とEtsy出品ステップ"
+      - "Pinterest自動投稿ワークフロー"
+      - "スパム判定を避ける投稿設計"
+  - id: niche-matching
+    title: "超ニッチ業種特化型マッチングシステム構築マニュアル"
+    category: "不動産マーケティング"
+    price_jpy: 12800
+    stripe_payment_link: ""
+    free_summary: "LINE、Supabase、Stripeを使った小規模マッチングサービスの全体像を無料で確認できます。"
+    paid_includes:
+      - "LINE Bot/LIFFによる登録導線"
+      - "Stripe Connect決済と手数料設計"
+      - "ニッチ市場の選定と初期集客"
+  - id: vps-bot
+    title: "完全無人AIトレードBot VPS環境構築マニュアル"
+    category: "AI・テック"
+    price_jpy: 7800
+    stripe_payment_link: ""
+    free_summary: "Botを止めずに動かすためのVPS運用の考え方を無料で学べます。"
+    paid_includes:
+      - "Ubuntu VPS初期設定"
+      - "screen/systemdによる常時稼働"
+      - "APIキー管理と少額テスト運用"
+  - id: ai-dance-video
+    title: "AI美女ダンス動画量産・収益化マニュアル"
+    category: "AI・テック"
+    price_jpy: 9800
+    stripe_payment_link: ""
+    free_summary: "AIショート動画の制作フローと収益化導線を無料で把握できます。"
+    paid_includes:
+      - "ComfyUI/AnimateDiff/ControlNetの制作手順"
+      - "TikTok/Shorts向け投稿設計"
+      - "量産と外注化のワークフロー"
+  - id: real-estate-ghost
+    title: "不動産怪談YouTubeチャンネル立ち上げ・収益化マニュアル"
+    category: "不動産投資"
+    price_jpy: 7800
+    stripe_payment_link: ""
+    free_summary: "不動産怪談という特化ジャンルでYouTubeを始めるための無料ガイドです。"
+    paid_includes:
+      - "ChatGPT台本、VOICEVOX音声、AI画像の制作手順"
+      - "YMM4テンプレート化とサムネイル設計"
+      - "広告収益と不動産系アフィリエイト導線"

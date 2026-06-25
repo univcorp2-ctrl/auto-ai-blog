@@ -21,7 +21,7 @@ MANUALS = [
     {
         "filename": "automated_investment_affiliate_manual.md",
         "title": "完全放置型・投資アフィリエイト自動化マニュアル",
-        "category": "AI・テック",
+        "category": "ビジネス・副業",
         "keywords": ["アフィリエイト自動化", "投資アフィリエイト", "AI活用", "不労所得"],
         "myasp_id": "INVESTMENT_AFFILIATE_MYASP_ID",
     },
@@ -35,7 +35,7 @@ MANUALS = [
     {
         "filename": "pinterest_passive_income_machine_manual.md",
         "title": "ピンタレスト不労所得マシーン 構築マニュアル",
-        "category": "AI・テック",
+        "category": "ビジネス・副業",
         "keywords": ["Pinterest", "Etsy販売", "デジタル商品", "AI画像生成"],
         "myasp_id": "PINTEREST_MACHINE_MYASP_ID",
     },

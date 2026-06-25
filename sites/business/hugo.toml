@@ -3,6 +3,7 @@ defaultContentLanguage = 'ja'
 title = 'ビジネス・副業専門メディア'
 theme = 'PaperMod'
 ignoreLogs = ['warning-goldmark-raw-html']
+ignoreFiles = ['desktop\.ini$']
 
 [languages.ja]
   locale = 'ja-JP'

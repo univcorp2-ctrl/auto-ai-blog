@@ -9,12 +9,31 @@ blog:
     "不動産投資": "sites/real-estate"
     "賃貸経営": "sites/real-estate"
     "不動産マーケティング": "sites/business"
+    "ビジネス・副業": "sites/business"
 generation:
   min_chars: 2000
   max_chars: 3000
   cli_timeout_seconds: 120
   cli_priority: ["codex"]
+generation_budget:
+  daily_article_limit: 1
+  daily_image_limit: 1
+  weekly_article_limit: 5
+  weekly_image_limit: 5
 git:
   auto_commit: true
   auto_push: true
   commit_message_template: "📝 新記事: {title}"
+deploy:
+  cloudflare_pages:
+    enabled: true
+    sites:
+      - project_name: "ai-tech-blog"
+        source_dir: "sites/ai-tech"
+        url: "https://ai-tech-blog-97e.pages.dev/"
+      - project_name: "business-blog"
+        source_dir: "sites/business"
+        url: "https://business-blog.pages.dev/"
+      - project_name: "real-estate-blog"
+        source_dir: "sites/real-estate"
+        url: "https://real-estate-blog.pages.dev/"

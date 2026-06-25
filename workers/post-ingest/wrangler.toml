@@ -1,0 +1,8 @@
+name = "auto-ai-blog-post-ingest"
+main = "src/worker.js"
+compatibility_date = "2026-06-25"
+
+[vars]
+GITHUB_OWNER = "univcorp2-ctrl"
+GITHUB_REPO = "auto-ai-blog"
+GITHUB_BRANCH = "main"

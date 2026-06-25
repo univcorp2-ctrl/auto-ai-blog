@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build_and_deploy:
@@ -15,7 +16,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Python static check
+        run: ruff check .
+
+      - name: Python tests
+        run: pytest
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
@@ -28,35 +47,8 @@ jobs:
         with:
           node-version: '22'
 
-      # AI Tech Blog
-      - name: Build AI Tech Site
-        run: cd sites/ai-tech && hugo --minify
-
-      - name: Deploy AI Tech to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy sites/ai-tech/public --project-name="ai-tech-blog" --commit-dirty=true
-
-      # Real Estate Blog
-      - name: Build Real Estate Site
-        run: cd sites/real-estate && hugo --minify
-
-      - name: Deploy Real Estate to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy sites/real-estate/public --project-name="real-estate-blog" --commit-dirty=true
-
-      # Business Blog
-      - name: Build Business Site
-        run: cd sites/business && hugo --minify
-
-      - name: Deploy Business to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy sites/business/public --project-name="business-blog" --commit-dirty=true
+      - name: Build and deploy all Hugo sites to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: python scripts/deploy_cloudflare_pages.py

@@ -16,4 +16,7 @@ Thumbs.db
 *.gsheet
 desktop.ini
 .wrangler/
+tmp/
+incoming/_archive/
+generator/.budget_ledger.json
 
