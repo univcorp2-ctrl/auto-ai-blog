@@ -16,6 +16,7 @@ from generator.config_loader import load_yaml
 from generator.markdown_post import make_slug, unique_post_path, yaml_quote
 from generator.routing import route_category_to_site
 from generator.runtime import JST, repo_root
+from generator.slop_guard import assert_not_slop, load_guidelines
 
 
 def load_payload(source: Path | dict[str, Any]) -> dict[str, Any]:
@@ -45,6 +46,7 @@ def store_cover_image(root: Path, site_dir: Path, payload: dict[str, Any], slug:
         target.write_bytes(base64.b64decode(str(image_base64)))
     else:
         shutil.copyfile(Path(str(image_source)), target)
+    payload.setdefault("_stored_files", []).append(str(target))
     return f"/images/posts/{target.name}"
 
 
@@ -68,6 +70,7 @@ def store_inline_images(root: Path, site_dir: Path, payload: dict[str, Any], slu
             target.write_bytes(base64.b64decode(str(image_base64)))
         else:
             shutil.copyfile(Path(str(image_source)), target)
+        payload.setdefault("_stored_files", []).append(str(target))
         alt = str(raw_image.get("alt") or "記事内画像")
         stored[image_id] = f"![{alt}](/images/posts/{target.name})"
     return stored
@@ -119,13 +122,30 @@ def import_payload(root: Path, config: dict[str, Any], source: Path | dict[str, 
     site_dir = route_category_to_site(config, str(payload.get("category") or "AI・テック"))
     title = str(payload.get("title") or "外部AI記事")
     slug = make_slug(title)
-    cover_url = store_cover_image(root, site_dir, payload, slug)
-    payload["_stored_inline_images"] = store_inline_images(root, site_dir, payload, slug)
+    try:
+        cover_url = store_cover_image(root, site_dir, payload, slug)
+        payload["_stored_inline_images"] = store_inline_images(root, site_dir, payload, slug)
+    except Exception:
+        cleanup_stored_files(payload)
+        raise
     posts_dir = root / site_dir / "content" / "posts"
     posts_dir.mkdir(parents=True, exist_ok=True)
     post_path = unique_post_path(posts_dir, now, title)
-    post_path.write_text(build_markdown(payload, cover_url, now), encoding="utf-8")
+    markdown = build_markdown(payload, cover_url, now)
+    try:
+        assert_not_slop(markdown, load_guidelines(root))
+    except Exception:
+        cleanup_stored_files(payload)
+        raise
+    post_path.write_text(markdown, encoding="utf-8")
     return post_path
+
+
+def cleanup_stored_files(payload: dict[str, Any]) -> None:
+    for raw_path in payload.get("_stored_files", []) or []:
+        path = Path(str(raw_path))
+        if path.exists():
+            path.unlink()
 
 
 def iter_incoming(root: Path) -> list[Path]:

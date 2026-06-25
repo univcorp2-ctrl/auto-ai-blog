@@ -39,6 +39,8 @@ async function handlePost(request, env) {
   if (!title || !body) {
     return json({ ok: false, error: "title_and_body_required" }, 400);
   }
+  const slopError = checkSlopReview(payload);
+  if (slopError) return slopError;
 
   const route = CATEGORY_SITE_MAP[category] || DEFAULT_ROUTE;
   const now = new Date();
@@ -66,6 +68,23 @@ async function handlePost(request, env) {
     cover_path: cover?.repoPath || null,
     inline_image_paths: inlineImages.map((image) => image.repoPath),
   });
+}
+
+function checkSlopReview(payload) {
+  const review = payload.slop_review || {};
+  const score = Number(review.score || 0);
+  const minimum = Number(review.minimum_score || 8);
+  if (!review || score < minimum || minimum < 8) {
+    return json(
+      {
+        ok: false,
+        error: "ai_slop_review_required",
+        message: "Submit through scripts/submit_external_post.py or include a slop_review score of at least 8.",
+      },
+      422,
+    );
+  }
+  return null;
 }
 
 function checkAuth(request, env) {

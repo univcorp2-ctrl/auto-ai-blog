@@ -41,6 +41,11 @@ Use ASCII image IDs and insert them inside the article body with
 `{{image:<id>}}`. The Worker replaces those placeholders with uploaded Markdown
 image links.
 
+All submissions must include the Notion-derived AI slop review. The normal path
+is to use `scripts/submit_external_post.py`; it validates the article against
+`generator/ai_slop_guidelines.json` and attaches `slop_review`. Direct API calls
+without a review score of at least 8 are rejected with `422 ai_slop_review_required`.
+
 Example:
 
 ```json
@@ -53,6 +58,10 @@ Example:
   "paid_teaser_markdown": "## 続きで学べる内容\n\n有料マニュアルの案内...",
   "product_id": "saas-affiliate",
   "cover_image_prompt": "Japanese editorial image about AI automation, no text",
+  "slop_review": {
+    "score": 8,
+    "minimum_score": 8
+  },
   "inline_images": [
     {
       "id": "flow",

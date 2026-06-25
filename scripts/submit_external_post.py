@@ -9,6 +9,11 @@ import urllib.request
 from pathlib import Path
 from typing import Any
 
+if __package__ in {None, ""}:
+    sys.path.append(str(Path(__file__).resolve().parents[1]))
+
+from generator.slop_guard import assert_not_slop, load_guidelines
+
 DEFAULT_API_URL = "https://auto-ai-blog-post-ingest.univcorp2.workers.dev/api/posts"
 IMAGE_MODEL = "gpt-image-2"
 DEFAULT_IMAGE_QUALITY = "high"
@@ -112,6 +117,14 @@ def prepare_payload(payload: dict[str, Any], *, openai_api_key: str, image_quali
     return prepared
 
 
+def payload_markdown_for_review(payload: dict[str, Any]) -> str:
+    title = str(payload.get("title") or "外部AI記事")
+    body = str(payload.get("body_markdown") or payload.get("free_body_markdown") or "")
+    if payload.get("cover_image_base64") or payload.get("cover_image_url"):
+        body = f"![cover image](/images/posts/cover.png)\n\n{body}"
+    return f"# {title}\n\n{body}"
+
+
 def write_dry_run(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -136,6 +149,9 @@ def main() -> int:
         raise RuntimeError("OPENAI_API_KEY is required for CLI image generation.")
 
     prepared = prepare_payload(payload, openai_api_key=str(args.openai_api_key or ""), image_quality=args.image_quality)
+    root = Path(__file__).resolve().parents[1]
+    report = assert_not_slop(payload_markdown_for_review(prepared), load_guidelines(root))
+    prepared["slop_review"] = report.to_dict()
     if args.dry_run_output:
         write_dry_run(args.dry_run_output, prepared)
         print(args.dry_run_output)

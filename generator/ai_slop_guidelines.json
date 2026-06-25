@@ -1,0 +1,54 @@
+{
+  "source": "Notion AI Slop guidelines",
+  "source_pages": [
+    {
+      "title": "AIスロップ防止ガイドライン — Hiroコンテンツチーム完全版",
+      "id": "37710562-e58b-816d-a3b2-fe6de9956efa",
+      "url": "https://app.notion.com/p/37710562e58b816da3b2fe6de9956efa"
+    },
+    {
+      "title": "AI Slop 対策ナレッジベース（毎日自動更新）",
+      "id": "38110562-e58b-8113-ad1a-cfa6638392c3",
+      "url": "https://app.notion.com/p/38110562e58b8113ad1acfa6638392c3"
+    },
+    {
+      "title": "AIスロップ反面教師リサーチ Run 001",
+      "id": "38310562-e58b-81ab-bd1a-dd3dd2d4915a",
+      "url": "https://app.notion.com/p/38310562e58b81abbd1add3dd2d4915a"
+    }
+  ],
+  "fetched_at": "2026-06-26T00:00:00+09:00",
+  "minimum_score": 8,
+  "checks": [
+    "Hiroの実体験・固有データが含まれている",
+    "一人称の具体エピソードがある",
+    "他者が書けない独自情報がある",
+    "数字に根拠・出典・自分のデータがある",
+    "冒頭で読者が役立つと判断できる",
+    "AI定型文体を避けている",
+    "画像・スクリーンショット・グラフなど視覚的証拠がある",
+    "反論・限界・注意点を正直に書いている",
+    "読了後の具体的アクションがある",
+    "類似コンテンツとの差別化が明確である"
+  ],
+  "banned_patterns": [
+    "Moreover",
+    "Furthermore",
+    "Additionally",
+    "In conclusion",
+    "重要なのは",
+    "本質は",
+    "まとめると",
+    "It’s not",
+    "It's not",
+    "だけでいい",
+    "しなくていい"
+  ],
+  "required_review_roles": [
+    "編集長",
+    "専門家",
+    "SEO",
+    "画像品質",
+    "法務・リスク"
+  ]
+}

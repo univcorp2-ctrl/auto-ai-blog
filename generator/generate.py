@@ -28,6 +28,7 @@ from generator.markdown_post import (
 from generator.models import CliResult, Topic
 from generator.prompts import draft_prompt, final_check_prompt, review_prompt
 from generator.runtime import JST, repo_root, setup_logging
+from generator.slop_guard import assert_not_slop, load_guidelines
 
 __all__ = [
     "CLI_COMMANDS",
@@ -107,6 +108,7 @@ def generate_article(root: Path, dry_run: bool = False, cloud: bool = False) -> 
 
     now = datetime.now(JST).replace(microsecond=0)
     post_markdown, title = build_post_markdown(final_article, topic, blog_config, now)
+    assert_not_slop(post_markdown, load_guidelines(root))
     post_path = save_post(root, post_markdown, title, now, topic, blog_config)
 
     history = state.setdefault("history", [])

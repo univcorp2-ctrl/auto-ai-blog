@@ -15,6 +15,7 @@ from generator.git_ops import commit_and_push
 from generator.markdown_post import build_post_markdown, save_post
 from generator.models import Topic
 from generator.runtime import JST, repo_root, setup_logging
+from generator.slop_guard import assert_not_slop, load_guidelines
 
 # List of manuals and their attributes
 MANUALS = [
@@ -115,8 +116,15 @@ def make_manual_promo_prompt(manual_title: str, manual_content: str, myasp_id: s
 ---
 
 ### 重要：
-- 文字数は 2000〜3000字程度 としてください。
+- 文字数は 5000〜7000字程度 としてください。
 - 専門的でありながら親切で行動を促すトーンで執筆してください。
+- NotionのAIスロップ防止基準を満たしてください。Hiroまたはこのサイト固有の実行ログ・検証結果・一次情報・具体データを必ず含めてください。
+- 数字を書く場合は、実測・ログ・出典・前提条件のいずれかを添えてください。
+- 画像で説明すべき箇所、視覚的証拠、スクリーンショットや図解の案を必ず1つ入れてください。
+- 反論、限界、使えないケース、注意点を正直に書いてください。
+- 読者が読了後すぐに取れる具体的アクションを1つ以上提示してください。
+- 類似記事との差別化ポイントを明確にしてください。
+- 「重要なのは」「本質は」「まとめると」「〜だけでいい」「〜しなくていい」のようなAI定型・思考停止表現は避けてください。
 - front matter は絶対に付けないでください。
 """
 
@@ -162,6 +170,7 @@ def generate_manual_promo_post(root: Path, dry_run: bool = False) -> Path | None
     )
 
     post_markdown, title = build_post_markdown(result.output, topic_obj, blog_config, now)
+    assert_not_slop(post_markdown, load_guidelines(root))
     post_path = save_post(root, post_markdown, title, now, topic_obj, blog_config)
 
     # Update state
