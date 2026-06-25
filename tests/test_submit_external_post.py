@@ -30,3 +30,16 @@ def test_prepare_payload_generates_cover_and_inline_images(monkeypatch) -> None:
         "sk-test:medium:記事全体を説明する画像",
         "sk-test:medium:本文途中の図解",
     ]
+
+
+def test_submit_external_post_uses_latest_high_quality_image_defaults() -> None:
+    assert submit_external_post.IMAGE_MODEL == "gpt-image-2"
+    assert submit_external_post.DEFAULT_IMAGE_QUALITY == "high"
+
+
+def test_enhance_prompt_requires_explanatory_image() -> None:
+    prompt = submit_external_post.enhance_image_prompt("AI投稿フローを説明する図")
+
+    assert "visually explain" in prompt
+    assert "specific article" in prompt
+    assert "no generic AI" in prompt

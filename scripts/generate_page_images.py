@@ -18,6 +18,7 @@ from generator.runtime import repo_root
 
 IMAGE_MODEL = "gpt-image-2"
 IMAGE_SIZE = "1536x1024"
+IMAGE_QUALITY = "high"
 
 
 def extract_front_matter_value(markdown: str, key: str) -> str:
@@ -45,15 +46,16 @@ def build_image_prompt(markdown: str) -> str:
     category = extract_category(markdown)
     excerpt = plain_excerpt(markdown)
     return (
-        "Create a unique, content-specific Japanese editorial web article cover image.\n"
+        "Create a unique, content-specific Japanese editorial web article cover image using the latest high-quality GPT image style.\n"
         f"Title/topic: {title}\n"
         f"Category: {category}\n"
         f"Article context: {excerpt}\n"
         "The image must visually explain the core idea of this exact article, not just generic AI or business imagery.\n"
-        "Use concrete objects, setting, workflow, or metaphor that matches the article content.\n"
+        "Show the beginner-friendly workflow, key decision point, output artifact, or before-after transformation described by the article.\n"
+        "Use concrete objects, settings, documents, dashboards, tools, people, or spatial relationships that match the article content.\n"
         "Style: premium realistic editorial photography or polished explanatory editorial illustration, trustworthy and conversion-oriented.\n"
-        "Composition: landscape cover image with clear focal point, usable on a Hugo/PaperMod article page.\n"
-        "Constraints: no readable text, no logos, no watermark, no fake app screenshots, no repeated generic desk-only composition."
+        "Composition: landscape cover image with clear focal point, strong depth, clean negative space, usable on a Hugo/PaperMod article page.\n"
+        "Constraints: no readable text, no logos, no watermark, no fake app screenshots, no repeated generic desk-only composition, no vague glowing networks."
     )
 
 
@@ -83,7 +85,7 @@ def insert_cover_front_matter(markdown: str, image_path: str) -> str:
     return f"---{parts[1]}{cover_block}---{parts[2]}"
 
 
-def iter_pages(root: Path) -> list[Path]:
+def iter_pages(root: Path, *, content_kind: str = "all", limit: int | None = None) -> list[Path]:
     pages: list[Path] = []
     for site in (root / "sites").iterdir():
         if not site.is_dir():
@@ -92,9 +94,14 @@ def iter_pages(root: Path) -> list[Path]:
         if not content.exists():
             continue
         for path in content.rglob("*.md"):
-            if any(part in {"posts", "manuals"} for part in path.parts):
+            if path.name == "_index.md":
+                continue
+            is_post_or_manual = any(part in {"posts", "manuals"} for part in path.parts)
+            matches_kind = content_kind == "all" or content_kind in path.parts
+            if is_post_or_manual and matches_kind:
                 pages.append(path)
-    return sorted(pages)
+    sorted_pages = sorted(pages)
+    return sorted_pages[:limit] if limit is not None else sorted_pages
 
 
 def output_path_for_page(root: Path, page: Path) -> tuple[Path, str]:
@@ -112,7 +119,7 @@ def generate_image(api_key: str, prompt: str) -> bytes:
                 "model": IMAGE_MODEL,
                 "prompt": prompt,
                 "size": IMAGE_SIZE,
-                "quality": "medium",
+                "quality": IMAGE_QUALITY,
                 "output_format": "png",
             }
         ).encode("utf-8"),
@@ -128,11 +135,19 @@ def generate_image(api_key: str, prompt: str) -> bytes:
     return base64.b64decode(b64)
 
 
-def process_pages(root: Path, *, overwrite: bool, dry_run: bool, prompt_manifest: Path | None) -> list[Path]:
+def process_pages(
+    root: Path,
+    *,
+    overwrite: bool,
+    dry_run: bool,
+    prompt_manifest: Path | None,
+    content_kind: str = "all",
+    limit: int | None = None,
+) -> list[Path]:
     api_key = os.getenv("OPENAI_API_KEY", "").strip()
     manifest_rows = []
     written: list[Path] = []
-    for page in iter_pages(root):
+    for page in iter_pages(root, content_kind=content_kind, limit=limit):
         markdown = page.read_text(encoding="utf-8")
         target, public_path = output_path_for_page(root, page)
         prompt = build_image_prompt(markdown)
@@ -163,11 +178,20 @@ def main() -> int:
     parser.add_argument("--overwrite", action="store_true", help="Regenerate existing generated images.")
     parser.add_argument("--dry-run", action="store_true", help="Only create prompt manifest; do not call image API.")
     parser.add_argument("--prompt-manifest", default="tmp/page-image-prompts.json", help="Where to write generated prompts.")
+    parser.add_argument("--content-kind", default="all", choices=["all", "posts", "manuals"], help="Limit image generation scope.")
+    parser.add_argument("--limit", type=int, help="Maximum number of pages to process.")
     args = parser.parse_args()
 
     root = repo_root()
     manifest = root / args.prompt_manifest if args.prompt_manifest else None
-    written = process_pages(root, overwrite=args.overwrite, dry_run=args.dry_run, prompt_manifest=manifest)
+    written = process_pages(
+        root,
+        overwrite=args.overwrite,
+        dry_run=args.dry_run,
+        prompt_manifest=manifest,
+        content_kind=args.content_kind,
+        limit=args.limit,
+    )
     if not os.getenv("OPENAI_API_KEY") and not args.dry_run:
         print("OPENAI_API_KEY is not set; wrote prompt manifest only and did not generate images.", file=sys.stderr)
         return 2

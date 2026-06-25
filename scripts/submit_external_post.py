@@ -11,6 +11,8 @@ from typing import Any
 
 DEFAULT_API_URL = "https://auto-ai-blog-post-ingest.univcorp2.workers.dev/api/posts"
 IMAGE_MODEL = "gpt-image-2"
+DEFAULT_IMAGE_QUALITY = "high"
+IMAGE_SIZE = "1536x1024"
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -39,13 +41,27 @@ def post_json(url: str, api_key: str, payload: dict[str, Any]) -> dict[str, Any]
         raise RuntimeError(f"post failed: HTTP {exc.code}: {detail}") from exc
 
 
+def enhance_image_prompt(prompt: str) -> str:
+    return (
+        f"{prompt}\n"
+        "Create a premium Japanese editorial web article image that visually explain the specific article.\n"
+        "The image must show the core mechanism, workflow, decision point, or beginner-friendly step sequence.\n"
+        "Use concrete objects, screens, documents, dashboards, people, tools, or spatial relationships that match the topic.\n"
+        "Avoid no generic AI, no floating robot heads, no vague glowing networks, no meaningless laptop desk scene.\n"
+        "Style: high-quality realistic editorial photography or polished explanatory illustration, trustworthy and purchase-worthy.\n"
+        "Composition: landscape, clear focal point, strong depth, clean negative space, useful as a blog cover or inline explanatory image.\n"
+        "Constraints: no readable text, no logos, no watermark, no fake UI labels."
+    )
+
+
 def generate_image_base64(api_key: str, prompt: str, *, quality: str) -> str:
     request_body = json.dumps(
         {
             "model": IMAGE_MODEL,
-            "prompt": f"{prompt}\nJapanese editorial web article image, no text, no watermark.",
-            "size": "1536x1024",
+            "prompt": enhance_image_prompt(prompt),
+            "size": IMAGE_SIZE,
             "quality": quality,
+            "output_format": "png",
         },
         ensure_ascii=False,
     ).encode("utf-8")
@@ -107,7 +123,7 @@ def main() -> int:
     parser.add_argument("--api-url", default=os.environ.get("AUTO_AI_BLOG_API_URL", DEFAULT_API_URL))
     parser.add_argument("--ingest-key", default=os.environ.get("INGEST_API_KEY"))
     parser.add_argument("--openai-api-key", default=os.environ.get("OPENAI_API_KEY"))
-    parser.add_argument("--image-quality", default="medium", choices=["low", "medium", "high"])
+    parser.add_argument("--image-quality", default=DEFAULT_IMAGE_QUALITY, choices=["low", "medium", "high"])
     parser.add_argument("--dry-run-output", type=Path, help="Write the generated payload and do not submit it.")
     args = parser.parse_args()
 

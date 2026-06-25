@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import subprocess
 import sys
 from datetime import date
@@ -54,6 +55,32 @@ def main() -> int:
         if generated:
             ledger = consume(ledger, articles=1, images=0)
             save_budget(ledger_path, ledger)
+            if os.getenv("OPENAI_API_KEY") and can_consume(
+                ledger,
+                daily_article_limit=daily_articles,
+                daily_image_limit=daily_images,
+                weekly_article_limit=weekly_articles,
+                weekly_image_limit=weekly_images,
+                articles=0,
+                images=1,
+            ):
+                run_step(
+                    root,
+                    [
+                        sys.executable,
+                        "scripts/generate_page_images.py",
+                        "--content-kind",
+                        "posts",
+                        "--limit",
+                        "1",
+                        "--prompt-manifest",
+                        "tmp/daily-post-image-prompts.json",
+                    ],
+                )
+                ledger = consume(ledger, articles=0, images=1)
+                save_budget(ledger_path, ledger)
+            elif not os.getenv("OPENAI_API_KEY"):
+                print("OPENAI_API_KEY is not set; skipped daily CLI image generation.")
     else:
         print("Generation budget exhausted; skipped Codex article generation.")
 

@@ -32,7 +32,12 @@ def test_products_have_free_and_paid_sections() -> None:
         assert f"![{product.title}](/images/manuals/{product.id}.png)" in page
         assert "無料サンプル" in page
         assert "実装ロードマップ" in page
-        assert len(page) > 2500
+        assert "初心者向けステップ・バイ・ステップ" in page
+        assert "専門家目線のチェックポイント" in page
+        assert "つまずきやすい失敗と対策" in page
+        assert "成果を測るKPI" in page
+        assert "購入者が作る成果物" in page
+        assert len(page) > 5500
 
 
 def test_products_are_grouped_by_routed_site() -> None:

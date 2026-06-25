@@ -11,9 +11,9 @@ blog:
     "不動産マーケティング": "sites/business"
     "ビジネス・副業": "sites/business"
 generation:
-  min_chars: 2000
-  max_chars: 3000
-  cli_timeout_seconds: 120
+  min_chars: 5000
+  max_chars: 7000
+  cli_timeout_seconds: 240
   cli_priority: ["codex"]
 generation_budget:
   daily_article_limit: 1
