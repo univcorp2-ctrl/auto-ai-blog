@@ -48,11 +48,53 @@ def store_cover_image(root: Path, site_dir: Path, payload: dict[str, Any], slug:
     return f"/images/posts/{target.name}"
 
 
+def store_inline_images(root: Path, site_dir: Path, payload: dict[str, Any], slug: str) -> dict[str, str]:
+    images_dir = root / site_dir / "static" / "images" / "posts"
+    stored: dict[str, str] = {}
+    for index, raw_image in enumerate(payload.get("inline_images", []) or [], start=1):
+        if not isinstance(raw_image, dict):
+            continue
+        image_id = str(raw_image.get("id") or f"image-{index}").strip()
+        image_source = raw_image.get("path") or raw_image.get("image_path")
+        image_base64 = raw_image.get("base64") or raw_image.get("image_base64")
+        if not image_id or (not image_source and not image_base64):
+            continue
+        images_dir.mkdir(parents=True, exist_ok=True)
+        extension = str(raw_image.get("extension") or raw_image.get("image_extension") or ".png")
+        if not extension.startswith("."):
+            extension = f".{extension}"
+        target = images_dir / f"{slug}-{image_id}{extension}"
+        if image_base64:
+            target.write_bytes(base64.b64decode(str(image_base64)))
+        else:
+            shutil.copyfile(Path(str(image_source)), target)
+        alt = str(raw_image.get("alt") or "記事内画像")
+        stored[image_id] = f"![{alt}](/images/posts/{target.name})"
+    return stored
+
+
+def insert_inline_images(body: str, inline_images: dict[str, str]) -> str:
+    updated = body
+    unused: list[str] = []
+    for image_id, markdown in inline_images.items():
+        placeholder = f"{{{{image:{image_id}}}}}"
+        if placeholder in updated:
+            updated = updated.replace(placeholder, markdown)
+        else:
+            unused.append(markdown)
+    if unused:
+        updated = "\n\n".join([updated, *unused])
+    return updated
+
+
 def build_markdown(payload: dict[str, Any], cover_url: str | None, now: datetime) -> str:
     title = str(payload.get("title") or "外部AI記事").strip()
     category = str(payload.get("category") or "AI・テック").strip()
     tags = [str(tag) for tag in payload.get("tags", ["AI"])]
     body = str(payload.get("body_markdown") or payload.get("free_body_markdown") or "").strip()
+    inline_images = payload.get("_stored_inline_images", {})
+    if isinstance(inline_images, dict):
+        body = insert_inline_images(body, {str(key): str(value) for key, value in inline_images.items()})
     summary = str(payload.get("summary") or title).strip()
     front_matter = [
         "---",
@@ -78,6 +120,7 @@ def import_payload(root: Path, config: dict[str, Any], source: Path | dict[str, 
     title = str(payload.get("title") or "外部AI記事")
     slug = make_slug(title)
     cover_url = store_cover_image(root, site_dir, payload, slug)
+    payload["_stored_inline_images"] = store_inline_images(root, site_dir, payload, slug)
     posts_dir = root / site_dir / "content" / "posts"
     posts_dir.mkdir(parents=True, exist_ok=True)
     post_path = unique_post_path(posts_dir, now, title)

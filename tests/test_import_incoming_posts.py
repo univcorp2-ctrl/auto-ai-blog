@@ -48,3 +48,25 @@ def test_import_payload_accepts_json_file(tmp_path: Path) -> None:
 
     assert post_path.exists()
     assert post_path.parent == root / "sites" / "ai-tech" / "content" / "posts"
+
+
+def test_import_payload_inserts_inline_images(tmp_path: Path) -> None:
+    root = tmp_path
+    config = {"blog": {"default_site": "sites/ai-tech", "site_map": {}}}
+    image = root / "flow.txt"
+    image.write_text("fake inline image", encoding="utf-8")
+    payload = {
+        "title": "CLI画像差し込みテスト",
+        "category": "AI・テック",
+        "body_markdown": "## 前半\n\n{{image:flow}}\n\n## 後半\n\n本文です。",
+        "inline_images": [{"id": "flow", "path": str(image), "alt": "記事フロー図", "extension": ".png"}],
+    }
+
+    post_path = import_payload(root, config, payload)
+    markdown = post_path.read_text(encoding="utf-8")
+
+    assert "{{image:flow}}" not in markdown
+    assert "![記事フロー図](/images/posts/" in markdown
+    assert "-flow.png)" in markdown
+    stored_images = list((root / "sites" / "ai-tech" / "static" / "images" / "posts").glob("*-flow.png"))
+    assert len(stored_images) == 1

@@ -45,15 +45,27 @@ async function handlePost(request, env) {
   const slug = slugify(title, now);
   const postPath = `${route.siteDir}/content/posts/${datePart(now)}-${slug}.md`;
   const cover = await resolveCoverImage(env, route.siteDir, slug, payload);
-  const markdown = buildMarkdown({ title, category, payload, body, now, coverPath: cover?.publicPath });
+  const inlineImages = await resolveInlineImages(route.siteDir, slug, payload);
+  const bodyWithImages = insertInlineImages(body, inlineImages);
+  const markdown = buildMarkdown({ title, category, payload, body: bodyWithImages, now, coverPath: cover?.publicPath });
 
   await putGitHubFile(env, postPath, utf8ToBase64(markdown), `external post: ${title}`);
   if (cover) {
     await putGitHubFile(env, cover.repoPath, cover.base64, `cover image: ${title}`);
   }
+  for (const image of inlineImages) {
+    await putGitHubFile(env, image.repoPath, image.base64, `inline image: ${title} ${image.id}`);
+  }
 
   const postUrl = `${route.baseUrl}/posts/${datePart(now)}-${slug}/`;
-  return json({ ok: true, site: route.siteDir, post_path: postPath, post_url: postUrl, cover_path: cover?.repoPath || null });
+  return json({
+    ok: true,
+    site: route.siteDir,
+    post_path: postPath,
+    post_url: postUrl,
+    cover_path: cover?.repoPath || null,
+    inline_image_paths: inlineImages.map((image) => image.repoPath),
+  });
 }
 
 function checkAuth(request, env) {
@@ -107,9 +119,6 @@ async function resolveCoverImage(env, siteDir, slug, payload) {
     if (!imageResponse.ok) throw new Error(`cover_image_url fetch failed: ${imageResponse.status}`);
     base64 = arrayBufferToBase64(await imageResponse.arrayBuffer());
   }
-  if (!base64 && payload.cover_image_prompt && env.OPENAI_API_KEY) {
-    base64 = await generateOpenAIImage(env.OPENAI_API_KEY, String(payload.cover_image_prompt));
-  }
   if (!base64) return null;
   const filename = `${slug}${extension}`;
   return {
@@ -119,25 +128,47 @@ async function resolveCoverImage(env, siteDir, slug, payload) {
   };
 }
 
-async function generateOpenAIImage(apiKey, prompt) {
-  const response = await fetch("https://api.openai.com/v1/images/generations", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: "gpt-image-2",
-      prompt: `${prompt}\nJapanese editorial web article cover image, no text, no watermark.`,
-      size: "1536x1024",
-      quality: "medium",
-    }),
-  });
-  const data = await response.json();
-  if (!response.ok) throw new Error(`OpenAI image generation failed: ${data.error?.message || response.status}`);
-  const image = data.data?.[0]?.b64_json;
-  if (!image) throw new Error("OpenAI image generation returned no image");
-  return image;
+async function resolveInlineImages(siteDir, slug, payload) {
+  if (!Array.isArray(payload.inline_images)) return [];
+  const images = [];
+  for (const [index, item] of payload.inline_images.entries()) {
+    const id = slugify(clean(item.id || `image-${index + 1}`), new Date());
+    const extension = normalizeExtension(item.extension || item.image_extension || ".png");
+    let base64 = clean(item.base64 || item.image_base64 || "");
+    if (!base64 && item.url) {
+      const imageResponse = await fetch(String(item.url));
+      if (!imageResponse.ok) throw new Error(`inline image url fetch failed: ${imageResponse.status}`);
+      base64 = arrayBufferToBase64(await imageResponse.arrayBuffer());
+    }
+    if (!base64) continue;
+    const filename = `${slug}-${id}${extension}`;
+    images.push({
+      id,
+      alt: clean(item.alt || item.title || "記事内画像"),
+      repoPath: `${siteDir}/static/images/posts/${filename}`,
+      publicPath: `/images/posts/${filename}`,
+      base64,
+    });
+  }
+  return images;
+}
+
+function insertInlineImages(body, images) {
+  let updated = body;
+  const unused = [];
+  for (const image of images) {
+    const markdown = `![${image.alt}](${image.publicPath})`;
+    const placeholder = `{{image:${image.id}}}`;
+    if (updated.includes(placeholder)) {
+      updated = updated.split(placeholder).join(markdown);
+    } else {
+      unused.push(markdown);
+    }
+  }
+  if (unused.length) {
+    updated = `${updated}\n\n${unused.join("\n\n")}`;
+  }
+  return updated;
 }
 
 async function putGitHubFile(env, path, contentBase64, message) {
