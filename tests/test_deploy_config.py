@@ -25,6 +25,7 @@ def test_cloudflare_pages_sites_are_configured_for_existing_hugo_sites() -> None
 
 
 def test_resolve_command_uses_windows_cmd_shims(monkeypatch) -> None:
+    monkeypatch.setattr("scripts.deploy_cloudflare_pages.os.name", "nt")
     monkeypatch.setattr("scripts.deploy_cloudflare_pages.shutil.which", lambda name: f"C:/tools/{name}")
 
     command = resolve_command(["npx", "wrangler", "--version"])
