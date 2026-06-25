@@ -3,7 +3,7 @@ title: "ピンタレスト不労所得マシーン 構築マニュアル"
 draft: false
 description: "AI画像、Pinterest、Etsyを組み合わせたデジタル商品販売の入口を無料で解説します。"
 cover:
-  image: "/images/category-cover.png"
+  image: "/images/manuals/pinterest-machine.png"
   relative: false
 ---
 

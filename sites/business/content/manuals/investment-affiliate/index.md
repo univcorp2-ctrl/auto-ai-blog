@@ -3,7 +3,7 @@ title: "完全放置型・投資アフィリエイト自動化マニュアル"
 draft: false
 description: "AIが市況を要約し、LINEやDiscordへ自動配信する投資アフィリエイト導線の全体像を無料で確認できます。"
 cover:
-  image: "/images/category-cover.png"
+  image: "/images/manuals/investment-affiliate.png"
   relative: false
 ---
 

@@ -3,7 +3,7 @@ title: "完全無人AIトレードBot VPS環境構築マニュアル"
 draft: false
 description: "Botを止めずに動かすためのVPS運用の考え方を無料で学べます。"
 cover:
-  image: "/images/category-cover.png"
+  image: "/images/manuals/vps-bot.png"
   relative: false
 ---
 

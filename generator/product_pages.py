@@ -116,7 +116,7 @@ title: {yaml_quote(product.title)}
 draft: false
 description: {yaml_quote(product.free_summary)}
 cover:
-  image: "/images/category-cover.png"
+  image: "/images/manuals/{product.id}.png"
   relative: false
 ---
 

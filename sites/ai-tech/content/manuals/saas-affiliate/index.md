@@ -3,7 +3,7 @@ title: "海外SaaS＆ノーコードツール特化型・全自動AIブログア
 draft: false
 description: "海外SaaSジャンルで継続報酬を狙うブログ自動化の考え方を無料で読めます。"
 cover:
-  image: "/images/category-cover.png"
+  image: "/images/manuals/saas-affiliate.png"
   relative: false
 ---
 

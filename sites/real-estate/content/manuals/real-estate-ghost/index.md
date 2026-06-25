@@ -3,7 +3,7 @@ title: "不動産怪談YouTubeチャンネル立ち上げ・収益化マニュ�
 draft: false
 description: "不動産怪談という特化ジャンルでYouTubeを始めるための無料ガイドです。"
 cover:
-  image: "/images/category-cover.png"
+  image: "/images/manuals/real-estate-ghost.png"
   relative: false
 ---
 

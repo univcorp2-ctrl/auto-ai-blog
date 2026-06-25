@@ -3,7 +3,7 @@ title: "超ニッチ業種特化型マッチングシステム構築マニュア
 draft: false
 description: "LINE、Supabase、Stripeを使った小規模マッチングサービスの全体像を無料で確認できます。"
 cover:
-  image: "/images/category-cover.png"
+  image: "/images/manuals/niche-matching.png"
   relative: false
 ---
 

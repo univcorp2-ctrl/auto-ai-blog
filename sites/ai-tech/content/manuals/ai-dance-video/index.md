@@ -3,7 +3,7 @@ title: "AI美女ダンス動画量産・収益化マニュアル"
 draft: false
 description: "AIショート動画の制作フローと収益化導線を無料で把握できます。"
 cover:
-  image: "/images/category-cover.png"
+  image: "/images/manuals/ai-dance-video.png"
   relative: false
 ---
 
