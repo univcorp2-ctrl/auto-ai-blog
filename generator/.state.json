@@ -1,5 +1,5 @@
 {
-  "next_index": 1,
+  "next_index": 2,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -7,6 +7,14 @@
       "topic": "ChatGPTを不動産投資に活用する5つの方法",
       "title": "初心者でも迷わない！ChatGPTを不動産投資に活用する5つの方法",
       "path": "sites\\ai-tech\\content\\posts\\2026-06-22-chu-xin-zhe-temomi-wanai-chatgptwobu-dong-chan-tou-zi-nihuo-yong-suru5tunofang.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-06-26T09:57:36+09:00",
+      "topic_index": 1,
+      "topic": "新築アパート投資の利回り計算完全ガイド",
+      "title": "新築アパート投資の利回り計算ガイド｜表面利回り・実質利回り・返済後CFを買付前に検算する手順",
+      "path": "sites\\real-estate\\content\\posts\\2026-06-26-xin-zhu-ahatotou-zi-noli-hui-riji-suan-kaito-biao-mian-li-hui-rishi-zhi-li-hui.md",
       "mode": "local"
     }
   ]
