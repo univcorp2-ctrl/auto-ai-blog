@@ -1,5 +1,5 @@
 {
-  "next_index": 4,
+  "next_index": 5,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -31,6 +31,14 @@
       "topic": "Claude vs GPT vs Gemini 徹底比較2026年版",
       "title": "Claude・GPT・Gemini比較2026年6月版：失敗しない選び方と10件検証テンプレート",
       "path": "sites\\ai-tech\\content\\posts\\2026-06-28-claudegptgeminibi-jiao-2026nian-6yue-ban-shi-bai-sinaixuan-hifang-to10jian-jian.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-06-29T09:07:54+09:00",
+      "topic_index": 4,
+      "topic": "不動産管理会社がAIを導入する前に整理すべき業務フロー",
+      "title": "不動産管理会社のAI導入で失敗しない方法：ツール選定前にやるべき業務フロー整理",
+      "path": "sites\\ai-tech\\content\\posts\\2026-06-29-bu-dong-chan-guan-li-hui-she-noaidao-ru-teshi-bai-sinaifang-fa-turuxuan-ding-wu.md",
       "mode": "local"
     }
   ]
