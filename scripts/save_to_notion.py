@@ -19,6 +19,12 @@ def save_to_notion(title, content, link, theme="その他"):
         "Notion-Version": "2022-06-28"
     }
     
+    # Split content into chunks to avoid 2000 character limit per block
+    chunks = [content[i:i+1900] for i in range(0, len(content), 1900)]
+    blocks = []
+    for chunk in chunks:
+        blocks.append({ "object": "block", "paragraph": { "rich_text": [ { "text": { "content": chunk } } ] } })
+
     data = {
         "parent": { "database_id": NOTION_DB_ID },
         "properties": {
@@ -26,9 +32,7 @@ def save_to_notion(title, content, link, theme="その他"):
             "テーマ": { "select": { "name": theme } },
             "公開URL": { "url": link }
         },
-        "children": [
-            { "object": "block", "paragraph": { "rich_text": [ { "text": { "content": content[:1900] } } ] } }
-        ]
+        "children": blocks
     }
     req = urllib.request.Request(url, data=json.dumps(data).encode(), headers=headers, method="POST")
     try:
