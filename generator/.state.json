@@ -1,5 +1,5 @@
 {
-  "next_index": 5,
+  "next_index": 6,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -39,6 +39,14 @@
       "topic": "不動産管理会社がAIを導入する前に整理すべき業務フロー",
       "title": "不動産管理会社のAI導入で失敗しない方法：ツール選定前にやるべき業務フロー整理",
       "path": "sites\\ai-tech\\content\\posts\\2026-06-29-bu-dong-chan-guan-li-hui-she-noaidao-ru-teshi-bai-sinaifang-fa-turuxuan-ding-wu.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-06-30T09:07:10+09:00",
+      "topic_index": 5,
+      "topic": "空室対策にAIを使うメリットと注意点",
+      "title": "家賃を下げる前にやる空室対策：AIで募集データ・競合・写真を点検する実践手順",
+      "path": "sites\\real-estate\\content\\posts\\2026-06-30-jia-ren-woxia-keruqian-niyarukong-shi-dui-ce-aitemu-ji-tetajing-he-xie-zhen-jian.md",
       "mode": "local"
     }
   ]
