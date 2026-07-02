@@ -127,6 +127,16 @@ def generate_article(root: Path, dry_run: bool = False, cloud: bool = False) -> 
     state["next_index"] = (index + 1) % len(topics)
     save_state(root, state)
 
+    # Notion連携
+    try:
+        sys.path.append(str(root / "scripts"))
+        from save_to_notion import save_to_notion
+        link = f"https://example.com/posts/{make_slug(topic.topic)}"
+        save_to_notion(title, final_article, link, topic.category)
+        logging.info("Saved to Notion successfully.")
+    except Exception as e:
+        logging.error("Failed to save to Notion: %s", e)
+
     commit_and_push(root, title, git_config, dry_run=dry_run)
     return post_path
 
