@@ -1,5 +1,5 @@
 {
-  "next_index": 6,
+  "next_index": 7,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -47,6 +47,14 @@
       "topic": "空室対策にAIを使うメリットと注意点",
       "title": "家賃を下げる前にやる空室対策：AIで募集データ・競合・写真を点検する実践手順",
       "path": "sites\\real-estate\\content\\posts\\2026-06-30-jia-ren-woxia-keruqian-niyarukong-shi-dui-ce-aitemu-ji-tetajing-he-xie-zhen-jian.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-02T09:08:38+09:00",
+      "topic_index": 6,
+      "topic": "家賃査定をデータで改善するための基本ステップ",
+      "title": "勘の家賃査定を卒業する：比較12件から87,000円を導く実務7ステップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-02-kan-nojia-ren-cha-ding-wozu-ye-suru-bi-jiao-12jian-kara87000yuan-wodao-kushi-wu.md",
       "mode": "local"
     }
   ]
