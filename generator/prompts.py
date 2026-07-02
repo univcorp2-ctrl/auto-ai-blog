@@ -36,10 +36,9 @@ def draft_prompt(topic: str, keywords: list[str], min_chars: int, max_chars: int
         - 投資助言と誤解される表現は避け、一般的な情報提供として書いてください。
         - 最初の行に H1 見出しとして魅力的な記事タイトルを書いてください。
         - 一般論だけで終えず、読者が実際に手を動かせる手順、チェックリスト、判断基準を必ず入れてください。
-        - 有料記事や有料マニュアルに誘導しても不自然ではない密度で、無料部分だけでも役立つ情報量にしてください。
         - 記事の導入部（H1タイトルの直後）および記事内の適切な箇所に、最低でも1枚〜3枚の画像を挿入してください。
           画像は以下のURLフォーマットを使用して、Markdownの画像リンクとして挿入してください。
-          フォーマット: `![画像の説明](https://image.pollinations.ai/prompt/{画像の内容を表す英語のプロンプト(空白は%20に変換)}?width=800&height=400&nologo=true)`
+          フォーマット: `![画像の説明](https://image.pollinations.ai/prompt/{{画像の内容を表す英語のプロンプト(空白は%20に変換)}}?width=800&height=400&nologo=true)`
           （例: `![AI活用イメージ](https://image.pollinations.ai/prompt/artificial%20intelligence%20real%20estate%20futuristic?width=800&height=400&nologo=true)`）
         """
     ).strip()
