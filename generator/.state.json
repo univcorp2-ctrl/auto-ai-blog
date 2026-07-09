@@ -1,5 +1,5 @@
 {
-  "next_index": 14,
+  "next_index": 15,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -111,6 +111,14 @@
       "topic": "AI時代の不動産営業に必要なスキル",
       "title": "AI時代の不動産営業で生き残る7つのスキル｜反響・追客・相談予約を「自動化資産」に変える実践ロードマップ",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-09-aishi-dai-nobu-dong-chan-ying-ye-tesheng-kican-ru7tunosukiru-fan-xiang-zhui-ke.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-09T20:50:13+09:00",
+      "topic_index": 14,
+      "topic": "PythonでCSVを自動集計する基本パターン",
+      "title": "PythonでCSV自動集計：毎朝の収益確認を5分で終わらせる実務パターン",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-09-pythontecsvzi-dong-ji-ji-mei-zhao-noshou-yi-que-ren-wo5fen-tezhong-waraserushi.md",
       "mode": "local"
     }
   ]
