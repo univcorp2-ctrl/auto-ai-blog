@@ -104,3 +104,48 @@ topics:
   - topic: "不動産ブログを毎日更新するための自動化設計"
     keywords: ["不動産ブログ", "毎日更新", "自動化"]
     category: "不動産マーケティング"
+  - topic: "Web操作の完全自動化によるポイ活の可能性と注意点"
+    keywords: ["Web自動化", "ポイ活", "完全自動化", "Python"]
+    category: "ビジネス・副業"
+  - topic: "Pythonでウェブタスクを自動化して稼ぐ具体的な手順"
+    keywords: ["Python", "ウェブタスク", "自動化", "副業"]
+    category: "ビジネス・副業"
+  - topic: "ルーチンワークを自動化してポイントや収益を得る仕組み作り"
+    keywords: ["自動化", "ポイント獲得", "不労所得"]
+    category: "ビジネス・副業"
+  - topic: "ポイ活自動化ツールの危険性と安全に稼ぐプログラミング副業"
+    keywords: ["ポイ活ツール", "自動化リスク", "プログラミング副業"]
+    category: "ビジネス・副業"
+  - topic: "投資アフィリエイトを完全自動化する仕組みの作り方"
+    keywords: ["投資アフィリエイト", "完全自動化", "不労所得"]
+    category: "ビジネス・副業"
+  - topic: "海外SaaSアフィリエイトで継続報酬（MRR）を自動で稼ぐ方法"
+    keywords: ["SaaSアフィリエイト", "継続報酬", "自動化"]
+    category: "AI・テック"
+  - topic: "PinterestとEtsyを連携させたデジタル商品自動販売システム"
+    keywords: ["Pinterest", "Etsy", "デジタル商品", "自動販売"]
+    category: "ビジネス・副業"
+  - topic: "ニッチ業種向けマッチングサイトをノーコードで立ち上げる手順"
+    keywords: ["マッチングサイト", "ノーコード", "副業"]
+    category: "不動産マーケティング"
+  - topic: "完全無人AIトレードBotのためのVPS環境構築と運用上の注意"
+    keywords: ["自動トレード", "VPS", "AI Bot"]
+    category: "AI・テック"
+  - topic: "AI美女ショート動画を量産してYouTube/TikTokで収益化する戦略"
+    keywords: ["AI美女", "ショート動画", "YouTube収益化"]
+    category: "AI・テック"
+  - topic: "AIで完全自動化する「顔出しなし」YouTube・TikTokの始め方"
+    keywords: ["顔出しなし", "YouTube完全自動化", "AIショート動画"]
+    category: "AI・テック"
+  - topic: "Pythonスクリプトを使ったメルカリ・ヤフオクの自動価格差リサーチと裁定取引"
+    keywords: ["せどり自動化", "Pythonスクリプト", "アービトラージ"]
+    category: "ビジネス・副業"
+  - topic: "海外ニュースをAIで自動翻訳・要約する有料ニュースレターの作り方"
+    keywords: ["有料ニュースレター", "AI要約", "サブスク収益"]
+    category: "ビジネス・副業"
+  - topic: "BtoBリード獲得を完全自動化：スクレイピングとAI営業メールの連携"
+    keywords: ["リード獲得", "営業自動化", "スクレイピング"]
+    category: "ビジネス・副業"
+  - topic: "AIの機能をAPI化してサブスクリプション収益（MRR）を得る開発手法"
+    keywords: ["Micro SaaS", "API販売", "不労所得"]
+    category: "AI・テック"
