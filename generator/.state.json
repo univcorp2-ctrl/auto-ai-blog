@@ -1,5 +1,5 @@
 {
-  "next_index": 10,
+  "next_index": 11,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -74,11 +74,19 @@
       "mode": "local"
     },
     {
-      "date": "2026-07-09T19:49:11+09:00",
+      "date": "2026-07-09T19:46:48+09:00",
       "topic_index": 9,
       "topic": "AIエージェントで営業資料作成を自動化する方法",
-      "title": "AIエージェントで営業資料作成を自動化する方法｜初稿生成を「営業資産」に変える実践手順",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-09-aiesientoteying-ye-zi-liao-zuo-cheng-wozi-dong-hua-surufang-fa-chu-gao-sheng-wo.md",
+      "title": "AIエージェントで営業資料作成を自動化する方法：初稿作成から収益導線まで作る実践手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-09-aiesientoteying-ye-zi-liao-zuo-cheng-wozi-dong-hua-surufang-fa-chu-gao-zuo-cheng.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-09T19:55:49+09:00",
+      "topic_index": 10,
+      "topic": "不動産広告文をAIで改善する実践プロンプト集",
+      "title": "反響につなげる不動産広告AIプロンプト集：誇張を避け、広告文を自動化資産に変える実践手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-09-fan-xiang-nitunakerubu-dong-chan-guang-gao-aihuronhutoji-kua-zhang-wobi-ke-guang.md",
       "mode": "local"
     }
   ]
