@@ -1,5 +1,5 @@
 {
-  "next_index": 12,
+  "next_index": 13,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -95,6 +95,14 @@
       "topic": "物件写真の見せ方で反響率を上げるチェックリスト",
       "title": "物件写真で反響率を上げる実務チェックリスト：不動産広告を「撮って終わり」から改善資産に変える方法",
       "path": "sites\\business\\content\\posts\\2026-07-09-wu-jian-xie-zhen-tefan-xiang-lu-woshang-kerushi-wu-tietukurisuto-bu-dong-chan-wo.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-09T20:22:49+09:00",
+      "topic_index": 12,
+      "topic": "賃貸管理の問い合わせ対応を自動化する前に決めるべきルール",
+      "title": "賃貸管理の問い合わせ対応を自動化する前に決める8つのルール：対応漏れ・炎上・解約リスクを減らす運用設計",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-09-ren-dai-guan-li-nowen-ihe-wasedui-ying-wozi-dong-hua-suruqian-nijue-dui-ying-lou.md",
       "mode": "local"
     }
   ]
