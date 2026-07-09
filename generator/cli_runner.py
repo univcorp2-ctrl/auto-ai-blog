@@ -28,23 +28,45 @@ def run_ai_cli(cli_name: str, prompt: str, timeout: int) -> CliResult:
     else:
         command = [*CLI_COMMANDS[cli_name], prompt]
 
+    temp_input_path: Path | None = None
     try:
-        completed = subprocess.run(
-            command,
-            input=prompt if use_stdin else None,
-            capture_output=True,
-            text=True,
-            encoding="utf-8",
-            errors="replace",
-            timeout=timeout,
-            check=False,
-        )
+        if use_stdin:
+            with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", delete=False, suffix=".txt") as temp_input:
+                temp_input.write(prompt)
+                temp_input_path = Path(temp_input.name)
+            with open(temp_input_path, "r", encoding="utf-8") as f_in:
+                completed = subprocess.run(
+                    command,
+                    stdin=f_in,
+                    capture_output=True,
+                    text=True,
+                    encoding="utf-8",
+                    errors="replace",
+                    timeout=timeout,
+                    check=False,
+                )
+        else:
+            completed = subprocess.run(
+                command,
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
+                timeout=timeout,
+                check=False,
+            )
     except FileNotFoundError as exc:
         return CliResult(False, cli_name, "", f"CLI not found: {exc}")
     except subprocess.TimeoutExpired as exc:
         return CliResult(False, cli_name, exc.stdout or "", f"CLI timeout after {timeout}s: {exc}")
     except OSError as exc:
         return CliResult(False, cli_name, "", f"CLI execution error: {exc}")
+    finally:
+        if temp_input_path is not None and temp_input_path.exists():
+            try:
+                temp_input_path.unlink()
+            except Exception:
+                pass
 
     output = (completed.stdout or "").strip()
     if output_path is not None:

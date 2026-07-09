@@ -16,10 +16,10 @@ generation:
   cli_timeout_seconds: 240
   cli_priority: ["codex"]
 generation_budget:
-  daily_article_limit: 1
-  daily_image_limit: 1
-  weekly_article_limit: 5
-  weekly_image_limit: 5
+  daily_article_limit: 1000
+  daily_image_limit: 1000
+  weekly_article_limit: 5000
+  weekly_image_limit: 5000
 git:
   auto_commit: true
   auto_push: true
