@@ -1,5 +1,5 @@
 {
-  "next_index": 13,
+  "next_index": 14,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -103,6 +103,14 @@
       "topic": "賃貸管理の問い合わせ対応を自動化する前に決めるべきルール",
       "title": "賃貸管理の問い合わせ対応を自動化する前に決める8つのルール：対応漏れ・炎上・解約リスクを減らす運用設計",
       "path": "sites\\real-estate\\content\\posts\\2026-07-09-ren-dai-guan-li-nowen-ihe-wasedui-ying-wozi-dong-hua-suruqian-nijue-dui-ying-lou.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-09T20:36:57+09:00",
+      "topic_index": 13,
+      "topic": "AI時代の不動産営業に必要なスキル",
+      "title": "AI時代の不動産営業で生き残る7つのスキル｜反響・追客・相談予約を「自動化資産」に変える実践ロードマップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-09-aishi-dai-nobu-dong-chan-ying-ye-tesheng-kican-ru7tunosukiru-fan-xiang-zhui-ke.md",
       "mode": "local"
     }
   ]
