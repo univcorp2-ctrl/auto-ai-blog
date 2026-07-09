@@ -1,5 +1,5 @@
 {
-  "next_index": 8,
+  "next_index": 10,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -63,6 +63,22 @@
       "topic": "不動産投資初心者が知っておきたいキャッシュフローの考え方",
       "title": "表面利回り8%でも手残り月2,800円？不動産投資初心者が最初に覚えるキャッシュフローの読み方",
       "path": "sites\\real-estate\\content\\posts\\2026-07-03-biao-mian-li-hui-ri8-temoshou-can-riyue-2800yuan-bu-dong-chan-tou-zi-chu-xin-zhe.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-09T19:36:56+09:00",
+      "topic_index": 8,
+      "topic": "Excel業務をPythonに置き換える判断基準",
+      "title": "Excel業務をPython化して失敗しない判断基準：移行手順・費用対効果・自動化資産の作り方",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-09-excelye-wu-wopythonhua-siteshi-bai-sinaipan-duan-ji-zhun-yi-xing-shou-shun-fei.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-09T19:46:48+09:00",
+      "topic_index": 9,
+      "topic": "AIエージェントで営業資料作成を自動化する方法",
+      "title": "AIエージェントで営業資料作成を自動化する方法：初稿作成から収益導線まで作る実践手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-09-aiesientoteying-ye-zi-liao-zuo-cheng-wozi-dong-hua-surufang-fa-chu-gao-zuo-cheng.md",
       "mode": "local"
     }
   ]
