@@ -1,5 +1,5 @@
 {
-  "next_index": 23,
+  "next_index": 24,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -183,6 +183,14 @@
       "topic": "AIブログ運用で品質を落とさないレビュー体制",
       "title": "AIブログ運用で品質を落とさないレビュー体制の作り方：自動化資産を守る品質管理マニュアル",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-10-aihurokuyun-yong-tepin-zhi-woluo-tosanairehiyuti-zhi-nozuo-rifang-zi-dong-hua-zi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-10T14:05:50+09:00",
+      "topic_index": 23,
+      "topic": "ローカルAI CLIを業務自動化に使うメリット",
+      "title": "AI CLIでローカル自動化を収益資産に変える方法：毎日の投稿・品質チェック・公開導線まで仕組み化する",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-10-ai-cliterokaruzi-dong-hua-woshou-yi-zi-chan-nibian-erufang-fa-mei-ri-notou-gao.md",
       "mode": "local"
     }
   ]
