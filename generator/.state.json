@@ -1,5 +1,5 @@
 {
-  "next_index": 24,
+  "next_index": 25,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -191,6 +191,14 @@
       "topic": "ローカルAI CLIを業務自動化に使うメリット",
       "title": "AI CLIでローカル自動化を収益資産に変える方法：毎日の投稿・品質チェック・公開導線まで仕組み化する",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-10-ai-cliterokaruzi-dong-hua-woshou-yi-zi-chan-nibian-erufang-fa-mei-ri-notou-gao.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-10T14:21:20+09:00",
+      "topic_index": 24,
+      "topic": "不動産投資シミュレーションでよくある入力ミス",
+      "title": "不動産投資シミュレーションで損する入力ミスを防ぐ｜利益候補だけを自動で残す実務チェックリスト",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-10-bu-dong-chan-tou-zi-simiyuresiyontesun-sururu-li-misuwofang-ku-li-yi-hou-bu-dong.md",
       "mode": "local"
     }
   ]
