@@ -1,5 +1,5 @@
 {
-  "next_index": 19,
+  "next_index": 20,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -151,6 +151,14 @@
       "topic": "不動産投資で見るべきKPIとダッシュボード設計",
       "title": "不動産投資のKPIとダッシュボード設計：放置せずに「自動で改善が回る資産」を作る実務手順",
       "path": "sites\\real-estate\\content\\posts\\2026-07-10-bu-dong-chan-tou-zi-nokpitotatusiyuhotoshe-ji-fang-zhi-sesuni-zi-dong-tegai-shan.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-10T12:38:19+09:00",
+      "topic_index": 19,
+      "topic": "AIで議事録からTODOを自動抽出する方法",
+      "title": "AIで議事録からTODOを自動抽出する方法：初心者でも作れる実践フローと精度改善チェックリスト",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-10-aiteyi-shi-lu-karatodowozi-dong-chou-chu-surufang-fa-chu-xin-zhe-temozuo-rerushi.md",
       "mode": "local"
     }
   ]
