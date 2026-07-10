@@ -1,5 +1,5 @@
 {
-  "next_index": 16,
+  "next_index": 17,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -127,6 +127,14 @@
       "topic": "GitHub Actionsで業務スクリプトを安全に運用する考え方",
       "title": "GitHub Actionsで業務スクリプトを止めずに回す方法：CI・Secrets・dry-runで「自動化資産」を作る実践手順",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-10-github-actionsteye-wu-sukurihutowozhi-mesunihui-sufang-fa-cisecretsdry-runte-zi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-10T09:52:02+09:00",
+      "topic_index": 16,
+      "topic": "Cloudflare PagesでHugoブログを高速配信するメリット",
+      "title": "Cloudflare Pages × Hugoで高速ブログを作る実践手順: 自動収益メディアの公開基盤を作る",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-10-cloudflare-pages-x-hugotegao-su-hurokuwozuo-rushi-jian-shou-shun-zi-dong-shou-yi.md",
       "mode": "local"
     }
   ]
