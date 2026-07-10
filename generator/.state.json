@@ -1,5 +1,5 @@
 {
-  "next_index": 22,
+  "next_index": 23,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -175,6 +175,14 @@
       "topic": "物件情報入力を減らすためのデータ連携設計",
       "title": "物件情報入力を減らすデータ連携設計：業務効率化を「自動で稼ぐ資産」に変える実務ガイド",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-10-wu-jian-qing-bao-ru-li-wojian-rasutetalian-xi-she-ji-ye-wu-xiao-lu-hua-wo-zi-wu.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-10T13:52:46+09:00",
+      "topic_index": 22,
+      "topic": "AIブログ運用で品質を落とさないレビュー体制",
+      "title": "AIブログ運用で品質を落とさないレビュー体制の作り方：自動化資産を守る品質管理マニュアル",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-10-aihurokuyun-yong-tepin-zhi-woluo-tosanairehiyuti-zhi-nozuo-rifang-zi-dong-hua-zi.md",
       "mode": "local"
     }
   ]
