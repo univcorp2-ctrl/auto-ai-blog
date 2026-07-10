@@ -1,5 +1,5 @@
 {
-  "next_index": 18,
+  "next_index": 19,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -143,6 +143,14 @@
       "topic": "HugoとWordPressの違いを不動産ブログ目線で比較",
       "title": "HugoとWordPressの違いを不動産ブログ目線で比較：自動化で“収益導線”を育てるならどちらを選ぶべきか",
       "path": "sites\\business\\content\\posts\\2026-07-10-hugotowordpressnowei-iwobu-dong-chan-hurokumu-xian-tebi-jiao-zi-dong-hua-te-shou.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-10T10:16:23+09:00",
+      "topic_index": 18,
+      "topic": "不動産投資で見るべきKPIとダッシュボード設計",
+      "title": "不動産投資のKPIとダッシュボード設計：放置せずに「自動で改善が回る資産」を作る実務手順",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-10-bu-dong-chan-tou-zi-nokpitotatusiyuhotoshe-ji-fang-zhi-sesuni-zi-dong-tegai-shan.md",
       "mode": "local"
     }
   ]
