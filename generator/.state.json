@@ -1,5 +1,5 @@
 {
-  "next_index": 15,
+  "next_index": 16,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -119,6 +119,14 @@
       "topic": "PythonでCSVを自動集計する基本パターン",
       "title": "PythonでCSV自動集計：毎朝の収益確認を5分で終わらせる実務パターン",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-09-pythontecsvzi-dong-ji-ji-mei-zhao-noshou-yi-que-ren-wo5fen-tezhong-waraserushi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-10T09:22:01+09:00",
+      "topic_index": 15,
+      "topic": "GitHub Actionsで業務スクリプトを安全に運用する考え方",
+      "title": "GitHub Actionsで業務スクリプトを止めずに回す方法：CI・Secrets・dry-runで「自動化資産」を作る実践手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-10-github-actionsteye-wu-sukurihutowozhi-mesunihui-sufang-fa-cisecretsdry-runte-zi.md",
       "mode": "local"
     }
   ]
