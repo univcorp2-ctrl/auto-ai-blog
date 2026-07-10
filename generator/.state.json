@@ -1,5 +1,5 @@
 {
-  "next_index": 17,
+  "next_index": 18,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -135,6 +135,14 @@
       "topic": "Cloudflare PagesでHugoブログを高速配信するメリット",
       "title": "Cloudflare Pages × Hugoで高速ブログを作る実践手順: 自動収益メディアの公開基盤を作る",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-10-cloudflare-pages-x-hugotegao-su-hurokuwozuo-rushi-jian-shou-shun-zi-dong-shou-yi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-10T10:06:50+09:00",
+      "topic_index": 17,
+      "topic": "HugoとWordPressの違いを不動産ブログ目線で比較",
+      "title": "HugoとWordPressの違いを不動産ブログ目線で比較：自動化で“収益導線”を育てるならどちらを選ぶべきか",
+      "path": "sites\\business\\content\\posts\\2026-07-10-hugotowordpressnowei-iwobu-dong-chan-hurokumu-xian-tebi-jiao-zi-dong-hua-te-shou.md",
       "mode": "local"
     }
   ]
