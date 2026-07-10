@@ -1,5 +1,5 @@
 {
-  "next_index": 20,
+  "next_index": 21,
   "history": [
     {
       "date": "2026-06-22T19:14:55+09:00",
@@ -159,6 +159,14 @@
       "topic": "AIで議事録からTODOを自動抽出する方法",
       "title": "AIで議事録からTODOを自動抽出する方法：初心者でも作れる実践フローと精度改善チェックリスト",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-10-aiteyi-shi-lu-karatodowozi-dong-chou-chu-surufang-fa-chu-xin-zhe-temozuo-rerushi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-10T12:51:14+09:00",
+      "topic_index": 20,
+      "topic": "賃貸オーナー向け月次レポートを自動生成する設計",
+      "title": "賃貸オーナーの月次レポート自動化：赤字・空室・修繕費の見落としを毎月つぶす実務設計",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-10-ren-dai-onanoyue-ci-rehotozi-dong-hua-chi-zi-kong-shi-xiu-shan-fei-nojian-luo-wu.md",
       "mode": "local"
     }
   ]
