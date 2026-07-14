@@ -1,166 +1,6 @@
 {
-  "next_index": 25,
+  "next_index": 10,
   "history": [
-    {
-      "date": "2026-06-22T19:14:55+09:00",
-      "topic_index": 0,
-      "topic": "ChatGPTを不動産投資に活用する5つの方法",
-      "title": "初心者でも迷わない！ChatGPTを不動産投資に活用する5つの方法",
-      "path": "sites\\ai-tech\\content\\posts\\2026-06-22-chu-xin-zhe-temomi-wanai-chatgptwobu-dong-chan-tou-zi-nihuo-yong-suru5tunofang.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-06-26T09:57:36+09:00",
-      "topic_index": 1,
-      "topic": "新築アパート投資の利回り計算完全ガイド",
-      "title": "新築アパート投資の利回り計算ガイド｜表面利回り・実質利回り・返済後CFを買付前に検算する手順",
-      "path": "sites\\real-estate\\content\\posts\\2026-06-26-xin-zhu-ahatotou-zi-noli-hui-riji-suan-kaito-biao-mian-li-hui-rishi-zhi-li-hui.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-06-27T10:00:51+09:00",
-      "topic_index": 2,
-      "topic": "Python自動化で業務効率を10倍にする実践テクニック",
-      "title": "Python自動化で業務効率化する実践手順：初心者が「30分作業」を3分確認に変える型",
-      "path": "sites\\ai-tech\\content\\posts\\2026-06-27-pythonzi-dong-hua-teye-wu-xiao-lu-hua-surushi-jian-shou-shun-chu-xin-zhe-ka-zuo.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-06-28T09:07:51+09:00",
-      "topic_index": 3,
-      "topic": "Claude vs GPT vs Gemini 徹底比較2026年版",
-      "title": "Claude・GPT・Gemini比較2026年6月版：失敗しない選び方と10件検証テンプレート",
-      "path": "sites\\ai-tech\\content\\posts\\2026-06-28-claudegptgeminibi-jiao-2026nian-6yue-ban-shi-bai-sinaixuan-hifang-to10jian-jian.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-06-29T09:07:54+09:00",
-      "topic_index": 4,
-      "topic": "不動産管理会社がAIを導入する前に整理すべき業務フロー",
-      "title": "不動産管理会社のAI導入で失敗しない方法：ツール選定前にやるべき業務フロー整理",
-      "path": "sites\\ai-tech\\content\\posts\\2026-06-29-bu-dong-chan-guan-li-hui-she-noaidao-ru-teshi-bai-sinaifang-fa-turuxuan-ding-wu.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-06-30T09:07:10+09:00",
-      "topic_index": 5,
-      "topic": "空室対策にAIを使うメリットと注意点",
-      "title": "家賃を下げる前にやる空室対策：AIで募集データ・競合・写真を点検する実践手順",
-      "path": "sites\\real-estate\\content\\posts\\2026-06-30-jia-ren-woxia-keruqian-niyarukong-shi-dui-ce-aitemu-ji-tetajing-he-xie-zhen-jian.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-07-02T09:08:38+09:00",
-      "topic_index": 6,
-      "topic": "家賃査定をデータで改善するための基本ステップ",
-      "title": "勘の家賃査定を卒業する：比較12件から87,000円を導く実務7ステップ",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-02-kan-nojia-ren-cha-ding-wozu-ye-suru-bi-jiao-12jian-kara87000yuan-wodao-kushi-wu.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-07-03T08:01:18+09:00",
-      "topic_index": 7,
-      "topic": "不動産投資初心者が知っておきたいキャッシュフローの考え方",
-      "title": "表面利回り8%でも手残り月2,800円？不動産投資初心者が最初に覚えるキャッシュフローの読み方",
-      "path": "sites\\real-estate\\content\\posts\\2026-07-03-biao-mian-li-hui-ri8-temoshou-can-riyue-2800yuan-bu-dong-chan-tou-zi-chu-xin-zhe.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-07-09T19:36:56+09:00",
-      "topic_index": 8,
-      "topic": "Excel業務をPythonに置き換える判断基準",
-      "title": "Excel業務をPython化して失敗しない判断基準：移行手順・費用対効果・自動化資産の作り方",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-09-excelye-wu-wopythonhua-siteshi-bai-sinaipan-duan-ji-zhun-yi-xing-shou-shun-fei.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-07-09T19:46:48+09:00",
-      "topic_index": 9,
-      "topic": "AIエージェントで営業資料作成を自動化する方法",
-      "title": "AIエージェントで営業資料作成を自動化する方法：初稿作成から収益導線まで作る実践手順",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-09-aiesientoteying-ye-zi-liao-zuo-cheng-wozi-dong-hua-surufang-fa-chu-gao-zuo-cheng.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-07-09T19:55:49+09:00",
-      "topic_index": 10,
-      "topic": "不動産広告文をAIで改善する実践プロンプト集",
-      "title": "反響につなげる不動産広告AIプロンプト集：誇張を避け、広告文を自動化資産に変える実践手順",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-09-fan-xiang-nitunakerubu-dong-chan-guang-gao-aihuronhutoji-kua-zhang-wobi-ke-guang.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-07-09T20:06:48+09:00",
-      "topic_index": 11,
-      "topic": "物件写真の見せ方で反響率を上げるチェックリスト",
-      "title": "物件写真で反響率を上げる実務チェックリスト：不動産広告を「撮って終わり」から改善資産に変える方法",
-      "path": "sites\\business\\content\\posts\\2026-07-09-wu-jian-xie-zhen-tefan-xiang-lu-woshang-kerushi-wu-tietukurisuto-bu-dong-chan-wo.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-07-09T20:22:49+09:00",
-      "topic_index": 12,
-      "topic": "賃貸管理の問い合わせ対応を自動化する前に決めるべきルール",
-      "title": "賃貸管理の問い合わせ対応を自動化する前に決める8つのルール：対応漏れ・炎上・解約リスクを減らす運用設計",
-      "path": "sites\\real-estate\\content\\posts\\2026-07-09-ren-dai-guan-li-nowen-ihe-wasedui-ying-wozi-dong-hua-suruqian-nijue-dui-ying-lou.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-07-09T20:36:57+09:00",
-      "topic_index": 13,
-      "topic": "AI時代の不動産営業に必要なスキル",
-      "title": "AI時代の不動産営業で生き残る7つのスキル｜反響・追客・相談予約を「自動化資産」に変える実践ロードマップ",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-09-aishi-dai-nobu-dong-chan-ying-ye-tesheng-kican-ru7tunosukiru-fan-xiang-zhui-ke.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-07-09T20:50:13+09:00",
-      "topic_index": 14,
-      "topic": "PythonでCSVを自動集計する基本パターン",
-      "title": "PythonでCSV自動集計：毎朝の収益確認を5分で終わらせる実務パターン",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-09-pythontecsvzi-dong-ji-ji-mei-zhao-noshou-yi-que-ren-wo5fen-tezhong-waraserushi.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-07-10T09:22:01+09:00",
-      "topic_index": 15,
-      "topic": "GitHub Actionsで業務スクリプトを安全に運用する考え方",
-      "title": "GitHub Actionsで業務スクリプトを止めずに回す方法：CI・Secrets・dry-runで「自動化資産」を作る実践手順",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-10-github-actionsteye-wu-sukurihutowozhi-mesunihui-sufang-fa-cisecretsdry-runte-zi.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-07-10T09:52:02+09:00",
-      "topic_index": 16,
-      "topic": "Cloudflare PagesでHugoブログを高速配信するメリット",
-      "title": "Cloudflare Pages × Hugoで高速ブログを作る実践手順: 自動収益メディアの公開基盤を作る",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-10-cloudflare-pages-x-hugotegao-su-hurokuwozuo-rushi-jian-shou-shun-zi-dong-shou-yi.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-07-10T10:06:50+09:00",
-      "topic_index": 17,
-      "topic": "HugoとWordPressの違いを不動産ブログ目線で比較",
-      "title": "HugoとWordPressの違いを不動産ブログ目線で比較：自動化で“収益導線”を育てるならどちらを選ぶべきか",
-      "path": "sites\\business\\content\\posts\\2026-07-10-hugotowordpressnowei-iwobu-dong-chan-hurokumu-xian-tebi-jiao-zi-dong-hua-te-shou.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-07-10T10:16:23+09:00",
-      "topic_index": 18,
-      "topic": "不動産投資で見るべきKPIとダッシュボード設計",
-      "title": "不動産投資のKPIとダッシュボード設計：放置せずに「自動で改善が回る資産」を作る実務手順",
-      "path": "sites\\real-estate\\content\\posts\\2026-07-10-bu-dong-chan-tou-zi-nokpitotatusiyuhotoshe-ji-fang-zhi-sesuni-zi-dong-tegai-shan.md",
-      "mode": "local"
-    },
-    {
-      "date": "2026-07-10T12:38:19+09:00",
-      "topic_index": 19,
-      "topic": "AIで議事録からTODOを自動抽出する方法",
-      "title": "AIで議事録からTODOを自動抽出する方法：初心者でも作れる実践フローと精度改善チェックリスト",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-10-aiteyi-shi-lu-karatodowozi-dong-chou-chu-surufang-fa-chu-xin-zhe-temozuo-rerushi.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-10T12:51:14+09:00",
       "topic_index": 20,
@@ -199,6 +39,686 @@
       "topic": "不動産投資シミュレーションでよくある入力ミス",
       "title": "不動産投資シミュレーションで損する入力ミスを防ぐ｜利益候補だけを自動で残す実務チェックリスト",
       "path": "sites\\real-estate\\content\\posts\\2026-07-10-bu-dong-chan-tou-zi-simiyuresiyontesun-sururu-li-misuwofang-ku-li-yi-hou-bu-dong.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T14:21:59+09:00",
+      "topic_index": 25,
+      "topic": "AIを使った競合物件リサーチの進め方",
+      "title": "AI競合物件リサーチ実践ガイド｜30分で比較表・掲載改善・週次レポートまで作る方法",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-11-aijing-he-wu-jian-risatishi-jian-kaito-30fen-tebi-jiao-biao-jie-zai-gai-shan-ci.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T14:38:56+09:00",
+      "topic_index": 26,
+      "topic": "PythonでPDF帳票から必要情報を抽出する基本設計",
+      "title": "PythonでPDF帳票から必要情報を抽出する基本設計：人手入力を減らし、自動化資産に変える実務ロードマップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-11-pythontepdfzhang-piao-karabi-yao-qing-bao-wochou-chu-suruji-ben-she-ji-ren-shou.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T14:51:28+09:00",
+      "topic_index": 27,
+      "topic": "不動産会社のためのSEO記事設計入門",
+      "title": "問い合わせが増えない不動産ブログを変える：SEO記事を「自動化資産」に育てる実務設計ガイド",
+      "path": "sites\\business\\content\\posts\\2026-07-11-wen-ihe-wasekazeng-enaibu-dong-chan-hurokuwobian-eru-seoji-shi-wo-zi-dong-hua-zi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T15:06:16+09:00",
+      "topic_index": 28,
+      "topic": "AIでメール返信文を標準化するテンプレート運用",
+      "title": "AIメール返信を標準化するテンプレート運用｜返信業務を「自動化資産」に変える実践ガイド",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-11-aimerufan-xin-wobiao-zhun-hua-surutenhuretoyun-yong-fan-xin-ye-wu-wo-zi-dong-hua.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T15:21:44+09:00",
+      "topic_index": 29,
+      "topic": "空室期間を短縮するためのデータ分析入門",
+      "title": "空室期間を短縮するデータ分析入門：退去から契約までを数字で詰める実務手順",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-11-kong-shi-qi-jian-woduan-suo-surutetafen-xi-ru-men-tui-qu-karaqi-yue-matewoshu-zi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T15:37:52+09:00",
+      "topic_index": 30,
+      "topic": "不動産業務におけるノーコードとPythonの使い分け",
+      "title": "不動産業務の自動化は「入口ノーコード・判断Python」が正解：問い合わせ・追客・査定を資産化する実践手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-11-bu-dong-chan-ye-wu-nozi-dong-hua-ha-ru-kou-nokotopan-duan-python-kazheng-jie-wen.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T15:52:01+09:00",
+      "topic_index": 31,
+      "topic": "AI生成記事のリスクと人間レビューの重要性",
+      "title": "AI生成記事のリスクを収益資産に変える人間レビュー設計：完全自動化ブログで失敗しない実務手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-11-aisheng-cheng-ji-shi-norisukuwoshou-yi-zi-chan-nibian-eruren-jian-rehiyushe-ji.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T16:05:27+09:00",
+      "topic_index": 32,
+      "topic": "収益物件の比較表を自動作成するワークフロー",
+      "title": "収益物件の比較表を自動作成する7ステップ｜投資判断の前処理を資産化する実務ワークフロー",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-11-shou-yi-wu-jian-nobi-jiao-biao-wozi-dong-zuo-cheng-suru7sutetuhu-tou-zi-pan-duan.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T16:21:09+09:00",
+      "topic_index": 33,
+      "topic": "賃貸募集条件を見直すためのAIチェックリスト",
+      "title": "賃貸募集条件をAIで見直すチェックリスト｜空室改善を「毎週改善される運用資産」に変える実務ガイド",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-11-ren-dai-mu-ji-tiao-jian-woaitejian-zhi-sutietukurisuto-kong-shi-gai-shan-wo-mei.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T16:35:46+09:00",
+      "topic_index": 34,
+      "topic": "不動産ブログを毎日更新するための自動化設計",
+      "title": "不動産ブログを毎日更新する自動化設計：92本の運営ログから作る「記事量産で終わらない」収益導線ロードマップ",
+      "path": "sites\\business\\content\\posts\\2026-07-11-bu-dong-chan-hurokuwomei-ri-geng-xin-suruzi-dong-hua-she-ji-92ben-noyun-ying-ru.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T16:50:18+09:00",
+      "topic_index": 35,
+      "topic": "Web操作の完全自動化によるポイ活の可能性と注意点",
+      "title": "Python×Web自動化でポイ活はどこまで効率化できる？規約内で「稼ぐ判断」を自動化する実践設計図",
+      "path": "sites\\business\\content\\posts\\2026-07-11-pythonxwebzi-dong-hua-tehoihuo-hatokomatexiao-lu-hua-tekiru-gui-yue-nei-te-jia.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T17:16:02+09:00",
+      "topic_index": 36,
+      "topic": "Pythonでウェブタスクを自動化して稼ぐ具体的な手順",
+      "title": "Pythonでウェブタスクを自動化して稼ぐ手順：副業を「作業」から「自動化資産」に変える実践ロードマップ",
+      "path": "sites\\business\\content\\posts\\2026-07-11-pythonteuehutasukuwozi-dong-hua-sitejia-kushou-shun-fu-ye-wo-zuo-ye-kara-zi-dong.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T18:01:26+09:00",
+      "topic_index": 37,
+      "topic": "ルーチンワークを自動化してポイントや収益を得る仕組み作り",
+      "title": "ルーチンワークを自動化してポイント獲得と収益を積み上げる仕組み作り｜人が動かない不労所得型ワークフローの実践ガイド",
+      "path": "sites\\business\\content\\posts\\2026-07-11-rutinwakuwozi-dong-hua-sitehointohuo-de-toshou-yi-woji-mishang-kerushi-zu-mizuo.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T19:30:42+09:00",
+      "topic_index": 38,
+      "topic": "ポイ活自動化ツールの危険性と安全に稼ぐプログラミング副業",
+      "title": "ポイ活自動化ツールの危険性と、安全に稼ぐプログラミング副業の作り方",
+      "path": "sites\\business\\content\\posts\\2026-07-11-hoihuo-zi-dong-hua-turunowei-xian-xing-to-an-quan-nijia-kuhurokuraminkufu-ye.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T20:22:54+09:00",
+      "topic_index": 39,
+      "topic": "投資アフィリエイトを完全自動化する仕組みの作り方",
+      "title": "投資アフィリエイト自動化の作り方：AI市況配信・免責表現・収益導線まで実装する手順",
+      "path": "sites\\business\\content\\posts\\2026-07-11-tou-zi-ahuirieitozi-dong-hua-nozuo-rifang-aishi-kuang-pei-xin-mian-ze-biao-xian.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T20:35:55+09:00",
+      "topic_index": 40,
+      "topic": "海外SaaSアフィリエイトで継続報酬（MRR）を自動で稼ぐ方法",
+      "title": "海外SaaSアフィリエイトで継続報酬を狙う方法：MRR型の収益導線を作る実践手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-11-hai-wai-saasahuirieitoteji-sok-bao-chou-woju-ufang-fa-mrrxing-noshou-yi-dao-xian.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T20:51:37+09:00",
+      "topic_index": 41,
+      "topic": "PinterestとEtsyを連携させたデジタル商品自動販売システム",
+      "title": "Pinterest×Etsyでデジタル商品を自動販売する設計図：集客・販売・納品・改善まで人手を減らす実践ロードマップ",
+      "path": "sites\\business\\content\\posts\\2026-07-11-pinterestxetsytetesitarushang-pin-wozi-dong-fan-mai-surushe-ji-tu-ji-ke-fan-mai.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T21:06:42+09:00",
+      "topic_index": 42,
+      "topic": "ニッチ業種向けマッチングサイトをノーコードで立ち上げる手順",
+      "title": "ニッチ業種向けマッチングサイトをノーコードで作る全手順：副業を「紹介作業」から自動化資産に変える実務ガイド",
+      "path": "sites\\business\\content\\posts\\2026-07-11-nitutiye-zhong-xiang-kematutinkusaitowonokototezuo-ruquan-shou-shun-fu-ye-wo-jie.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T21:21:12+09:00",
+      "topic_index": 43,
+      "topic": "完全無人AIトレードBotのためのVPS環境構築と運用上の注意",
+      "title": "VPSでAIトレードBotを24時間止めない実践チェックリスト｜完全無人運用に近づける環境構築・監視・復旧の手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-11-vpsteaitoretobotwo24shi-jian-zhi-menaishi-jian-tietukurisuto-wan-quan-wu-ren-yun.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T21:35:25+09:00",
+      "topic_index": 44,
+      "topic": "AI美女ショート動画を量産してYouTube/TikTokで収益化する戦略",
+      "title": "AI美女ショート動画を量産してYouTube/TikTok収益化を狙う：自動化ラインの作り方",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-11-aimei-nu-siyotodong-hua-woliang-chan-siteyoutube-tiktokshou-yi-hua-woju-u-zi-hua.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T21:52:06+09:00",
+      "topic_index": 45,
+      "topic": "AIで完全自動化する「顔出しなし」YouTube・TikTokの始め方",
+      "title": "顔出しなしAIショート動画の始め方｜YouTube・TikTokを「完全放置」ではなく自動化資産に変える実践ガイド",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-11-yan-chu-sinasiaisiyotodong-hua-noshi-mefang-youtubetiktokwo-wan-quan-fang-zhi-zi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T22:07:03+09:00",
+      "topic_index": 46,
+      "topic": "Pythonスクリプトを使ったメルカリ・ヤフオクの自動価格差リサーチと裁定取引",
+      "title": "Pythonでメルカリ・ヤフオクの価格差を自動リサーチする方法：せどり自動化を「候補抽出システム」に変える実践ガイド",
+      "path": "sites\\business\\content\\posts\\2026-07-11-pythontemerukariyahuokunojia-ge-chai-wozi-dong-risatisurufang-fa-setorizi-dong.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-11T22:15:48+09:00",
+      "topic_index": 47,
+      "topic": "海外ニュースをAIで自動翻訳・要約する有料ニュースレターの作り方",
+      "title": "海外ニュースをAI要約して有料ニュースレター化する作り方｜サブスク収益を自動で積み上げる仕組み設計",
+      "path": "sites\\business\\content\\posts\\2026-07-11-hai-wai-niyusuwoaiyao-yue-siteyou-liao-niyusuretahua-suruzuo-rifang-sahusukushou.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T00:17:48+09:00",
+      "topic_index": 48,
+      "topic": "BtoBリード獲得を完全自動化：スクレイピングとAI営業メールの連携",
+      "title": "半日かかるBtoBリード獲得を自動化する：スクレイピング×AI営業メールで「営業資産」を作る実践ガイド",
+      "path": "sites\\business\\content\\posts\\2026-07-12-ban-ri-kakarubtobritohuo-de-wozi-dong-hua-suru-sukureihinkuxaiying-ye-merute-ye.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T01:22:37+09:00",
+      "topic_index": 49,
+      "topic": "AIの機能をAPI化してサブスクリプション収益（MRR）を得る開発手法",
+      "title": "AI機能をAPI化してMRRを作る方法：Micro SaaSを「自動課金される業務部品」に変える実装ロードマップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-aiji-neng-woapihua-sitemrrwozuo-rufang-fa-micro-saaswo-zi-dong-ke-jin-sareruye.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T01:38:51+09:00",
+      "topic_index": 0,
+      "topic": "ChatGPTを不動産投資に活用する5つの方法",
+      "title": "ChatGPT不動産投資術：物件探しを「自動化資産」に変える5つの実践ロードマップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-chatgptbu-dong-chan-tou-zi-shu-wu-jian-tan-siwo-zi-dong-hua-zi-chan-nibian-jian.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T01:51:15+09:00",
+      "topic_index": 1,
+      "topic": "新築アパート投資の利回り計算完全ガイド",
+      "title": "表面利回りで買う前に読む｜新築アパート投資の利回り・CF・DSCR計算ガイド",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-12-biao-mian-li-hui-ritemai-uqian-nidu-mu-xin-zhu-ahatotou-zi-noli-hui-ricfdscrji.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T02:05:29+09:00",
+      "topic_index": 2,
+      "topic": "Python自動化で業務効率を10倍にする実践テクニック",
+      "title": "Python自動化で業務効率を10倍にする実践手順：定型作業を「自動化資産」に変える方法",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-pythonzi-dong-hua-teye-wu-xiao-lu-wo10bei-nisurushi-jian-shou-shun-ding-xing-zuo.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T02:21:50+09:00",
+      "topic_index": 3,
+      "topic": "Claude vs GPT vs Gemini 徹底比較2026年版",
+      "title": "Claude vs GPT vs Gemini比較2026年版：AI選びで終わらせない「自動化資産づくり」実践ガイド",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-claude-vs-gpt-vs-geminibi-jiao-2026nian-ban-aixuan-hitezhong-warasenai-zi-dong.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T02:35:55+09:00",
+      "topic_index": 4,
+      "topic": "不動産管理会社がAIを導入する前に整理すべき業務フロー",
+      "title": "不動産管理会社のAI導入はツール選定前に決まる：問い合わせ対応を「自動化資産」に変える業務フロー設計",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-bu-dong-chan-guan-li-hui-she-noaidao-ru-haturuxuan-ding-qian-nijue-maru-wen-ihe.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T02:51:57+09:00",
+      "topic_index": 5,
+      "topic": "空室対策にAIを使うメリットと注意点",
+      "title": "家賃を下げる前にやる空室対策AI｜賃貸経営を「手離れのよい収益運用」に近づける実践手順",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-12-jia-ren-woxia-keruqian-niyarukong-shi-dui-ce-ai-ren-dai-jing-ying-wo-shou-li-yi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T03:07:30+09:00",
+      "topic_index": 6,
+      "topic": "家賃査定をデータで改善するための基本ステップ",
+      "title": "家賃査定をデータで改善する実務手順：空室損失を減らし、収益を自動で見直す仕組みの作り方",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-jia-ren-cha-ding-wotetategai-shan-surushi-wu-shou-shun-kong-shi-sun-shi-wojian.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T03:18:12+09:00",
+      "topic_index": 7,
+      "topic": "不動産投資初心者が知っておきたいキャッシュフローの考え方",
+      "title": "不動産投資初心者のキャッシュフロー入門：毎月いくら残るかを計算し、自分の時間を削らず管理する方法",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-12-bu-dong-chan-tou-zi-chu-xin-zhe-nokiyatusiyuhuroru-men-mei-yue-ikuracan-rukawoji.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T06:35:35+09:00",
+      "topic_index": 8,
+      "topic": "Excel業務をPythonに置き換える判断基準",
+      "title": "Excel業務をPython化すべきか？時短で終わらない「自動化資産」の作り方",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-excelye-wu-wopythonhua-suhekika-shi-duan-tezhong-waranai-zi-dong-hua-zi-chan.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T06:51:25+09:00",
+      "topic_index": 9,
+      "topic": "AIエージェントで営業資料作成を自動化する方法",
+      "title": "AIエージェントで営業資料作成を自動化する実践手順｜提案書を「作業」から「売上機会」に変える",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-aiesientoteying-ye-zi-liao-zuo-cheng-wozi-dong-hua-surushi-jian-shou-shun-ti-an.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T07:06:24+09:00",
+      "topic_index": 10,
+      "topic": "不動産広告文をAIで改善する実践プロンプト集",
+      "title": "反響を落とさない不動産広告文AI改善プロンプト集：法務チェック・KPI・改善ログまで実務で回す手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-fan-xiang-woluo-tosanaibu-dong-chan-guang-gao-wen-aigai-shan-huronhutoji-fa-wu.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T07:19:01+09:00",
+      "topic_index": 11,
+      "topic": "物件写真の見せ方で反響率を上げるチェックリスト",
+      "title": "物件写真で反響率を上げる15項目チェックリスト：不動産広告を「撮って終わり」から改善資産に変える実務ガイド",
+      "path": "sites\\business\\content\\posts\\2026-07-12-wu-jian-xie-zhen-tefan-xiang-lu-woshang-keru15xiang-mu-tietukurisuto-bu-dong-gao.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T07:37:23+09:00",
+      "topic_index": 12,
+      "topic": "賃貸管理の問い合わせ対応を自動化する前に決めるべきルール",
+      "title": "賃貸管理の問い合わせ対応を自動化する前に決めるべき7つのルール：緊急対応・法務リスク・収益導線を守る実務設計図",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-12-ren-dai-guan-li-nowen-ihe-wasedui-ying-wozi-dong-hua-suruqian-nijue-jin-ji-dui.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T07:52:14+09:00",
+      "topic_index": 13,
+      "topic": "AI時代の不動産営業に必要なスキル",
+      "title": "AI時代の不動産営業に必要なスキル：反響・追客・紹介を「自動化資産」に変える実践ロードマップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-aishi-dai-nobu-dong-chan-ying-ye-nibi-yao-nasukiru-fan-xiang-zhui-ke-shao-jie-wo.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T08:05:14+09:00",
+      "topic_index": 14,
+      "topic": "PythonでCSVを自動集計する基本パターン",
+      "title": "PythonでCSVを自動集計する基本パターン：手作業レポートを「改善に使える自動化資産」に変える入門",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-pythontecsvwozi-dong-ji-ji-suruji-ben-hatan-shou-zuo-ye-rehotowo-gai-shan-nishi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T08:22:32+09:00",
+      "topic_index": 15,
+      "topic": "GitHub Actionsで業務スクリプトを安全に運用する考え方",
+      "title": "GitHub Actionsで業務スクリプトを安全に自動化する実践設計：CI・Secrets・ログ・KPIまで",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-github-actionsteye-wu-sukurihutowoan-quan-nizi-dong-hua-surushi-jian-she-ji.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T08:31:04+09:00",
+      "topic_index": 16,
+      "topic": "Cloudflare PagesでHugoブログを高速配信するメリット",
+      "title": "Cloudflare PagesでHugoブログを高速配信するメリット：静的サイトを「自動収益メディア」の土台に変える",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-cloudflare-pagestehugohurokuwogao-su-pei-xin-surumerituto-jing-de-saitowo-zi-yi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T10:16:25+09:00",
+      "topic_index": 17,
+      "topic": "HugoとWordPressの違いを不動産ブログ目線で比較",
+      "title": "HugoとWordPressの違いを不動産ブログ目線で比較：自動化資産を作るならどちらを選ぶべきか",
+      "path": "sites\\business\\content\\posts\\2026-07-12-hugotowordpressnowei-iwobu-dong-chan-hurokumu-xian-tebi-jiao-zi-dong-hua-zi-chan.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T11:35:44+09:00",
+      "topic_index": 18,
+      "topic": "不動産投資で見るべきKPIとダッシュボード設計",
+      "title": "家賃は入るのに手残りが増えない人へ：不動産投資KPIと収益改善ダッシュボードの作り方",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-12-jia-ren-haru-runonishou-can-rikazeng-enairen-he-bu-dong-chan-tou-zi-kpitoshou-yi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T11:52:17+09:00",
+      "topic_index": 19,
+      "topic": "AIで議事録からTODOを自動抽出する方法",
+      "title": "AIで議事録からTODOを自動抽出する方法：会議後のタスク漏れを減らす実践ワークフロー",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-aiteyi-shi-lu-karatodowozi-dong-chou-chu-surufang-fa-hui-yi-hou-notasukulou-jian.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T12:06:33+09:00",
+      "topic_index": 20,
+      "topic": "賃貸オーナー向け月次レポートを自動生成する設計",
+      "title": "賃貸オーナー向け月次レポート自動生成ガイド：手作業を減らし、収益改善につなげる設計",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-12-ren-dai-onaxiang-keyue-ci-rehotozi-dong-sheng-cheng-kaito-shou-zuo-ye-wojian-yi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T12:21:44+09:00",
+      "topic_index": 21,
+      "topic": "物件情報入力を減らすためのデータ連携設計",
+      "title": "物件情報入力を87%削減したデータ連携設計：転記作業を「継続的に働く収益導線」へ変える実践手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-wu-jian-qing-bao-ru-li-wo87-xue-jian-sitatetalian-xi-she-ji-zhuan-ji-zuo-ye-wo.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T12:36:32+09:00",
+      "topic_index": 22,
+      "topic": "AIブログ運用で品質を落とさないレビュー体制",
+      "title": "AIブログを“負債”にしないレビュー体制：実行ログ・KPI・収益導線までつなぐ実践設計",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-aihurokuwo-fu-zhai-nisinairehiyuti-zhi-shi-xing-rokukpishou-yi-dao-xian-jian-she.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T12:52:09+09:00",
+      "topic_index": 23,
+      "topic": "ローカルAI CLIを業務自動化に使うメリット",
+      "title": "ローカルAI CLIで業務自動化を「収益資産」に変える実装ガイド｜AI CLI・ローカル自動化の手順と失敗対策",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-rokaruai-cliteye-wu-zi-dong-hua-wo-shou-yi-zi-chan-nibian-erushi-zhuang-kaito-ai.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T13:07:44+09:00",
+      "topic_index": 24,
+      "topic": "不動産投資シミュレーションでよくある入力ミス",
+      "title": "利回り8%でも赤字化する？不動産投資シミュレーションの入力ミスを潰す買付前チェックリスト",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-12-li-hui-ri8-temochi-zi-hua-suru-bu-dong-chan-tou-zi-simiyuresiyonnoru-li-sumai-fu.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T13:21:22+09:00",
+      "topic_index": 25,
+      "topic": "AIを使った競合物件リサーチの進め方",
+      "title": "AI競合物件リサーチ実務ガイド｜家賃判断を「毎週使える自動化資産」に変える手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-aijing-he-wu-jian-risatishi-wu-kaito-jia-ren-pan-duan-wo-mei-zhou-shi-eruzi-dong.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T14:34:45+09:00",
+      "topic_index": 26,
+      "topic": "PythonでPDF帳票から必要情報を抽出する基本設計",
+      "title": "PythonでPDF帳票を自動抽出する基本設計：転記ミスを減らし、例外確認に変える実践ロードマップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-pythontepdfzhang-piao-wozi-dong-chou-chu-suruji-ben-she-ji-zhuan-ji-misuwojian.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T14:50:55+09:00",
+      "topic_index": 27,
+      "topic": "不動産会社のためのSEO記事設計入門",
+      "title": "問い合わせにつながる不動産SEO記事設計｜Web集客を自動化資産に変える実務手順",
+      "path": "sites\\business\\content\\posts\\2026-07-12-wen-ihe-wasenitunakarubu-dong-chan-seoji-shi-she-ji-webji-ke-wozi-dong-hua-zi-wu.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T15:06:49+09:00",
+      "topic_index": 28,
+      "topic": "AIでメール返信文を標準化するテンプレート運用",
+      "title": "AIメール返信テンプレート運用の作り方｜対応時間を削りながら収益導線まで自動化する実務設計",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-aimerufan-xin-tenhuretoyun-yong-nozuo-rifang-dui-ying-shi-jian-woxue-yi-dao-xian.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T15:21:58+09:00",
+      "topic_index": 29,
+      "topic": "空室期間を短縮するためのデータ分析入門",
+      "title": "空室が長引く原因を数字で特定する｜賃貸経営を「手離れする収益管理」に近づけるデータ分析入門",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-12-kong-shi-kachang-yin-kuyuan-yin-woshu-zi-tete-ding-suru-ren-dai-jing-ying-wo-li.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T15:34:33+09:00",
+      "topic_index": 30,
+      "topic": "不動産業務におけるノーコードとPythonの使い分け",
+      "title": "不動産業務の自動化は「ノーコードで流し、Pythonで判定」が正解：初心者でも失敗しない実務設計",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-bu-dong-chan-ye-wu-nozi-dong-hua-ha-nokototeliu-si-pythontepan-ding-kazheng-jie.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T15:50:56+09:00",
+      "topic_index": 31,
+      "topic": "AI生成記事のリスクと人間レビューの重要性",
+      "title": "AI生成記事を“収益資産”に変える公開前レビュー術：AIスロップを防ぐ実務チェックリスト",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-aisheng-cheng-ji-shi-wo-shou-yi-zi-chan-nibian-erugong-kai-qian-rehiyushu-kushi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T16:07:21+09:00",
+      "topic_index": 32,
+      "topic": "収益物件の比較表を自動作成するワークフロー",
+      "title": "収益物件の比較表を自動作成する方法：候補整理を「手作業」から「検証ログが残る仕組み」に変える",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-12-shou-yi-wu-jian-nobi-jiao-biao-wozi-dong-zuo-cheng-surufang-fa-hou-bu-zheng-li.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T16:20:28+09:00",
+      "topic_index": 33,
+      "topic": "賃貸募集条件を見直すためのAIチェックリスト",
+      "title": "家賃を下げる前に見るべき賃貸募集AIチェックリスト：空室対応を「再利用できる資産」に変える実務手順",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-12-jia-ren-woxia-keruqian-nijian-ruhekiren-dai-mu-ji-aitietukurisuto-kong-shi-dui.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T16:36:38+09:00",
+      "topic_index": 34,
+      "topic": "不動産ブログを毎日更新するための自動化設計",
+      "title": "不動産ブログを毎日更新する自動化設計：717本の運用ログから作るSEO・収益導線・監視の実務ガイド",
+      "path": "sites\\business\\content\\posts\\2026-07-12-bu-dong-chan-hurokuwomei-ri-geng-xin-suruzi-dong-hua-she-ji-717ben-noyun-yong-yi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T16:51:14+09:00",
+      "topic_index": 35,
+      "topic": "Web操作の完全自動化によるポイ活の可能性と注意点",
+      "title": "ポイ活自動化の現実解：Pythonで「案件発見・記録・通知」を効率化する実践ガイド",
+      "path": "sites\\business\\content\\posts\\2026-07-12-hoihuo-zi-dong-hua-noxian-shi-jie-pythonte-an-jian-fa-jian-ji-lu-tong-zhi-woxiao.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T17:07:19+09:00",
+      "topic_index": 36,
+      "topic": "Pythonでウェブタスクを自動化して稼ぐ具体的な手順",
+      "title": "Pythonでウェブタスクを自動化して稼ぐ手順：副業を「作業時間」から「検証できる収益導線」に変える実践ロードマップ",
+      "path": "sites\\business\\content\\posts\\2026-07-12-pythonteuehutasukuwozi-dong-hua-sitejia-kushou-shun-fu-ye-wo-zuo-ye-shi-jian-yi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T22:06:25+09:00",
+      "topic_index": 37,
+      "topic": "ルーチンワークを自動化してポイントや収益を得る仕組み作り",
+      "title": "ルーチンワークを「収益化資産」に変える自動化設計：ポイント獲得から商品導線まで",
+      "path": "sites\\business\\content\\posts\\2026-07-12-rutinwakuwo-shou-yi-hua-zi-chan-nibian-eruzi-dong-hua-she-ji-hointohuo-de-pin.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-12T22:18:28+09:00",
+      "topic_index": 38,
+      "topic": "ポイ活自動化ツールの危険性と安全に稼ぐプログラミング副業",
+      "title": "ポイ活自動化ツールは危険？規約違反を避けて「安全に稼ぐプログラミング副業」へ変える実践ロードマップ",
+      "path": "sites\\business\\content\\posts\\2026-07-12-hoihuo-zi-dong-hua-turuhawei-xian-gui-yue-wei-fan-wobi-kete-an-quan-nijia-ye.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T04:05:50+09:00",
+      "topic_index": 39,
+      "topic": "投資アフィリエイトを完全自動化する仕組みの作り方",
+      "title": "投資アフィリエイト自動化の始め方｜初心者でも収益導線・記事制作・KPI改善まで仕組み化する手順",
+      "path": "sites\\business\\content\\posts\\2026-07-13-tou-zi-ahuirieitozi-dong-hua-noshi-mefang-chu-xin-zhe-temoshou-yi-dao-xian-ji-zu.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T04:21:15+09:00",
+      "topic_index": 40,
+      "topic": "海外SaaSアフィリエイトで継続報酬（MRR）を自動で稼ぐ方法",
+      "title": "海外SaaSアフィリエイトで継続報酬を狙う実践ロードマップ：初心者がMRR型の収益導線を作る手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-13-hai-wai-saasahuirieitoteji-sok-bao-chou-woju-ushi-jian-rotomatuhu-chu-xin-zhe-yi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T04:36:05+09:00",
+      "topic_index": 41,
+      "topic": "PinterestとEtsyを連携させたデジタル商品自動販売システム",
+      "title": "Pinterest×Etsyでデジタル商品を自動販売：初心者が10商品・30ピンで「売れる導線」を検証する手順",
+      "path": "sites\\business\\content\\posts\\2026-07-13-pinterestxetsytetesitarushang-pin-wozi-dong-fan-mai-chu-xin-zhe-ka10shang-pin.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T04:52:12+09:00",
+      "topic_index": 42,
+      "topic": "ニッチ業種向けマッチングサイトをノーコードで立ち上げる手順",
+      "title": "ニッチ業種マッチングサイトの作り方：LINE・Supabase・Stripeで副業の収益導線を自動化する実装ガイド",
+      "path": "sites\\business\\content\\posts\\2026-07-13-nitutiye-zhong-matutinkusaitonozuo-rifang-linesupabasestripetefu-ye-noshou-yi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T05:07:15+09:00",
+      "topic_index": 43,
+      "topic": "完全無人AIトレードBotのためのVPS環境構築と運用上の注意",
+      "title": "VPSでAIトレードBotを24時間動かす実践ガイド：止まらない・暴走しない・あとから検証できる運用設計",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-13-vpsteaitoretobotwo24shi-jian-dong-kasushi-jian-kaito-zhi-maranaibao-zou-zheng-ji.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T05:19:55+09:00",
+      "topic_index": 44,
+      "topic": "AI美女ショート動画を量産してYouTube/TikTokで収益化する戦略",
+      "title": "AI美女ショート動画で収益化する実践戦略｜YouTube/TikTok規約・自動化・KPI設計まで完全ガイド",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-13-aimei-nu-siyotodong-hua-teshou-yi-hua-surushi-jian-zhan-lue-youtube-tiktokgui-zi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T05:36:36+09:00",
+      "topic_index": 45,
+      "topic": "AIで完全自動化する「顔出しなし」YouTube・TikTokの始め方",
+      "title": "顔出しなしYouTube自動化の始め方｜AIショート動画を「投稿作業」で終わらせず、検証できるメディア資産にする手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-13-yan-chu-sinasiyoutubezi-dong-hua-noshi-mefang-aisiyotodong-hua-wo-tou-gao-zuo-ye.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T05:50:23+09:00",
+      "topic_index": 46,
+      "topic": "Pythonスクリプトを使ったメルカリ・ヤフオクの自動価格差リサーチと裁定取引",
+      "title": "メルカリ・ヤフオクの価格差をPythonで自動リサーチする方法：せどり自動化を「候補確認型」に変える実践手順",
+      "path": "sites\\business\\content\\posts\\2026-07-13-merukariyahuokunojia-ge-chai-wopythontezi-dong-risatisurufang-fa-setorizi-dong.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T06:07:14+09:00",
+      "topic_index": 47,
+      "topic": "海外ニュースをAIで自動翻訳・要約する有料ニュースレターの作り方",
+      "title": "海外ニュースをAI要約で有料ニュースレター化する実務手順：収集・翻訳・配信・課金まで",
+      "path": "sites\\business\\content\\posts\\2026-07-13-hai-wai-niyusuwoaiyao-yue-teyou-liao-niyusuretahua-surushi-wu-shou-shun-shou-ji.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T06:35:30+09:00",
+      "topic_index": 48,
+      "topic": "BtoBリード獲得を完全自動化：スクレイピングとAI営業メールの連携",
+      "title": "BtoBリード獲得を自動化する実務設計：スクレイピングとAI営業メールで「改善し続ける営業資産」を作る",
+      "path": "sites\\business\\content\\posts\\2026-07-13-btobritohuo-de-wozi-dong-hua-surushi-wu-she-ji-sukureihinkutoaiying-ye-merute-ye.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T06:53:16+09:00",
+      "topic_index": 49,
+      "topic": "AIの機能をAPI化してサブスクリプション収益（MRR）を得る開発手法",
+      "title": "AI機能をAPI販売してMRRを作る方法：Micro SaaSを自動化資産に変える実践ロードマップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-13-aiji-neng-woapifan-mai-sitemrrwozuo-rufang-fa-micro-saaswozi-dong-hua-zi-chan.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T07:06:43+09:00",
+      "topic_index": 0,
+      "topic": "ChatGPTを不動産投資に活用する5つの方法",
+      "title": "ChatGPTを不動産投資に活用する5つの方法：物件調査・収支計算・リスク確認を再現できる仕組みに変える実践ガイド",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-13-chatgptwobu-dong-chan-tou-zi-nihuo-yong-suru5tunofang-fa-wu-jian-diao-cha-shou.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T07:20:47+09:00",
+      "topic_index": 1,
+      "topic": "新築アパート投資の利回り計算完全ガイド",
+      "title": "新築アパート投資の利回り計算完全ガイド：表面利回りに騙されず「自動化資産」として見極める実践手順",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-13-xin-zhu-ahatotou-zi-noli-hui-riji-suan-wan-quan-kaito-biao-mian-li-hui-rinipian.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T07:37:10+09:00",
+      "topic_index": 2,
+      "topic": "Python自動化で業務効率を10倍にする実践テクニック",
+      "title": "Python自動化で業務効率を10倍にする実践手順：定型作業を「自動化資産」に変える8ステップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-13-pythonzi-dong-hua-teye-wu-xiao-lu-wo10bei-nisurushi-jian-shou-shun-ding-xing-zuo.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T07:50:45+09:00",
+      "topic_index": 3,
+      "topic": "Claude vs GPT vs Gemini 徹底比較2026年版",
+      "title": "Claude・GPT・Gemini比較2026：自動化収益を作る「役割分担」と実務テンプレート",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-13-claudegptgeminibi-jiao-2026-zi-dong-hua-shou-yi-wozuo-ru-yi-ge-fen-dan-toshi-wu.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T08:03:59+09:00",
+      "topic_index": 4,
+      "topic": "不動産管理会社がAIを導入する前に整理すべき業務フロー",
+      "title": "不動産管理会社のAI導入は「修繕対応」から始める：業務フロー整理で失敗を防ぐ実践手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-13-bu-dong-chan-guan-li-hui-she-noaidao-ru-ha-xiu-shan-dui-ying-karashi-meru-ye-wu.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T08:21:04+09:00",
+      "topic_index": 5,
+      "topic": "空室対策にAIを使うメリットと注意点",
+      "title": "空室対策にAIを使うメリットと注意点｜賃貸経営を「改善が回る仕組み」に変える実践ガイド",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-13-kong-shi-dui-ce-niaiwoshi-umeritutotozhu-yi-dian-ren-dai-jing-ying-wo-gai-shan.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T08:36:19+09:00",
+      "topic_index": 6,
+      "topic": "家賃査定をデータで改善するための基本ステップ",
+      "title": "家賃査定は「勘」で決めない｜データで空室対策を再現する実務ステップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-13-jia-ren-cha-ding-ha-kan-tejue-menai-tetatekong-shi-dui-ce-wozai-xian-surushi-wu.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T08:52:11+09:00",
+      "topic_index": 7,
+      "topic": "不動産投資初心者が知っておきたいキャッシュフローの考え方",
+      "title": "手残りが消える前に見る。不動産投資初心者のキャッシュフロー入門｜赤字を自動で見張る仕組みの作り方",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-13-shou-can-rikaxiao-eruqian-nijian-ru-bu-dong-chan-tou-zi-chu-xin-zhe-men-chi-zi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T09:06:03+09:00",
+      "topic_index": 8,
+      "topic": "Excel業務をPythonに置き換える判断基準",
+      "title": "Excel業務をPython化する判断基準：手作業を「稼ぐ自動化資産」に変える設計図",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-13-excelye-wu-wopythonhua-surupan-duan-ji-zhun-shou-zuo-ye-wo-jia-kuzi-dong-hua-zi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-13T09:21:53+09:00",
+      "topic_index": 9,
+      "topic": "AIエージェントで営業資料作成を自動化する方法",
+      "title": "AIエージェントで営業資料作成を自動化する方法：提案書を“売上につながる自動化資産”に変える実践手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-13-aiesientoteying-ye-zi-liao-zuo-cheng-wozi-dong-hua-surufang-fa-ti-an-shu-wo-mai.md",
       "mode": "local"
     }
   ]
