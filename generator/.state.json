@@ -1,14 +1,6 @@
 {
-  "next_index": 15,
+  "next_index": 16,
   "history": [
-    {
-      "date": "2026-07-11T14:21:59+09:00",
-      "topic_index": 25,
-      "topic": "AIを使った競合物件リサーチの進め方",
-      "title": "AI競合物件リサーチ実践ガイド｜30分で比較表・掲載改善・週次レポートまで作る方法",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-11-aijing-he-wu-jian-risatishi-jian-kaito-30fen-tebi-jiao-biao-jie-zai-gai-shan-ci.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-11T14:38:56+09:00",
       "topic_index": 26,
@@ -719,6 +711,14 @@
       "topic": "PythonでCSVを自動集計する基本パターン",
       "title": "PythonでCSV集計を完全自動化する方法｜10万行の実測・エラー検知・定期実行まで",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-16-pythontecsvji-ji-wowan-quan-zi-dong-hua-surufang-fa-10mo-xing-noshi-ce-erajian.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-16T18:07:51+09:00",
+      "topic_index": 15,
+      "topic": "GitHub Actionsで業務スクリプトを安全に運用する考え方",
+      "title": "pytestが30件通っても公開しない――AIブログ自動化を止めた4つの安全装置",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-16-pytestka30jian-tong-tutemogong-kai-sinai-aihurokuzi-dong-hua-wozhi-meta4tunoan.md",
       "mode": "local"
     }
   ]
