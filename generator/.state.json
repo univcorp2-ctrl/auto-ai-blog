@@ -1,14 +1,6 @@
 {
-  "next_index": 28,
+  "next_index": 29,
   "history": [
-    {
-      "date": "2026-07-11T19:30:42+09:00",
-      "topic_index": 38,
-      "topic": "ポイ活自動化ツールの危険性と安全に稼ぐプログラミング副業",
-      "title": "ポイ活自動化ツールの危険性と、安全に稼ぐプログラミング副業の作り方",
-      "path": "sites\\business\\content\\posts\\2026-07-11-hoihuo-zi-dong-hua-turunowei-xian-xing-to-an-quan-nijia-kuhurokuraminkufu-ye.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-11T20:22:54+09:00",
       "topic_index": 39,
@@ -719,6 +711,14 @@
       "topic": "不動産会社のためのSEO記事設計入門",
       "title": "不動産会社のためのSEO記事設計入門｜Web集客を自動で育つ営業資産に変える7ステップ",
       "path": "sites\\business\\content\\posts\\2026-07-17-bu-dong-chan-hui-she-notamenoseoji-shi-she-ji-ru-men-webji-ke-wozi-dong-teyu-ye.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-17T08:24:53+09:00",
+      "topic_index": 28,
+      "topic": "AIでメール返信文を標準化するテンプレート運用",
+      "title": "AIメール返信を自動化・標準化する方法｜テンプレート設計から承認・KPI改善まで7ステップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-17-aimerufan-xin-wozi-dong-hua-biao-zhun-hua-surufang-fa-tenhuretoshe-ji-karacheng.md",
       "mode": "local"
     }
   ]
