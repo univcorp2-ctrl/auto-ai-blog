@@ -1,14 +1,6 @@
 {
-  "next_index": 16,
+  "next_index": 17,
   "history": [
-    {
-      "date": "2026-07-11T14:38:56+09:00",
-      "topic_index": 26,
-      "topic": "PythonでPDF帳票から必要情報を抽出する基本設計",
-      "title": "PythonでPDF帳票から必要情報を抽出する基本設計：人手入力を減らし、自動化資産に変える実務ロードマップ",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-11-pythontepdfzhang-piao-karabi-yao-qing-bao-wochou-chu-suruji-ben-she-ji-ren-shou.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-11T14:51:28+09:00",
       "topic_index": 27,
@@ -719,6 +711,14 @@
       "topic": "GitHub Actionsで業務スクリプトを安全に運用する考え方",
       "title": "pytestが30件通っても公開しない――AIブログ自動化を止めた4つの安全装置",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-16-pytestka30jian-tong-tutemogong-kai-sinai-aihurokuzi-dong-hua-wozhi-meta4tunoan.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-16T19:09:47+09:00",
+      "topic_index": 16,
+      "topic": "Cloudflare PagesでHugoブログを高速配信するメリット",
+      "title": "Cloudflare Pages×Hugo自動ブログの実装記録——高速化より効いた「低品質記事を公開しない」設計",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-16-cloudflare-pagesxhugozi-dong-hurokunoshi-zhuang-ji-lu-gao-su-hua-yorixiao-ita-di.md",
       "mode": "local"
     }
   ]
