@@ -1,14 +1,6 @@
 {
-  "next_index": 11,
+  "next_index": 12,
   "history": [
-    {
-      "date": "2026-07-10T13:00:51+09:00",
-      "topic_index": 21,
-      "topic": "物件情報入力を減らすためのデータ連携設計",
-      "title": "物件情報入力を減らすデータ連携設計：業務効率化を「自動で稼ぐ資産」に変える実務ガイド",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-10-wu-jian-qing-bao-ru-li-wojian-rasutetalian-xi-she-ji-ye-wu-xiao-lu-hua-wo-zi-wu.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-10T13:52:46+09:00",
       "topic_index": 22,
@@ -719,6 +711,14 @@
       "topic": "不動産広告文をAIで改善する実践プロンプト集",
       "title": "【コピペ可】不動産広告文をAIで改善する実践プロンプト集｜誇大表現を防ぎ、反響KPIまで回す方法",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-16-kohiheke-bu-dong-chan-guang-gao-wen-woaitegai-shan-surushi-jian-huronhutoji-kua.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-16T13:54:08+09:00",
+      "topic_index": 11,
+      "topic": "物件写真の見せ方で反響率を上げるチェックリスト",
+      "title": "物件写真で反響率を上げる実務チェックリスト｜撮影・掲載順・自動検品・KPI改善の全手順",
+      "path": "sites\\business\\content\\posts\\2026-07-16-wu-jian-xie-zhen-tefan-xiang-lu-woshang-kerushi-wu-tietukurisuto-cuo-ying-jie-zi.md",
       "mode": "local"
     }
   ]
