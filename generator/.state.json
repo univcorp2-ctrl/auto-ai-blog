@@ -1,14 +1,6 @@
 {
-  "next_index": 21,
+  "next_index": 22,
   "history": [
-    {
-      "date": "2026-07-11T15:52:01+09:00",
-      "topic_index": 31,
-      "topic": "AI生成記事のリスクと人間レビューの重要性",
-      "title": "AI生成記事のリスクを収益資産に変える人間レビュー設計：完全自動化ブログで失敗しない実務手順",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-11-aisheng-cheng-ji-shi-norisukuwoshou-yi-zi-chan-nibian-eruren-jian-rehiyushe-ji.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-11T16:05:27+09:00",
       "topic_index": 32,
@@ -719,6 +711,14 @@
       "topic": "賃貸オーナー向け月次レポートを自動生成する設計",
       "title": "賃貸オーナーの月次レポートを完全自動生成する設計｜収支・空室・修繕の異常を無人で検知する9ステップ",
       "path": "sites\\real-estate\\content\\posts\\2026-07-16-ren-dai-onanoyue-ci-rehotowowan-quan-zi-dong-sheng-cheng-surushe-ji-shou-zhi-shi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-17T05:30:25+09:00",
+      "topic_index": 21,
+      "topic": "物件情報入力を減らすためのデータ連携設計",
+      "title": "最終チェックには記事本文が必要です",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-17-zui-zhong-tietukunihaji-shi-ben-wen-kabi-yao-tesu.md",
       "mode": "local"
     }
   ]
