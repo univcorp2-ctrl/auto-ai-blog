@@ -1,14 +1,6 @@
 {
-  "next_index": 18,
+  "next_index": 19,
   "history": [
-    {
-      "date": "2026-07-11T15:06:16+09:00",
-      "topic_index": 28,
-      "topic": "AIでメール返信文を標準化するテンプレート運用",
-      "title": "AIメール返信を標準化するテンプレート運用｜返信業務を「自動化資産」に変える実践ガイド",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-11-aimerufan-xin-wobiao-zhun-hua-surutenhuretoyun-yong-fan-xin-ye-wu-wo-zi-dong-hua.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-11T15:21:44+09:00",
       "topic_index": 29,
@@ -719,6 +711,14 @@
       "topic": "HugoとWordPressの違いを不動産ブログ目線で比較",
       "title": "不動産ブログはHugoとWordPressのどちらで作るべきか？3サイト自動運用の実データで比較",
       "path": "sites\\business\\content\\posts\\2026-07-16-bu-dong-chan-hurokuhahugotowordpressnototiratezuo-ruhekika-3saitozi-dong-yun.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-16T19:38:51+09:00",
+      "topic_index": 18,
+      "topic": "不動産投資で見るべきKPIとダッシュボード設計",
+      "title": "不動産投資のKPI完全ガイド｜手残りと異常が一目で分かるダッシュボード設計・自動化手順",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-16-bu-dong-chan-tou-zi-nokpiwan-quan-kaito-shou-can-ritoyi-chang-kayi-mu-tefen-ji.md",
       "mode": "local"
     }
   ]
