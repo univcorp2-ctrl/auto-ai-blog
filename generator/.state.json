@@ -1,14 +1,6 @@
 {
-  "next_index": 23,
+  "next_index": 24,
   "history": [
-    {
-      "date": "2026-07-11T16:21:09+09:00",
-      "topic_index": 33,
-      "topic": "賃貸募集条件を見直すためのAIチェックリスト",
-      "title": "賃貸募集条件をAIで見直すチェックリスト｜空室改善を「毎週改善される運用資産」に変える実務ガイド",
-      "path": "sites\\real-estate\\content\\posts\\2026-07-11-ren-dai-mu-ji-tiao-jian-woaitejian-zhi-sutietukurisuto-kong-shi-gai-shan-wo-mei.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-11T16:35:46+09:00",
       "topic_index": 34,
@@ -719,6 +711,14 @@
       "topic": "AIブログ運用で品質を落とさないレビュー体制",
       "title": "AIブログの品質を落とさないレビュー体制｜完全自動運用を守る7段階ゲート設計",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-17-aihurokunopin-zhi-woluo-tosanairehiyuti-zhi-wan-quan-zi-dong-yun-yong-woshou-jie.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-17T06:40:05+09:00",
+      "topic_index": 23,
+      "topic": "ローカルAI CLIを業務自動化に使うメリット",
+      "title": "ローカルAI CLIで業務を自動化する方法｜Codex CLIを使った実践手順・失敗対策・KPI",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-17-rokaruai-cliteye-wu-wozi-dong-hua-surufang-fa-codex-cliwoshi-tutashi-jian-shou.md",
       "mode": "local"
     }
   ]
