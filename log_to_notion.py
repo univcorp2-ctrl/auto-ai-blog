@@ -3,7 +3,7 @@ import json
 import datetime
 
 NOTION_TOKEN = "ntn_E43853346674S2T0YcUYVUCOGCQaOU4v7ZTyflXB8Sx5JL"
-TARGET_PAGE_ID = "38d10562-e58b-819b-be2f-f6e7b55866c9" # X投稿の内容を確認して実行可否を判断 (Main strategy log page)
+TARGET_PAGE_ID = "38d10562-e58b-819b-be2f-f6e7b55866c9"
 
 def append_log_to_notion(content):
     url = f"https://api.notion.com/v1/blocks/{TARGET_PAGE_ID}/children"
@@ -36,11 +36,10 @@ def append_log_to_notion(content):
         print(e.read().decode())
 
 if __name__ == "__main__":
-    log_text = """【自動タスク 実行結果 (Iteration 1)】
-- テーマ：「コミュニティ拡大の自動化：SNSからLINEへの送客スキーム」
+    log_text = """【自動タスク 実行結果 (Iteration 13)】
+- テーマ：「論理だけでは人は動かない：感情を揺さぶる『ストーリーテリング』の技術」
 - アクション：
-  1. カスタマージャーニー（SNS共感→LINE教育→キラーページ）に基づく記事の自動生成・保存
-  2. 専用のアイキャッチ画像（デジタルネットワークとAIコア）の生成・保存
-  3. Cloudflare Pagesへの自動デプロイ実行
-※これより先の実行ログも、すべてこのページの下部に集約して記録します。"""
+  1. カスタマージャーニーの中で共感を生み出す「ストーリーテリング（神話の法則）」に関する記事を生成・保存
+  2. （※画像生成AIのAPI制限に到達したため、既存の高品質な画像を流用して記事に設定しました）
+  3. ローカルビルド＆デプロイスクリプトの実行完了（※Wranglerトークン未設定のためクラウド側へのアップロード保留中）"""
     append_log_to_notion(log_text)
