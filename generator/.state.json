@@ -1,14 +1,6 @@
 {
-  "next_index": 1,
+  "next_index": 2,
   "history": [
-    {
-      "date": "2026-07-12T07:19:01+09:00",
-      "topic_index": 11,
-      "topic": "物件写真の見せ方で反響率を上げるチェックリスト",
-      "title": "物件写真で反響率を上げる15項目チェックリスト：不動産広告を「撮って終わり」から改善資産に変える実務ガイド",
-      "path": "sites\\business\\content\\posts\\2026-07-12-wu-jian-xie-zhen-tefan-xiang-lu-woshang-keru15xiang-mu-tietukurisuto-bu-dong-gao.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-12T07:37:23+09:00",
       "topic_index": 12,
@@ -719,6 +711,14 @@
       "topic": "ChatGPTを不動産投資に活用する5つの方法",
       "title": "ChatGPTを不動産投資に活用する5つの方法｜物件比較・収支計算を自動化する実践手順",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-19-chatgptwobu-dong-chan-tou-zi-nihuo-yong-suru5tunofang-fa-wu-jian-bi-jiao-shou-ji.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-19T03:22:45+09:00",
+      "topic_index": 1,
+      "topic": "新築アパート投資の利回り計算完全ガイド",
+      "title": "不動産投資の利回り計算は信用できる？Hiroの検証ログと正しい確認方法",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-19-bu-dong-chan-tou-zi-noli-hui-riji-suan-haxin-yong-tekiru-hironojian-zheng-siique.md",
       "mode": "local"
     }
   ]
