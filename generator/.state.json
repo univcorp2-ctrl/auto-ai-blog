@@ -1,14 +1,6 @@
 {
-  "next_index": 39,
+  "next_index": 40,
   "history": [
-    {
-      "date": "2026-07-12T01:22:37+09:00",
-      "topic_index": 49,
-      "topic": "AIの機能をAPI化してサブスクリプション収益（MRR）を得る開発手法",
-      "title": "AI機能をAPI化してMRRを作る方法：Micro SaaSを「自動課金される業務部品」に変える実装ロードマップ",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-aiji-neng-woapihua-sitemrrwozuo-rufang-fa-micro-saaswo-zi-dong-ke-jin-sareruye.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-12T01:38:51+09:00",
       "topic_index": 0,
@@ -719,6 +711,14 @@
       "topic": "ポイ活自動化ツールの危険性と安全に稼ぐプログラミング副業",
       "title": "ポイ活自動化ツールはどこまで安全？規約違反を避け、Python副業を「自動化資産」に変える実践設計",
       "path": "sites\\business\\content\\posts\\2026-07-18-hoihuo-zi-dong-hua-turuhatokomatean-quan-gui-yue-wei-fan-wobi-ke-pythonfu-ye-wo.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-18T17:10:22+09:00",
+      "topic_index": 39,
+      "topic": "投資アフィリエイトを完全自動化する仕組みの作り方",
+      "title": "投資アフィリエイトを完全自動化する方法｜1案件・3記事から始める収益システム設計",
+      "path": "sites\\business\\content\\posts\\2026-07-18-tou-zi-ahuirieitowowan-quan-zi-dong-hua-surufang-fa-1an-jian-3ji-shi-karashi-yi.md",
       "mode": "local"
     }
   ]
