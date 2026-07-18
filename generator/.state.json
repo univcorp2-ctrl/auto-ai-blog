@@ -1,14 +1,6 @@
 {
-  "next_index": 40,
+  "next_index": 41,
   "history": [
-    {
-      "date": "2026-07-12T01:38:51+09:00",
-      "topic_index": 0,
-      "topic": "ChatGPTを不動産投資に活用する5つの方法",
-      "title": "ChatGPT不動産投資術：物件探しを「自動化資産」に変える5つの実践ロードマップ",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-chatgptbu-dong-chan-tou-zi-shu-wu-jian-tan-siwo-zi-dong-hua-zi-chan-nibian-jian.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-12T01:51:15+09:00",
       "topic_index": 1,
@@ -719,6 +711,14 @@
       "topic": "投資アフィリエイトを完全自動化する仕組みの作り方",
       "title": "投資アフィリエイトを完全自動化する方法｜1案件・3記事から始める収益システム設計",
       "path": "sites\\business\\content\\posts\\2026-07-18-tou-zi-ahuirieitowowan-quan-zi-dong-hua-surufang-fa-1an-jian-3ji-shi-karashi-yi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-18T18:21:47+09:00",
+      "topic_index": 40,
+      "topic": "海外SaaSアフィリエイトで継続報酬（MRR）を自動で稼ぐ方法",
+      "title": "海外SaaSアフィリエイトは「完全放置」で稼げるのか？実行ログで分かった自動化の現実と設計手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-18-hai-wai-saasahuirieitoha-wan-quan-fang-zhi-tejia-kerunoka-shi-xing-rokutefen-hua.md",
       "mode": "local"
     }
   ]
