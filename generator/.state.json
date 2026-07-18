@@ -1,14 +1,6 @@
 {
-  "next_index": 36,
+  "next_index": 37,
   "history": [
-    {
-      "date": "2026-07-11T22:07:03+09:00",
-      "topic_index": 46,
-      "topic": "Pythonスクリプトを使ったメルカリ・ヤフオクの自動価格差リサーチと裁定取引",
-      "title": "Pythonでメルカリ・ヤフオクの価格差を自動リサーチする方法：せどり自動化を「候補抽出システム」に変える実践ガイド",
-      "path": "sites\\business\\content\\posts\\2026-07-11-pythontemerukariyahuokunojia-ge-chai-wozi-dong-risatisurufang-fa-setorizi-dong.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-11T22:15:48+09:00",
       "topic_index": 47,
@@ -719,6 +711,14 @@
       "topic": "Web操作の完全自動化によるポイ活の可能性と注意点",
       "title": "Web操作の完全自動化でポイ活はどこまで可能？Pythonで「時間を使わない収益資産」を作る現実的な手順",
       "path": "sites\\business\\content\\posts\\2026-07-18-webcao-zuo-nowan-quan-zi-dong-hua-tehoihuo-hatokomateke-neng-pythonte-shi-jian.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-18T15:22:17+09:00",
+      "topic_index": 36,
+      "topic": "Pythonでウェブタスクを自動化して稼ぐ具体的な手順",
+      "title": "Python業務自動化を副業から月額保守・SaaSへ育てる方法｜受託案件を継続収益に変える7ステップ",
+      "path": "sites\\business\\content\\posts\\2026-07-18-pythonye-wu-zi-dong-hua-wofu-ye-karayue-e-bao-shou-saasheyu-terufang-fa-shou-tuo.md",
       "mode": "local"
     }
   ]
