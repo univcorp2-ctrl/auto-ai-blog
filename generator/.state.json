@@ -1,14 +1,6 @@
 {
-  "next_index": 42,
+  "next_index": 43,
   "history": [
-    {
-      "date": "2026-07-12T02:05:29+09:00",
-      "topic_index": 2,
-      "topic": "Python自動化で業務効率を10倍にする実践テクニック",
-      "title": "Python自動化で業務効率を10倍にする実践手順：定型作業を「自動化資産」に変える方法",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-pythonzi-dong-hua-teye-wu-xiao-lu-wo10bei-nisurushi-jian-shou-shun-ding-xing-zuo.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-12T02:21:50+09:00",
       "topic_index": 3,
@@ -719,6 +711,14 @@
       "topic": "PinterestとEtsyを連携させたデジタル商品自動販売システム",
       "title": "「完全放置」はできない。それでもAI画像×Pinterest×Etsyを自動化する価値はある",
       "path": "sites\\business\\content\\posts\\2026-07-18-wan-quan-fang-zhi-hatekinai-soretemoaihua-xiang-xpinterestxetsywozi-dong-hua-zhi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-18T20:20:42+09:00",
+      "topic_index": 42,
+      "topic": "ニッチ業種向けマッチングサイトをノーコードで立ち上げる手順",
+      "title": "LINE×Stripe Connectで超ニッチ市場を検証する――売れる前に作り込まない「7イベント」実践設計",
+      "path": "sites\\business\\content\\posts\\2026-07-18-linexstripe-connecttechao-nitutishi-chang-wojian-zheng-suru-mai-reruqian-nizuo.md",
       "mode": "local"
     }
   ]
