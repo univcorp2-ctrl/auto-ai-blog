@@ -1,14 +1,6 @@
 {
-  "next_index": 38,
+  "next_index": 39,
   "history": [
-    {
-      "date": "2026-07-12T00:17:48+09:00",
-      "topic_index": 48,
-      "topic": "BtoBリード獲得を完全自動化：スクレイピングとAI営業メールの連携",
-      "title": "半日かかるBtoBリード獲得を自動化する：スクレイピング×AI営業メールで「営業資産」を作る実践ガイド",
-      "path": "sites\\business\\content\\posts\\2026-07-12-ban-ri-kakarubtobritohuo-de-wozi-dong-hua-suru-sukureihinkuxaiying-ye-merute-ye.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-12T01:22:37+09:00",
       "topic_index": 49,
@@ -719,6 +711,14 @@
       "topic": "ルーチンワークを自動化してポイントや収益を得る仕組み作り",
       "title": "ルーチンワークを「ほぼ無人化」して収益につなげる方法｜失敗ログから学ぶ自動化資産の作り方",
       "path": "sites\\business\\content\\posts\\2026-07-18-rutinwakuwo-hohowu-ren-hua-siteshou-yi-nitunakerufang-fa-shi-bai-rokukaraxue-hua.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-18T16:08:52+09:00",
+      "topic_index": 38,
+      "topic": "ポイ活自動化ツールの危険性と安全に稼ぐプログラミング副業",
+      "title": "ポイ活自動化ツールはどこまで安全？規約違反を避け、Python副業を「自動化資産」に変える実践設計",
+      "path": "sites\\business\\content\\posts\\2026-07-18-hoihuo-zi-dong-hua-turuhatokomatean-quan-gui-yue-wei-fan-wobi-ke-pythonfu-ye-wo.md",
       "mode": "local"
     }
   ]
