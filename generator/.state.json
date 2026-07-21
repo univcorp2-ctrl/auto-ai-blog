@@ -1,14 +1,6 @@
 {
-  "next_index": 27,
+  "next_index": 28,
   "history": [
-    {
-      "date": "2026-07-12T22:06:25+09:00",
-      "topic_index": 37,
-      "topic": "ルーチンワークを自動化してポイントや収益を得る仕組み作り",
-      "title": "ルーチンワークを「収益化資産」に変える自動化設計：ポイント獲得から商品導線まで",
-      "path": "sites\\business\\content\\posts\\2026-07-12-rutinwakuwo-shou-yi-hua-zi-chan-nibian-eruzi-dong-hua-she-ji-hointohuo-de-pin.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-12T22:18:28+09:00",
       "topic_index": 38,
@@ -719,6 +711,14 @@
       "topic": "PythonでPDF帳票から必要情報を抽出する基本設計",
       "title": "PythonでPDFからデータ抽出を安全に自動化する方法｜OCR判定・検算・重複防止の実務設計",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-21-pythontepdfkaratetachou-chu-woan-quan-nizi-dong-hua-surufang-fa-ocrpan-ding-jian.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T00:11:06+09:00",
+      "topic_index": 27,
+      "topic": "不動産会社のためのSEO記事設計入門",
+      "title": "不動産SEOの記事設計完全ガイド｜検索流入を問い合わせにつなげる9つの実践手順",
+      "path": "sites\\business\\content\\posts\\2026-07-22-bu-dong-chan-seonoji-shi-she-ji-wan-quan-kaito-jian-suo-liu-ru-wowen-ihe-jian.md",
       "mode": "local"
     }
   ]
