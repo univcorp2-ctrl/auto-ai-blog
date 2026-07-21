@@ -1,14 +1,6 @@
 {
-  "next_index": 37,
+  "next_index": 38,
   "history": [
-    {
-      "date": "2026-07-13T06:07:14+09:00",
-      "topic_index": 47,
-      "topic": "海外ニュースをAIで自動翻訳・要約する有料ニュースレターの作り方",
-      "title": "海外ニュースをAI要約で有料ニュースレター化する実務手順：収集・翻訳・配信・課金まで",
-      "path": "sites\\business\\content\\posts\\2026-07-13-hai-wai-niyusuwoaiyao-yue-teyou-liao-niyusuretahua-surushi-wu-shou-shun-shou-ji.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-13T06:35:30+09:00",
       "topic_index": 48,
@@ -719,6 +711,14 @@
       "topic": "Pythonでウェブタスクを自動化して稼ぐ具体的な手順",
       "title": "Pythonでウェブ副業を自動化する10ステップ｜収益導線・監視・KPIまで実測ログ付きで解説",
       "path": "sites\\business\\content\\posts\\2026-07-22-pythonteuehufu-ye-wozi-dong-hua-suru10sutetuhu-shou-yi-dao-xian-jian-shi-ce-shuo.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T03:23:29+09:00",
+      "topic_index": 37,
+      "topic": "ルーチンワークを自動化してポイントや収益を得る仕組み作り",
+      "title": "年間83時間を取り戻すルーチンワーク自動化｜ポイント・収益につなげる8ステップ",
+      "path": "sites\\business\\content\\posts\\2026-07-22-nian-jian-83shi-jian-woqu-rili-surutinwakuzi-dong-hua-hointoshou-yi.md",
       "mode": "local"
     }
   ]
