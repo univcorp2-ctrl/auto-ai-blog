@@ -1,14 +1,6 @@
 {
-  "next_index": 6,
+  "next_index": 7,
   "history": [
-    {
-      "date": "2026-07-12T08:31:04+09:00",
-      "topic_index": 16,
-      "topic": "Cloudflare PagesでHugoブログを高速配信するメリット",
-      "title": "Cloudflare PagesでHugoブログを高速配信するメリット：静的サイトを「自動収益メディア」の土台に変える",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-cloudflare-pagestehugohurokuwogao-su-pei-xin-surumerituto-jing-de-saitowo-zi-yi.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-12T10:16:25+09:00",
       "topic_index": 17,
@@ -719,6 +711,14 @@
       "topic": "空室対策にAIを使うメリットと注意点",
       "title": "家賃を下げる前に始める「AI空室対策」｜賃貸経営の募集・反響分析を自動化する実践手順",
       "path": "sites\\real-estate\\content\\posts\\2026-07-21-jia-ren-woxia-keruqian-nishi-meru-aikong-shi-dui-ce-ren-dai-jing-ying-nomu-ji-xi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-21T15:37:46+09:00",
+      "topic_index": 6,
+      "topic": "家賃査定をデータで改善するための基本ステップ",
+      "title": "家賃査定をデータで改善・自動化する8ステップ｜空室損失を減らす計算方法とKPI",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-21-jia-ren-cha-ding-wotetategai-shan-zi-dong-hua-suru8sutetuhu-kong-shi-sun-shi-fa.md",
       "mode": "local"
     }
   ]
