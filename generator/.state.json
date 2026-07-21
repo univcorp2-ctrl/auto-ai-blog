@@ -1,14 +1,6 @@
 {
-  "next_index": 7,
+  "next_index": 8,
   "history": [
-    {
-      "date": "2026-07-12T10:16:25+09:00",
-      "topic_index": 17,
-      "topic": "HugoとWordPressの違いを不動産ブログ目線で比較",
-      "title": "HugoとWordPressの違いを不動産ブログ目線で比較：自動化資産を作るならどちらを選ぶべきか",
-      "path": "sites\\business\\content\\posts\\2026-07-12-hugotowordpressnowei-iwobu-dong-chan-hurokumu-xian-tebi-jiao-zi-dong-hua-zi-chan.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-12T11:35:44+09:00",
       "topic_index": 18,
@@ -719,6 +711,14 @@
       "topic": "家賃査定をデータで改善するための基本ステップ",
       "title": "家賃査定をデータで改善・自動化する8ステップ｜空室損失を減らす計算方法とKPI",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-21-jia-ren-cha-ding-wotetategai-shan-zi-dong-hua-suru8sutetuhu-kong-shi-sun-shi-fa.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-21T16:08:04+09:00",
+      "topic_index": 7,
+      "topic": "不動産投資初心者が知っておきたいキャッシュフローの考え方",
+      "title": "表面利回り12.21％でも手残りは月6万円｜不動産投資CF計算の7ステップ",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-21-biao-mian-li-hui-ri12-21-temoshou-can-rihayue-6mo-yuan-bu-dong-chan-tou-zi-cfji.md",
       "mode": "local"
     }
   ]
