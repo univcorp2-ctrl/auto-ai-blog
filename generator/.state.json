@@ -1,14 +1,6 @@
 {
-  "next_index": 33,
+  "next_index": 34,
   "history": [
-    {
-      "date": "2026-07-13T05:07:15+09:00",
-      "topic_index": 43,
-      "topic": "完全無人AIトレードBotのためのVPS環境構築と運用上の注意",
-      "title": "VPSでAIトレードBotを24時間動かす実践ガイド：止まらない・暴走しない・あとから検証できる運用設計",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-13-vpsteaitoretobotwo24shi-jian-dong-kasushi-jian-kaito-zhi-maranaibao-zou-zheng-ji.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-13T05:19:55+09:00",
       "topic_index": 44,
@@ -719,6 +711,14 @@
       "topic": "収益物件の比較表を自動作成するワークフロー",
       "title": "収益物件の比較表を自動化する方法｜NOI計算・異常検知・通知まで実装する9ステップ",
       "path": "sites\\real-estate\\content\\posts\\2026-07-22-shou-yi-wu-jian-nobi-jiao-biao-wozi-dong-hua-surufang-fa-noiji-suan-yi-chang-zhi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T01:39:01+09:00",
+      "topic_index": 33,
+      "topic": "賃貸募集条件を見直すためのAIチェックリスト",
+      "title": "賃貸募集条件をAIで見直すチェックリスト｜空室対策を自動化する実務手順",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-22-ren-dai-mu-ji-tiao-jian-woaitejian-zhi-sutietukurisuto-kong-shi-dui-ce-wozi-dong.md",
       "mode": "local"
     }
   ]
