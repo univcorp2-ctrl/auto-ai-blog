@@ -1,14 +1,6 @@
 {
-  "next_index": 9,
+  "next_index": 10,
   "history": [
-    {
-      "date": "2026-07-12T11:52:17+09:00",
-      "topic_index": 19,
-      "topic": "AIで議事録からTODOを自動抽出する方法",
-      "title": "AIで議事録からTODOを自動抽出する方法：会議後のタスク漏れを減らす実践ワークフロー",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-aiteyi-shi-lu-karatodowozi-dong-chou-chu-surufang-fa-hui-yi-hou-notasukulou-jian.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-12T12:06:33+09:00",
       "topic_index": 20,
@@ -719,6 +711,14 @@
       "topic": "Excel業務をPythonに置き換える判断基準",
       "title": "Excel業務はPython化すべき？費用対効果で見極める判断基準と完全自動化9ステップ",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-21-excelye-wu-hapythonhua-suheki-fei-yong-dui-xiao-guo-tejian-ji-merupan-duan-ji-zi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-21T16:55:48+09:00",
+      "topic_index": 9,
+      "topic": "AIエージェントで営業資料作成を自動化する方法",
+      "title": "AIエージェントで営業資料作成を自動化する方法｜誤送信を防ぎ、提案を商談につなげる9ステップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-21-aiesientoteying-ye-zi-liao-zuo-cheng-wozi-dong-hua-surufang-fa-wu-song-xin-ki-ti.md",
       "mode": "local"
     }
   ]
