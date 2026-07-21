@@ -1,14 +1,6 @@
 {
-  "next_index": 13,
+  "next_index": 14,
   "history": [
-    {
-      "date": "2026-07-12T12:52:09+09:00",
-      "topic_index": 23,
-      "topic": "ローカルAI CLIを業務自動化に使うメリット",
-      "title": "ローカルAI CLIで業務自動化を「収益資産」に変える実装ガイド｜AI CLI・ローカル自動化の手順と失敗対策",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-rokaruai-cliteye-wu-zi-dong-hua-wo-shou-yi-zi-chan-nibian-erushi-zhuang-kaito-ai.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-12T13:07:44+09:00",
       "topic_index": 24,
@@ -719,6 +711,14 @@
       "topic": "賃貸管理の問い合わせ対応を自動化する前に決めるべきルール",
       "title": "賃貸管理の問い合わせ対応を自動化する前に決めるべき8つのルール｜誤回答を防ぎ、無人運用へつなげる実務設計",
       "path": "sites\\real-estate\\content\\posts\\2026-07-21-ren-dai-guan-li-nowen-ihe-wasedui-ying-wozi-dong-hua-suruqian-nijue-wu-hui-da-ki.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-21T18:21:16+09:00",
+      "topic_index": 13,
+      "topic": "AI時代の不動産営業に必要なスキル",
+      "title": "AI時代の不動産営業に必要な7つのスキル｜経験を「自動化資産」に変える実践ロードマップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-21-aishi-dai-nobu-dong-chan-ying-ye-nibi-yao-na7tunosukiru-jing-yan-wo-zi-dong-hua.md",
       "mode": "local"
     }
   ]
