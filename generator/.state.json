@@ -1,14 +1,6 @@
 {
-  "next_index": 44,
+  "next_index": 45,
   "history": [
-    {
-      "date": "2026-07-13T08:03:59+09:00",
-      "topic_index": 4,
-      "topic": "不動産管理会社がAIを導入する前に整理すべき業務フロー",
-      "title": "不動産管理会社のAI導入は「修繕対応」から始める：業務フロー整理で失敗を防ぐ実践手順",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-13-bu-dong-chan-guan-li-hui-she-noaidao-ru-ha-xiu-shan-dui-ying-karashi-meru-ye-wu.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-13T08:21:04+09:00",
       "topic_index": 5,
@@ -719,6 +711,14 @@
       "topic": "完全無人AIトレードBotのためのVPS環境構築と運用上の注意",
       "title": "AIトレードBotをVPSで止めない12手順｜再起動・重複注文・APIキー漏えいを防ぐ運用設計",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-22-aitoretobotwovpstezhi-menai12shou-shun-zai-qi-dong-zhong-fu-zhu-wen-apikilou-she.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T06:05:13+09:00",
+      "topic_index": 44,
+      "topic": "AI美女ショート動画を量産してYouTube/TikTokで収益化する戦略",
+      "title": "「AI美女動画は稼げる」は本当か？実測データがない段階で分かったこと",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-22-aimei-nu-dong-hua-hajia-keru-haben-dang-ka-shi-ce-tetakanaiduan-jie-tefen.md",
       "mode": "local"
     }
   ]
