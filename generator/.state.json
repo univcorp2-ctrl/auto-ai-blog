@@ -1,14 +1,6 @@
 {
-  "next_index": 20,
+  "next_index": 21,
   "history": [
-    {
-      "date": "2026-07-12T15:34:33+09:00",
-      "topic_index": 30,
-      "topic": "不動産業務におけるノーコードとPythonの使い分け",
-      "title": "不動産業務の自動化は「ノーコードで流し、Pythonで判定」が正解：初心者でも失敗しない実務設計",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-12-bu-dong-chan-ye-wu-nozi-dong-hua-ha-nokototeliu-si-pythontepan-ding-kazheng-jie.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-12T15:50:56+09:00",
       "topic_index": 31,
@@ -719,6 +711,14 @@
       "topic": "AIで議事録からTODOを自動抽出する方法",
       "title": "AIで議事録からTODOを自動抽出・登録する方法｜担当者・期限の判定と誤登録を防ぐ実務設計",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-21-aiteyi-shi-lu-karatodowozi-dong-chou-chu-deng-lu-surufang-fa-dan-dang-zhe-qi-lu.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-21T21:52:32+09:00",
+      "topic_index": 20,
+      "topic": "賃貸オーナー向け月次レポートを自動生成する設計",
+      "title": "賃貸経営の異常を見逃さない｜収支・空室・修繕の月次レポートを自動生成する9ステップ",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-21-ren-dai-jing-ying-noyi-chang-wojian-tao-sanai-shou-zhi-kong-shi-xiu-shan-noyue.md",
       "mode": "local"
     }
   ]
