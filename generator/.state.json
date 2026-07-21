@@ -1,14 +1,6 @@
 {
-  "next_index": 10,
+  "next_index": 11,
   "history": [
-    {
-      "date": "2026-07-12T12:06:33+09:00",
-      "topic_index": 20,
-      "topic": "賃貸オーナー向け月次レポートを自動生成する設計",
-      "title": "賃貸オーナー向け月次レポート自動生成ガイド：手作業を減らし、収益改善につなげる設計",
-      "path": "sites\\real-estate\\content\\posts\\2026-07-12-ren-dai-onaxiang-keyue-ci-rehotozi-dong-sheng-cheng-kaito-shou-zuo-ye-wojian-yi.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-12T12:21:44+09:00",
       "topic_index": 21,
@@ -719,6 +711,14 @@
       "topic": "AIエージェントで営業資料作成を自動化する方法",
       "title": "AIエージェントで営業資料作成を自動化する方法｜誤送信を防ぎ、提案を商談につなげる9ステップ",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-21-aiesientoteying-ye-zi-liao-zuo-cheng-wozi-dong-hua-surufang-fa-wu-song-xin-ki-ti.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-21T17:08:38+09:00",
+      "topic_index": 10,
+      "topic": "不動産広告文をAIで改善する実践プロンプト集",
+      "title": "【コピペ可・実務テンプレ付き】不動産広告文をAIで改善する7ステップ｜根拠確認から反響計測まで",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-21-kohiheke-shi-wu-tenhurefu-ki-bu-dong-chan-guang-gao-wen-woaitegai-shan-gen-ju-ji.md",
       "mode": "local"
     }
   ]
