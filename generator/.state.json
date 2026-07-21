@@ -1,14 +1,6 @@
 {
-  "next_index": 47,
+  "next_index": 48,
   "history": [
-    {
-      "date": "2026-07-13T08:52:11+09:00",
-      "topic_index": 7,
-      "topic": "不動産投資初心者が知っておきたいキャッシュフローの考え方",
-      "title": "手残りが消える前に見る。不動産投資初心者のキャッシュフロー入門｜赤字を自動で見張る仕組みの作り方",
-      "path": "sites\\real-estate\\content\\posts\\2026-07-13-shou-can-rikaxiao-eruqian-nijian-ru-bu-dong-chan-tou-zi-chu-xin-zhe-men-chi-zi.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-13T09:06:03+09:00",
       "topic_index": 8,
@@ -719,6 +711,14 @@
       "topic": "Pythonスクリプトを使ったメルカリ・ヤフオクの自動価格差リサーチと裁定取引",
       "title": "Pythonでメルカリ・ヤフオクの価格差を自動リサーチする方法｜せどり自動化・アービトラージ実践ガイド",
       "path": "sites\\business\\content\\posts\\2026-07-22-pythontemerukariyahuokunojia-ge-chai-wozi-dong-risatisurufang-fa-setorizi-dong.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T07:37:09+09:00",
+      "topic_index": 47,
+      "topic": "海外ニュースをAIで自動翻訳・要約する有料ニュースレターの作り方",
+      "title": "AI海外ニュースレターの作り方｜2度の240秒タイムアウトで分かった「止まっても二重配信しない」8ステップ",
+      "path": "sites\\business\\content\\posts\\2026-07-22-aihai-wai-niyusuretanozuo-rifang-2du-no240miao-taimuautotefen-katuta-zhi-zhong.md",
       "mode": "local"
     }
   ]
