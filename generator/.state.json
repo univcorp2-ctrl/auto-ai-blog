@@ -1,14 +1,6 @@
 {
-  "next_index": 35,
+  "next_index": 36,
   "history": [
-    {
-      "date": "2026-07-13T05:36:36+09:00",
-      "topic_index": 45,
-      "topic": "AIで完全自動化する「顔出しなし」YouTube・TikTokの始め方",
-      "title": "顔出しなしYouTube自動化の始め方｜AIショート動画を「投稿作業」で終わらせず、検証できるメディア資産にする手順",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-13-yan-chu-sinasiyoutubezi-dong-hua-noshi-mefang-aisiyotodong-hua-wo-tou-gao-zuo-ye.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-13T05:50:23+09:00",
       "topic_index": 46,
@@ -719,6 +711,14 @@
       "topic": "不動産ブログを毎日更新するための自動化設計",
       "title": "不動産ブログを毎日更新する自動化設計｜人の時間を使わず育つメディア資産の作り方",
       "path": "sites\\business\\content\\posts\\2026-07-22-bu-dong-chan-hurokuwomei-ri-geng-xin-suruzi-dong-hua-she-ji-ren-noshi-jian-woshi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T02:22:14+09:00",
+      "topic_index": 35,
+      "topic": "Web操作の完全自動化によるポイ活の可能性と注意点",
+      "title": "ポイ活の完全自動化はどこまで可能？Pythonで安全性・採算・成果を検証する実践手順",
+      "path": "sites\\business\\content\\posts\\2026-07-22-hoihuo-nowan-quan-zi-dong-hua-hatokomateke-neng-pythontean-quan-xing-cai-suan.md",
       "mode": "local"
     }
   ]
