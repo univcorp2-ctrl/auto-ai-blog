@@ -1,14 +1,6 @@
 {
-  "next_index": 17,
+  "next_index": 18,
   "history": [
-    {
-      "date": "2026-07-12T14:50:55+09:00",
-      "topic_index": 27,
-      "topic": "不動産会社のためのSEO記事設計入門",
-      "title": "問い合わせにつながる不動産SEO記事設計｜Web集客を自動化資産に変える実務手順",
-      "path": "sites\\business\\content\\posts\\2026-07-12-wen-ihe-wasenitunakarubu-dong-chan-seoji-shi-she-ji-webji-ke-wozi-dong-hua-zi-wu.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-12T15:06:49+09:00",
       "topic_index": 28,
@@ -719,6 +711,14 @@
       "topic": "Cloudflare PagesでHugoブログを高速配信するメリット",
       "title": "Cloudflare Pages＋Hugoでブログ公開を自動化する方法【3サイト・836記事の運用記録を検証】",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-21-cloudflare-pages-hugotehurokugong-kai-wozi-dong-hua-surufang-fa-3saito836ji-shi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-21T20:39:39+09:00",
+      "topic_index": 17,
+      "topic": "HugoとWordPressの違いを不動産ブログ目線で比較",
+      "title": "不動産ブログはHugoとWordPressのどっち？837記事の実測で分かった自動化・SEO・運用コスト",
+      "path": "sites\\business\\content\\posts\\2026-07-21-bu-dong-chan-hurokuhahugotowordpressnototuti-837ji-shi-noshi-ce-tefen-katutazi.md",
       "mode": "local"
     }
   ]
