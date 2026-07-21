@@ -1,14 +1,6 @@
 {
-  "next_index": 31,
+  "next_index": 32,
   "history": [
-    {
-      "date": "2026-07-13T04:36:05+09:00",
-      "topic_index": 41,
-      "topic": "PinterestとEtsyを連携させたデジタル商品自動販売システム",
-      "title": "Pinterest×Etsyでデジタル商品を自動販売：初心者が10商品・30ピンで「売れる導線」を検証する手順",
-      "path": "sites\\business\\content\\posts\\2026-07-13-pinterestxetsytetesitarushang-pin-wozi-dong-fan-mai-chu-xin-zhe-ka10shang-pin.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-13T04:52:12+09:00",
       "topic_index": 42,
@@ -719,6 +711,14 @@
       "topic": "不動産業務におけるノーコードとPythonの使い分け",
       "title": "不動産業務自動化で失敗しないノーコード・Python使い分けガイド｜選定から監視まで9ステップ",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-22-bu-dong-chan-ye-wu-zi-dong-hua-teshi-bai-sinainokotopythonshi-ifen-kekaito-xuan.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T01:07:05+09:00",
+      "topic_index": 31,
+      "topic": "AI生成記事のリスクと人間レビューの重要性",
+      "title": "AI記事の「誤公開」を防ぐ7段階の品質ゲート｜実事故とログから学ぶ人間レビュー設計",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-22-aiji-shi-no-wu-gong-kai-wofang-ku7duan-jie-nopin-zhi-keto-shi-shi-gu-huren-jian.md",
       "mode": "local"
     }
   ]
