@@ -1,14 +1,6 @@
 {
-  "next_index": 2,
+  "next_index": 3,
   "history": [
-    {
-      "date": "2026-07-12T07:37:23+09:00",
-      "topic_index": 12,
-      "topic": "賃貸管理の問い合わせ対応を自動化する前に決めるべきルール",
-      "title": "賃貸管理の問い合わせ対応を自動化する前に決めるべき7つのルール：緊急対応・法務リスク・収益導線を守る実務設計図",
-      "path": "sites\\real-estate\\content\\posts\\2026-07-12-ren-dai-guan-li-nowen-ihe-wasedui-ying-wozi-dong-hua-suruqian-nijue-jin-ji-dui.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-12T07:52:14+09:00",
       "topic_index": 13,
@@ -719,6 +711,14 @@
       "topic": "新築アパート投資の利回り計算完全ガイド",
       "title": "不動産投資の利回り計算は信用できる？Hiroの検証ログと正しい確認方法",
       "path": "sites\\real-estate\\content\\posts\\2026-07-19-bu-dong-chan-tou-zi-noli-hui-riji-suan-haxin-yong-tekiru-hironojian-zheng-siique.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-21T12:53:29+09:00",
+      "topic_index": 2,
+      "topic": "Python自動化で業務効率を10倍にする実践テクニック",
+      "title": "Python自動化で業務効率10倍を目指す｜実測ログで学ぶ「自動化資産」の作り方",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-21-pythonzi-dong-hua-teye-wu-xiao-lu-10bei-womu-zhi-su-shi-ce-rokutexue-hu-zi-dong.md",
       "mode": "local"
     }
   ]
