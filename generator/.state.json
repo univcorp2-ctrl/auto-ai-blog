@@ -1,14 +1,6 @@
 {
-  "next_index": 29,
+  "next_index": 30,
   "history": [
-    {
-      "date": "2026-07-13T04:05:50+09:00",
-      "topic_index": 39,
-      "topic": "投資アフィリエイトを完全自動化する仕組みの作り方",
-      "title": "投資アフィリエイト自動化の始め方｜初心者でも収益導線・記事制作・KPI改善まで仕組み化する手順",
-      "path": "sites\\business\\content\\posts\\2026-07-13-tou-zi-ahuirieitozi-dong-hua-noshi-mefang-chu-xin-zhe-temoshou-yi-dao-xian-ji-zu.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-13T04:21:15+09:00",
       "topic_index": 40,
@@ -719,6 +711,14 @@
       "topic": "AIでメール返信文を標準化するテンプレート運用",
       "title": "AIメール返信を自動化する方法｜誤送信を防ぐ8ステップと実運用KPI",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-22-aimerufan-xin-wozi-dong-hua-surufang-fa-wu-song-xin-wofang-ku8sutetuhutoshi-yun.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T00:38:01+09:00",
+      "topic_index": 29,
+      "topic": "空室期間を短縮するためのデータ分析入門",
+      "title": "賃貸募集ファネルを自動監視する方法｜問い合わせ・内見・申込の詰まりを特定する7ステップ",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-22-ren-dai-mu-ji-huaneruwozi-dong-jian-shi-surufang-fa-wen-ihe-wasenei-jian-shen-ip.md",
       "mode": "local"
     }
   ]
