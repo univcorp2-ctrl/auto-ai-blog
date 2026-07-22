@@ -1,14 +1,6 @@
 {
-  "next_index": 30,
+  "next_index": 31,
   "history": [
-    {
-      "date": "2026-07-18T18:21:47+09:00",
-      "topic_index": 40,
-      "topic": "海外SaaSアフィリエイトで継続報酬（MRR）を自動で稼ぐ方法",
-      "title": "海外SaaSアフィリエイトは「完全放置」で稼げるのか？実行ログで分かった自動化の現実と設計手順",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-18-hai-wai-saasahuirieitoha-wan-quan-fang-zhi-tejia-kerunoka-shi-xing-rokutefen-hua.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-18T19:21:52+09:00",
       "topic_index": 41,
@@ -719,6 +711,14 @@
       "topic": "空室期間を短縮するためのデータ分析入門",
       "title": "完成稿を作るために必要な情報：記事本文をご共有ください",
       "path": "sites\\real-estate\\content\\posts\\2026-07-22-wan-cheng-gao-wozuo-rutamenibi-yao-naqing-bao-ji-shi-ben-wen-wokogong-you.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T21:24:02+09:00",
+      "topic_index": 30,
+      "topic": "不動産業務におけるノーコードとPythonの使い分け",
+      "title": "ノーコードかPythonか？不動産業務を無人化する判断基準と実践7ステップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-22-nokotokapythonka-bu-dong-chan-ye-wu-wowu-ren-hua-surupan-duan-ji-zhun-toshi-jian.md",
       "mode": "local"
     }
   ]
