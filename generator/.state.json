@@ -1,14 +1,6 @@
 {
-  "next_index": 25,
+  "next_index": 26,
   "history": [
-    {
-      "date": "2026-07-18T14:26:26+09:00",
-      "topic_index": 35,
-      "topic": "Web操作の完全自動化によるポイ活の可能性と注意点",
-      "title": "Web操作の完全自動化でポイ活はどこまで可能？Pythonで「時間を使わない収益資産」を作る現実的な手順",
-      "path": "sites\\business\\content\\posts\\2026-07-18-webcao-zuo-nowan-quan-zi-dong-hua-tehoihuo-hatokomateke-neng-pythonte-shi-jian.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-18T15:22:17+09:00",
       "topic_index": 36,
@@ -719,6 +711,14 @@
       "topic": "不動産投資シミュレーションでよくある入力ミス",
       "title": "不動産投資シミュレーションの入力ミス12選｜黒字予測を守る自動チェック実践ガイド",
       "path": "sites\\real-estate\\content\\posts\\2026-07-22-bu-dong-chan-tou-zi-simiyuresiyonnoru-li-misu12xuan-hei-zi-yu-ce-woshou-ruzi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T18:53:55+09:00",
+      "topic_index": 25,
+      "topic": "AIを使った競合物件リサーチの進め方",
+      "title": "AIで競合物件調査を自動化する9ステップ｜半日かかる比較表を「更新される資産」に変える",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-22-aitejing-he-wu-jian-diao-cha-wozi-dong-hua-suru9sutetuhu-ban-ri-kakarubi-jiao-wo.md",
       "mode": "local"
     }
   ]
