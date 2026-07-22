@@ -1,14 +1,6 @@
 {
-  "next_index": 7,
+  "next_index": 8,
   "history": [
-    {
-      "date": "2026-07-16T19:20:33+09:00",
-      "topic_index": 17,
-      "topic": "HugoとWordPressの違いを不動産ブログ目線で比較",
-      "title": "不動産ブログはHugoとWordPressのどちらで作るべきか？3サイト自動運用の実データで比較",
-      "path": "sites\\business\\content\\posts\\2026-07-16-bu-dong-chan-hurokuhahugotowordpressnototiratezuo-ruhekika-3saitozi-dong-yun.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-16T19:38:51+09:00",
       "topic_index": 18,
@@ -719,6 +711,14 @@
       "topic": "家賃査定をデータで改善するための基本ステップ",
       "title": "家賃査定をデータで改善する7ステップ｜不動産収益を自動で守る仕組みの作り方",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-22-jia-ren-cha-ding-wotetategai-shan-suru7sutetuhu-bu-dong-chan-shou-yi-wozi-dong.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T11:24:20+09:00",
+      "topic_index": 7,
+      "topic": "不動産投資初心者が知っておきたいキャッシュフローの考え方",
+      "title": "表面利回り12.21％でも手残りは月6万円？不動産投資初心者のためのキャッシュフロー完全ガイド",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-22-biao-mian-li-hui-ri12-21-temoshou-can-rihayue-6mo-yuan-bu-dong-chan-tou-zi-chu.md",
       "mode": "local"
     }
   ]
