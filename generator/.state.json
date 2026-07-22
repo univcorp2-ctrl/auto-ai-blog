@@ -1,14 +1,6 @@
 {
-  "next_index": 0,
+  "next_index": 1,
   "history": [
-    {
-      "date": "2026-07-21T17:08:38+09:00",
-      "topic_index": 10,
-      "topic": "不動産広告文をAIで改善する実践プロンプト集",
-      "title": "【コピペ可・実務テンプレ付き】不動産広告文をAIで改善する7ステップ｜根拠確認から反響計測まで",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-21-kohiheke-shi-wu-tenhurefu-ki-bu-dong-chan-guang-gao-wen-woaitegai-shan-gen-ju-ji.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-21T17:22:45+09:00",
       "topic_index": 11,
@@ -719,6 +711,14 @@
       "topic": "AIの機能をAPI化してサブスクリプション収益（MRR）を得る開発手法",
       "title": "AI機能をAPI販売してMRRを作る方法｜小さく始めるMicro SaaS構築9ステップ",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-23-aiji-neng-woapifan-mai-sitemrrwozuo-rufang-fa-xiao-sakushi-merumicro-saasgou-zhu.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T05:54:42+09:00",
+      "topic_index": 0,
+      "topic": "ChatGPTを不動産投資に活用する5つの方法",
+      "title": "ChatGPTを不動産投資に活用する5つの方法｜物件探し・収支分析・賃貸管理を自動化する実践手順",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-23-chatgptwobu-dong-chan-tou-zi-nihuo-yong-suru5tunofang-fa-wu-jian-tan-sishou-zhi.md",
       "mode": "local"
     }
   ]
