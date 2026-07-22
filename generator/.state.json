@@ -1,14 +1,6 @@
 {
-  "next_index": 5,
+  "next_index": 6,
   "history": [
-    {
-      "date": "2026-07-21T19:23:47+09:00",
-      "topic_index": 15,
-      "topic": "GitHub Actionsで業務スクリプトを安全に運用する考え方",
-      "title": "GitHub Actionsで業務スクリプトを安全に無人運用する方法｜二重実行・秘密漏えい・誤配信を防ぐ実践設計",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-21-github-actionsteye-wu-sukurihutowoan-quan-niwu-ren-yun-yong-surufang-fa-er-zhong.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-21T19:51:10+09:00",
       "topic_index": 16,
@@ -719,6 +711,14 @@
       "topic": "不動産管理会社がAIを導入する前に整理すべき業務フロー",
       "title": "失敗しない不動産管理会社のAI導入9ステップ｜誤返信・二重登録を防ぐ実務設計",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-23-shi-bai-sinaibu-dong-chan-guan-li-hui-she-noaidao-ru-9sutetuhu-wu-fan-xin-er-lu.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T07:23:24+09:00",
+      "topic_index": 5,
+      "topic": "空室対策にAIを使うメリットと注意点",
+      "title": "家賃を下げる前に試すAI空室対策7ステップ｜反響分析・募集改善を自動化する実務手順",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-23-jia-ren-woxia-keruqian-nishi-suaikong-shi-dui-ce-7sutetuhu-fan-xiang-fen-xi-mu.md",
       "mode": "local"
     }
   ]
