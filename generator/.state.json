@@ -1,14 +1,6 @@
 {
-  "next_index": 15,
+  "next_index": 16,
   "history": [
-    {
-      "date": "2026-07-17T07:38:24+09:00",
-      "topic_index": 25,
-      "topic": "AIを使った競合物件リサーチの進め方",
-      "title": "AIで競合物件調査を自動化する9ステップ｜根拠・欠損・更新履歴を「収益に使えるデータ資産」へ変える",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-17-aitejing-he-wu-jian-diao-cha-wozi-dong-hua-suru9sutetuhu-gen-ju-qian-sun-geng-lu.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-17T07:46:30+09:00",
       "topic_index": 26,
@@ -719,6 +711,14 @@
       "topic": "PythonでCSVを自動集計する基本パターン",
       "title": "PythonでCSV集計を自動化｜売上・ポイントを安全に無人記録する実践パターン",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-22-pythontecsvji-ji-wozi-dong-hua-mai-shang-hointowoan-quan-niwu-ren-ji-lu-surushi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T15:15:16+09:00",
+      "topic_index": 15,
+      "topic": "GitHub Actionsで業務スクリプトを安全に運用する考え方",
+      "title": "記事本文が不足しているため、最終チェックを実施できません",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-22-ji-shi-ben-wen-kabu-zu-siteirutame-zui-zhong-tietukuwoshi-shi-tekimasen.md",
       "mode": "local"
     }
   ]
