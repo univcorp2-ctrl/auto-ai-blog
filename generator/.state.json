@@ -1,14 +1,6 @@
 {
-  "next_index": 34,
+  "next_index": 35,
   "history": [
-    {
-      "date": "2026-07-18T21:25:04+09:00",
-      "topic_index": 44,
-      "topic": "AI美女ショート動画を量産してYouTube/TikTokで収益化する戦略",
-      "title": "AI美女ショート動画は「量産」だけでは稼げない｜YouTube収益化までの全自動運用設計",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-18-aimei-nu-siyotodong-hua-ha-liang-chan-taketehajia-kenai-youtubeshou-yi-hua-zi-ji.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-18T23:25:13+09:00",
       "topic_index": 45,
@@ -719,6 +711,14 @@
       "topic": "賃貸募集条件を見直すためのAIチェックリスト",
       "title": "賃貸募集条件をAIで見直すチェックリスト｜空室対策を仕組み化する7ステップ",
       "path": "sites\\real-estate\\content\\posts\\2026-07-22-ren-dai-mu-ji-tiao-jian-woaitejian-zhi-sutietukurisuto-kong-shi-dui-ce-woshi-zu.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T23:23:45+09:00",
+      "topic_index": 34,
+      "topic": "不動産ブログを毎日更新するための自動化設計",
+      "title": "不動産ブログ自動化の設計図｜917本の運用と失敗ログから学ぶ毎日更新・品質管理・収益化",
+      "path": "sites\\business\\content\\posts\\2026-07-22-bu-dong-chan-hurokuzi-dong-hua-noshe-ji-tu-917ben-noyun-yong-toshi-bai-humei-ri.md",
       "mode": "local"
     }
   ]
