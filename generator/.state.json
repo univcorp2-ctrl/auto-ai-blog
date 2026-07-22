@@ -1,14 +1,6 @@
 {
-  "next_index": 16,
+  "next_index": 17,
   "history": [
-    {
-      "date": "2026-07-17T07:46:30+09:00",
-      "topic_index": 26,
-      "topic": "PythonでPDF帳票から必要情報を抽出する基本設計",
-      "title": "「精度99%」でも危ない？請求書PDFをAIで読み取る前に知っておきたい実務検証の全手順",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-17-jing-du-99-temowei-nai-qing-qiu-shu-pdfwoaitedu-miqu-ruqian-nizhi-tuteokitaishi.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-17T08:10:50+09:00",
       "topic_index": 27,
@@ -719,6 +711,14 @@
       "topic": "GitHub Actionsで業務スクリプトを安全に運用する考え方",
       "title": "記事本文が不足しているため、最終チェックを実施できません",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-22-ji-shi-ben-wen-kabu-zu-siteirutame-zui-zhong-tietukuwoshi-shi-tekimasen.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T15:54:59+09:00",
+      "topic_index": 16,
+      "topic": "Cloudflare PagesでHugoブログを高速配信するメリット",
+      "title": "Cloudflare Pages×Hugo完全ガイド｜公開を自動化し、高速・低保守のブログ資産をつくる",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-22-cloudflare-pagesxhugowan-quan-kaito-gong-kai-wozi-dong-hua-si-gao-su-di-bao-shou.md",
       "mode": "local"
     }
   ]
