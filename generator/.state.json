@@ -1,14 +1,6 @@
 {
-  "next_index": 42,
+  "next_index": 43,
   "history": [
-    {
-      "date": "2026-07-21T12:53:29+09:00",
-      "topic_index": 2,
-      "topic": "Python自動化で業務効率を10倍にする実践テクニック",
-      "title": "Python自動化で業務効率10倍を目指す｜実測ログで学ぶ「自動化資産」の作り方",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-21-pythonzi-dong-hua-teye-wu-xiao-lu-10bei-womu-zhi-su-shi-ce-rokutexue-hu-zi-dong.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-21T13:40:24+09:00",
       "topic_index": 3,
@@ -719,6 +711,14 @@
       "topic": "PinterestとEtsyを連携させたデジタル商品自動販売システム",
       "title": "Pinterest×Etsyでデジタル商品を自動販売する仕組み｜集客・納品・改善を資産化する8ステップ",
       "path": "sites\\business\\content\\posts\\2026-07-23-pinterestxetsytetesitarushang-pin-wozi-dong-fan-mai-surushi-zu-mi-ji-ke-na-pin.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T02:25:14+09:00",
+      "topic_index": 42,
+      "topic": "ニッチ業種向けマッチングサイトをノーコードで立ち上げる手順",
+      "title": "ニッチ業種向けマッチングサイトをノーコードで立ち上げる9ステップ｜副業を自動化資産へ変える設計図",
+      "path": "sites\\business\\content\\posts\\2026-07-23-nitutiye-zhong-xiang-kematutinkusaitowonokototeli-tishang-keru9sutetuhu-fu-ye-zi.md",
       "mode": "local"
     }
   ]
