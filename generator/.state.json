@@ -1,14 +1,6 @@
 {
-  "next_index": 19,
+  "next_index": 20,
   "history": [
-    {
-      "date": "2026-07-17T08:35:20+09:00",
-      "topic_index": 29,
-      "topic": "空室期間を短縮するためのデータ分析入門",
-      "title": "家賃を下げる前に読む空室分析｜問い合わせ・内見・申込の「詰まり」を特定する7ステップ",
-      "path": "sites\\real-estate\\content\\posts\\2026-07-17-jia-ren-woxia-keruqian-nidu-mukong-shi-fen-xi-wen-ihe-wasenei-jian-shen-ip-no.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-17T08:54:20+09:00",
       "topic_index": 30,
@@ -719,6 +711,14 @@
       "topic": "不動産投資で見るべきKPIとダッシュボード設計",
       "title": "不動産投資で見るべきKPI完全ガイド｜収益とリスクを自動監視するダッシュボード設計",
       "path": "sites\\real-estate\\content\\posts\\2026-07-22-bu-dong-chan-tou-zi-tejian-ruhekikpiwan-quan-kaito-shou-yi-torisukuwozi-dong-shi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T16:53:47+09:00",
+      "topic_index": 19,
+      "topic": "AIで議事録からTODOを自動抽出する方法",
+      "title": "AIで議事録からTODOを自動抽出・登録する方法｜誤登録を防ぎ、通知・実行までつなぐ8ステップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-22-aiteyi-shi-lu-karatodowozi-dong-chou-chu-deng-lu-surufang-fa-wu-deng-lu-wofang.md",
       "mode": "local"
     }
   ]
