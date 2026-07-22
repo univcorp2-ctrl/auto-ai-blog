@@ -1,14 +1,6 @@
 {
-  "next_index": 27,
+  "next_index": 28,
   "history": [
-    {
-      "date": "2026-07-18T15:38:34+09:00",
-      "topic_index": 37,
-      "topic": "ルーチンワークを自動化してポイントや収益を得る仕組み作り",
-      "title": "ルーチンワークを「ほぼ無人化」して収益につなげる方法｜失敗ログから学ぶ自動化資産の作り方",
-      "path": "sites\\business\\content\\posts\\2026-07-18-rutinwakuwo-hohowu-ren-hua-siteshou-yi-nitunakerufang-fa-shi-bai-rokukaraxue-hua.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-18T16:08:52+09:00",
       "topic_index": 38,
@@ -719,6 +711,14 @@
       "topic": "PythonでPDF帳票から必要情報を抽出する基本設計",
       "title": "PythonでPDF帳票から必要情報を抽出する基本設計｜転記作業を無人化する9ステップ",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-22-pythontepdfzhang-piao-karabi-yao-qing-bao-wochou-chu-suruji-ben-she-ji-zhuan-ji.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T19:49:05+09:00",
+      "topic_index": 27,
+      "topic": "不動産会社のためのSEO記事設計入門",
+      "title": "広告費を増やす前に見直す！不動産会社の問い合わせ・査定・内見予約を増やすWeb集客7ステップ",
+      "path": "sites\\business\\content\\posts\\2026-07-22-guang-gao-fei-wozeng-yasuqian-nijian-zhi-su-bu-dong-chan-hui-she-nowen-ihe-ding.md",
       "mode": "local"
     }
   ]
