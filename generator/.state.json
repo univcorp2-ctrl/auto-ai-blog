@@ -1,14 +1,6 @@
 {
-  "next_index": 32,
+  "next_index": 33,
   "history": [
-    {
-      "date": "2026-07-18T20:20:42+09:00",
-      "topic_index": 42,
-      "topic": "ニッチ業種向けマッチングサイトをノーコードで立ち上げる手順",
-      "title": "LINE×Stripe Connectで超ニッチ市場を検証する――売れる前に作り込まない「7イベント」実践設計",
-      "path": "sites\\business\\content\\posts\\2026-07-18-linexstripe-connecttechao-nitutishi-chang-wojian-zheng-suru-mai-reruqian-nizuo.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-18T21:11:09+09:00",
       "topic_index": 43,
@@ -719,6 +711,14 @@
       "topic": "AI生成記事のリスクと人間レビューの重要性",
       "title": "AI生成記事の誤公開を防ぐ7段階の品質ゲート｜913本運用のログで学ぶ人間レビュー設計",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-22-aisheng-cheng-ji-shi-nowu-gong-kai-wofang-ku7duan-jie-nopin-zhi-keto-913ben-yun.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T22:25:26+09:00",
+      "topic_index": 32,
+      "topic": "収益物件の比較表を自動作成するワークフロー",
+      "title": "収益物件の比較表を自動作成する7ステップ｜Excel・Googleスプレッドシートで始める実践手順",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-22-shou-yi-wu-jian-nobi-jiao-biao-wozi-dong-zuo-cheng-suru7sutetuhu-merushi-jian.md",
       "mode": "local"
     }
   ]
