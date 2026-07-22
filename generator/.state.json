@@ -1,14 +1,6 @@
 {
-  "next_index": 4,
+  "next_index": 5,
   "history": [
-    {
-      "date": "2026-07-16T15:10:51+09:00",
-      "topic_index": 14,
-      "topic": "PythonでCSVを自動集計する基本パターン",
-      "title": "PythonでCSV集計を完全自動化する方法｜10万行の実測・エラー検知・定期実行まで",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-16-pythontecsvji-ji-wowan-quan-zi-dong-hua-surufang-fa-10mo-xing-noshi-ce-erajian.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-16T18:07:51+09:00",
       "topic_index": 15,
@@ -719,6 +711,14 @@
       "topic": "Claude vs GPT vs Gemini 徹底比較2026年版",
       "title": "Claude vs GPT vs Gemini徹底比較2026年版｜無人AI自動化で収益資産を育てる選び方",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-22-claude-vs-gpt-vs-geminiche-di-bi-jiao-2026nian-ban-wu-ren-aizi-dong-hua-teshou.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T09:19:17+09:00",
+      "topic_index": 4,
+      "topic": "不動産管理会社がAIを導入する前に整理すべき業務フロー",
+      "title": "AIで賃貸物件の修繕受付を安全に自動化する方法｜誤判定を防ぐ業務フロー・例外設計・KPI",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-22-aiteren-dai-wu-jian-noxiu-shan-shou-fu-woan-quan-nizi-dong-hua-surufang-fa-wu-wu.md",
       "mode": "local"
     }
   ]
