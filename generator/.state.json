@@ -1,14 +1,6 @@
 {
-  "next_index": 41,
+  "next_index": 42,
   "history": [
-    {
-      "date": "2026-07-19T03:22:45+09:00",
-      "topic_index": 1,
-      "topic": "新築アパート投資の利回り計算完全ガイド",
-      "title": "不動産投資の利回り計算は信用できる？Hiroの検証ログと正しい確認方法",
-      "path": "sites\\real-estate\\content\\posts\\2026-07-19-bu-dong-chan-tou-zi-noli-hui-riji-suan-haxin-yong-tekiru-hironojian-zheng-siique.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-21T12:53:29+09:00",
       "topic_index": 2,
@@ -719,6 +711,14 @@
       "topic": "海外SaaSアフィリエイトで継続報酬（MRR）を自動で稼ぐ方法",
       "title": "海外SaaSアフィリエイト自動化の設計図｜継続報酬を育てる8ステップとKPI",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-23-hai-wai-saasahuirieitozi-dong-hua-noshe-ji-tu-ji-sok-bao-chou-woyu.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T02:08:54+09:00",
+      "topic_index": 41,
+      "topic": "PinterestとEtsyを連携させたデジタル商品自動販売システム",
+      "title": "Pinterest×Etsyでデジタル商品を自動販売する仕組み｜集客・納品・改善を資産化する8ステップ",
+      "path": "sites\\business\\content\\posts\\2026-07-23-pinterestxetsytetesitarushang-pin-wozi-dong-fan-mai-surushi-zu-mi-ji-ke-na-pin.md",
       "mode": "local"
     }
   ]
