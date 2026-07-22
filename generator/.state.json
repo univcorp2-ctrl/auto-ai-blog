@@ -1,14 +1,6 @@
 {
-  "next_index": 12,
+  "next_index": 13,
   "history": [
-    {
-      "date": "2026-07-17T06:23:42+09:00",
-      "topic_index": 22,
-      "topic": "AIブログ運用で品質を落とさないレビュー体制",
-      "title": "AIブログの品質を落とさないレビュー体制｜完全自動運用を守る7段階ゲート設計",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-17-aihurokunopin-zhi-woluo-tosanairehiyuti-zhi-wan-quan-zi-dong-yun-yong-woshou-jie.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-17T06:40:05+09:00",
       "topic_index": 23,
@@ -719,6 +711,14 @@
       "topic": "物件写真の見せ方で反響率を上げるチェックリスト",
       "title": "問い合わせにつながる物件写真の実務チェックリスト｜撮影・掲載順・AI検品を仕組み化する8ステップ",
       "path": "sites\\business\\content\\posts\\2026-07-22-wen-ihe-wasenitunakaruwu-jian-xie-zhen-noshi-wu-tietukurisuto-cuo-ying-jie-zai.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T12:54:30+09:00",
+      "topic_index": 12,
+      "topic": "賃貸管理の問い合わせ対応を自動化する前に決めるべきルール",
+      "title": "賃貸管理の問い合わせ対応を自動化する前に決めるべきルール完全ガイド",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-22-ren-dai-guan-li-nowen-ihe-wasedui-ying-wozi-dong-hua-suruqian-nijue-quan-kaito.md",
       "mode": "local"
     }
   ]
