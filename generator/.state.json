@@ -1,14 +1,6 @@
 {
-  "next_index": 38,
+  "next_index": 39,
   "history": [
-    {
-      "date": "2026-07-19T01:24:23+09:00",
-      "topic_index": 48,
-      "topic": "BtoBリード獲得を完全自動化：スクレイピングとAI営業メールの連携",
-      "title": "BtoBリード獲得自動化の設計図｜スクレイピング×AI営業メールを10社から安全に始める方法",
-      "path": "sites\\business\\content\\posts\\2026-07-19-btobritohuo-de-zi-dong-hua-noshe-ji-tu-sukureihinkuxaiying-ye-meruwo10she-karaan.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-19T01:39:43+09:00",
       "topic_index": 49,
@@ -719,6 +711,14 @@
       "topic": "ルーチンワークを自動化してポイントや収益を得る仕組み作り",
       "title": "ルーチンワーク自動化でポイント・収益を生む仕組みの作り方【初心者向け8ステップ】",
       "path": "sites\\business\\content\\posts\\2026-07-23-rutinwakuzi-dong-hua-tehointoshou-yi-wosheng-mushi-zu-minozuo-rifang-chu-xin-zhe.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T01:25:22+09:00",
+      "topic_index": 38,
+      "topic": "ポイ活自動化ツールの危険性と安全に稼ぐプログラミング副業",
+      "title": "ポイ活自動化は危険？アカウント停止を避けて稼ぐ「プログラミング副業」8ステップ",
+      "path": "sites\\business\\content\\posts\\2026-07-23-hoihuo-zi-dong-hua-hawei-xian-akauntoting-zhi-wobi-ketejia-ku-hurokuraminkufu-ye.md",
       "mode": "local"
     }
   ]
