@@ -1,14 +1,6 @@
 {
-  "next_index": 5,
+  "next_index": 6,
   "history": [
-    {
-      "date": "2026-07-16T18:07:51+09:00",
-      "topic_index": 15,
-      "topic": "GitHub Actionsで業務スクリプトを安全に運用する考え方",
-      "title": "pytestが30件通っても公開しない――AIブログ自動化を止めた4つの安全装置",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-16-pytestka30jian-tong-tutemogong-kai-sinai-aihurokuzi-dong-hua-wozhi-meta4tunoan.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-16T19:09:47+09:00",
       "topic_index": 16,
@@ -719,6 +711,14 @@
       "topic": "不動産管理会社がAIを導入する前に整理すべき業務フロー",
       "title": "AIで賃貸物件の修繕受付を安全に自動化する方法｜誤判定を防ぐ業務フロー・例外設計・KPI",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-22-aiteren-dai-wu-jian-noxiu-shan-shou-fu-woan-quan-nizi-dong-hua-surufang-fa-wu-wu.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-22T09:39:11+09:00",
+      "topic_index": 5,
+      "topic": "空室対策にAIを使うメリットと注意点",
+      "title": "家賃を下げる前に試したいAI空室対策｜賃貸経営を仕組み化する7ステップ",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-22-jia-ren-woxia-keruqian-nishi-sitaiaikong-shi-dui-ce-ren-dai-jing-ying-woshi-zu.md",
       "mode": "local"
     }
   ]
