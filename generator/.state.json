@@ -1,14 +1,6 @@
 {
-  "next_index": 28,
+  "next_index": 29,
   "history": [
-    {
-      "date": "2026-07-22T04:21:26+09:00",
-      "topic_index": 38,
-      "topic": "ポイ活自動化ツールの危険性と安全に稼ぐプログラミング副業",
-      "title": "ポイ活Botは「稼ぐ装置」ではない——実行90件・誤公開1件から学んだ、安全な自動化の設計",
-      "path": "sites\\business\\content\\posts\\2026-07-22-hoihuo-botha-jia-kuzhuang-zhi-tehanai-shi-xing-90jian-wu-gong-kai-1jian-karaxue.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-22T04:39:29+09:00",
       "topic_index": 39,
@@ -719,6 +711,14 @@
       "topic": "不動産会社のためのSEO記事設計入門",
       "title": "「Git Push成功」で終わらせない｜AIブログ自動化を実行ログで監査する7ステップ",
       "path": "sites\\business\\content\\posts\\2026-07-23-git-pushcheng-gong-tezhong-warasenai-aihurokuzi-dong-hua-woshi-xing-rokutejian.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T18:22:12+09:00",
+      "topic_index": 28,
+      "topic": "AIでメール返信文を標準化するテンプレート運用",
+      "title": "AIメール返信を安全に自動化する方法｜テンプレート設計8ステップと誤送信・二重送信対策",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-23-aimerufan-xin-woan-quan-nizi-dong-hua-surufang-fa-tenhuretoshe-ji-8sutetuhutowu.md",
       "mode": "local"
     }
   ]
