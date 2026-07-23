@@ -1,14 +1,6 @@
 {
-  "next_index": 49,
+  "next_index": 0,
   "history": [
-    {
-      "date": "2026-07-22T11:56:01+09:00",
-      "topic_index": 9,
-      "topic": "AIエージェントで営業資料作成を自動化する方法",
-      "title": "AIエージェントで営業資料を自動化する7ステップ｜調査・提案・品質検査を無人で回す実践設計",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-22-aiesientoteying-ye-zi-liao-wozi-dong-hua-suru7sutetuhu-diao-cha-ti-an-pin-zhi-ji.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-22T12:11:17+09:00",
       "topic_index": 10,
@@ -719,6 +711,14 @@
       "topic": "BtoBリード獲得を完全自動化：スクレイピングとAI営業メールの連携",
       "title": "BtoBリード獲得はどこまで自動化できる？スクレイピング×AI営業メールの実践設計【法令・誤送信対策付き】",
       "path": "sites\\business\\content\\posts\\2026-07-24-btobritohuo-de-hatokomatezi-dong-hua-tekiru-sukureihinkuxaiying-ye-merunoshi-she.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-24T02:36:00+09:00",
+      "topic_index": 49,
+      "topic": "AIの機能をAPI化してサブスクリプション収益（MRR）を得る開発手法",
+      "title": "AI機能をAPI販売してMRRを作る方法｜赤字・品質崩れ・二重処理を防ぐMicro SaaS 9ステップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-24-aiji-neng-woapifan-mai-sitemrrwozuo-rufang-fa-chi-zi-pin-zhi-beng-reer-zhong-chu.md",
       "mode": "local"
     }
   ]
