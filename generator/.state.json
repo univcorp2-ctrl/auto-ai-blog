@@ -1,14 +1,6 @@
 {
-  "next_index": 36,
+  "next_index": 37,
   "history": [
-    {
-      "date": "2026-07-22T06:57:38+09:00",
-      "topic_index": 46,
-      "topic": "Pythonスクリプトを使ったメルカリ・ヤフオクの自動価格差リサーチと裁定取引",
-      "title": "Pythonでメルカリ・ヤフオクの価格差を自動リサーチする方法｜せどり自動化・アービトラージ実践ガイド",
-      "path": "sites\\business\\content\\posts\\2026-07-22-pythontemerukariyahuokunojia-ge-chai-wozi-dong-risatisurufang-fa-setorizi-dong.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-22T07:37:09+09:00",
       "topic_index": 47,
@@ -719,6 +711,14 @@
       "topic": "Web操作の完全自動化によるポイ活の可能性と注意点",
       "title": "Web自動化でポイ活はどこまで無人化できる？Pythonで作る規約順守型システム",
       "path": "sites\\business\\content\\posts\\2026-07-23-webzi-dong-hua-tehoihuo-hatokomatewu-ren-hua-tekiru-pythontezuo-rugui-yue-shun.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T22:10:05+09:00",
+      "topic_index": 36,
+      "topic": "Pythonでウェブタスクを自動化して稼ぐ具体的な手順",
+      "title": "Pythonでウェブタスクを自動化して稼ぐ7ステップ｜副業を「自動化資産」に変える実践手順",
+      "path": "sites\\business\\content\\posts\\2026-07-23-pythonteuehutasukuwozi-dong-hua-sitejia-ku7sutetuhu-fu-ye-wo-zi-dong-hua-zi-chan.md",
       "mode": "local"
     }
   ]
