@@ -1,14 +1,6 @@
 {
-  "next_index": 24,
+  "next_index": 25,
   "history": [
-    {
-      "date": "2026-07-22T01:55:19+09:00",
-      "topic_index": 34,
-      "topic": "不動産ブログを毎日更新するための自動化設計",
-      "title": "不動産ブログを毎日更新する自動化設計｜人の時間を使わず育つメディア資産の作り方",
-      "path": "sites\\business\\content\\posts\\2026-07-22-bu-dong-chan-hurokuwomei-ri-geng-xin-suruzi-dong-hua-she-ji-ren-noshi-jian-woshi.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-22T02:22:14+09:00",
       "topic_index": 35,
@@ -719,6 +711,14 @@
       "topic": "ローカルAI CLIを業務自動化に使うメリット",
       "title": "ローカルAI CLIで業務自動化する方法｜904記事の実運用で分かった設計・失敗対策・収益化",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-23-rokaruai-cliteye-wu-zi-dong-hua-surufang-fa-904ji-shi-noshi-yun-yong-tefen-ji-ce.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T17:09:32+09:00",
+      "topic_index": 24,
+      "topic": "不動産投資シミュレーションでよくある入力ミス",
+      "title": "不動産投資シミュレーションの入力ミス11選｜手残りを見誤らない検算・自動化ガイド",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-23-bu-dong-chan-tou-zi-simiyuresiyonnoru-li-misu11xuan-shou-can-riwojian-wu-suan-zi.md",
       "mode": "local"
     }
   ]
