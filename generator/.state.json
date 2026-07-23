@@ -1,14 +1,6 @@
 {
-  "next_index": 32,
+  "next_index": 33,
   "history": [
-    {
-      "date": "2026-07-22T05:39:10+09:00",
-      "topic_index": 42,
-      "topic": "ニッチ業種向けマッチングサイトをノーコードで立ち上げる手順",
-      "title": "ニッチ業種向けマッチングサイトの作り方9ステップ｜ノーコード自動化・決済・KPI設計",
-      "path": "sites\\business\\content\\posts\\2026-07-22-nitutiye-zhong-xiang-kematutinkusaitonozuo-rifang-9sutetuhu-nokotozi-dong-hua-ji.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-22T05:55:49+09:00",
       "topic_index": 43,
@@ -719,6 +711,14 @@
       "topic": "AI生成記事のリスクと人間レビューの重要性",
       "title": "AI生成記事のリスクを防ぐ人間レビュー設計｜無人運転できる収益ブログを育てる8ステップ",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-23-aisheng-cheng-ji-shi-norisukuwofang-kuren-jian-rehiyushe-ji-wu-ren-yun-zhuan-yi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T19:53:51+09:00",
+      "topic_index": 32,
+      "topic": "収益物件の比較表を自動作成するワークフロー",
+      "title": "収益物件の比較表を自動作成する方法｜情報収集・利回り検算・通知までの実践手順",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-23-shou-yi-wu-jian-nobi-jiao-biao-wozi-dong-zuo-cheng-surufang-fa-qing-bao-shou-ji.md",
       "mode": "local"
     }
   ]
