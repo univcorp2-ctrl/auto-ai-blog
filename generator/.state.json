@@ -1,14 +1,6 @@
 {
-  "next_index": 22,
+  "next_index": 23,
   "history": [
-    {
-      "date": "2026-07-22T01:24:21+09:00",
-      "topic_index": 32,
-      "topic": "収益物件の比較表を自動作成するワークフロー",
-      "title": "収益物件の比較表を自動化する方法｜NOI計算・異常検知・通知まで実装する9ステップ",
-      "path": "sites\\real-estate\\content\\posts\\2026-07-22-shou-yi-wu-jian-nobi-jiao-biao-wozi-dong-hua-surufang-fa-noiji-suan-yi-chang-zhi.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-22T01:39:01+09:00",
       "topic_index": 33,
@@ -719,6 +711,14 @@
       "topic": "物件情報入力を減らすためのデータ連携設計",
       "title": "物件情報の転記をなくすデータ連携設計｜API・CSV・PDFを「例外だけ確認」に変える実践手順",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-23-wu-jian-qing-bao-nozhuan-ji-wonakusutetalian-xi-she-ji-apicsvpdfwo-li-wai-ren.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T16:08:41+09:00",
+      "topic_index": 22,
+      "topic": "AIブログ運用で品質を落とさないレビュー体制",
+      "title": "AIブログの品質を落とさない自動レビュー設計｜人手を増やさず「公開・再生成・隔離」を回す8ステップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-23-aihurokunopin-zhi-woluo-tosanaizi-dong-rehiyushe-ji-ren-shou-wozeng-yasasu-gong.md",
       "mode": "local"
     }
   ]
