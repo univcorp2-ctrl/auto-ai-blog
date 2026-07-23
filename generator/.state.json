@@ -1,14 +1,6 @@
 {
-  "next_index": 16,
+  "next_index": 17,
   "history": [
-    {
-      "date": "2026-07-21T23:52:57+09:00",
-      "topic_index": 26,
-      "topic": "PythonでPDF帳票から必要情報を抽出する基本設計",
-      "title": "PythonでPDFからデータ抽出を安全に自動化する方法｜OCR判定・検算・重複防止の実務設計",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-21-pythontepdfkaratetachou-chu-woan-quan-nizi-dong-hua-surufang-fa-ocrpan-ding-jian.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-22T00:11:06+09:00",
       "topic_index": 27,
@@ -719,6 +711,14 @@
       "topic": "GitHub Actionsで業務スクリプトを安全に運用する考え方",
       "title": "GitHub Actionsで業務自動化を壊さない9つの設計術｜CIを「止まらない自動化資産」に変える実践手順",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-23-github-actionsteye-wu-zi-dong-hua-wohuai-sanai9tunoshe-ji-shu-ciwo-zhi-maranaizi.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T13:05:07+09:00",
+      "topic_index": 16,
+      "topic": "Cloudflare PagesでHugoブログを高速配信するメリット",
+      "title": "信頼できる技術記事にするために：一次情報の扱いを選んでください",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-23-xin-lai-tekiruji-shu-ji-shi-nisurutameni-yi-ci-qing-bao-noxi-iwoxuan-ntekutasai.md",
       "mode": "local"
     }
   ]
