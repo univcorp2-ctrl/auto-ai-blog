@@ -1,14 +1,6 @@
 {
-  "next_index": 29,
+  "next_index": 30,
   "history": [
-    {
-      "date": "2026-07-22T04:39:29+09:00",
-      "topic_index": 39,
-      "topic": "投資アフィリエイトを完全自動化する仕組みの作り方",
-      "title": "投資アフィリエイトを完全自動化する仕組みの作り方｜集客・記事生成・収益計測まで無人で回す実践設計",
-      "path": "sites\\business\\content\\posts\\2026-07-22-tou-zi-ahuirieitowowan-quan-zi-dong-hua-surushi-zu-minozuo-rifang-ji-ke-ji-shi.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-22T05:06:33+09:00",
       "topic_index": 40,
@@ -719,6 +711,14 @@
       "topic": "AIでメール返信文を標準化するテンプレート運用",
       "title": "AIメール返信を安全に自動化する方法｜テンプレート設計8ステップと誤送信・二重送信対策",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-23-aimerufan-xin-woan-quan-nizi-dong-hua-surufang-fa-tenhuretoshe-ji-8sutetuhutowu.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T18:38:03+09:00",
+      "topic_index": 29,
+      "topic": "空室期間を短縮するためのデータ分析入門",
+      "title": "空室1日2,667円の機会損失を止める｜賃貸経営を改善・自動化するデータ分析7ステップ",
+      "path": "sites\\real-estate\\content\\posts\\2026-07-23-kong-shi-1ri-2667yuan-noji-hui-sun-shi-wozhi-meru-ren-dai-jing-ying-wogai-shan.md",
       "mode": "local"
     }
   ]
