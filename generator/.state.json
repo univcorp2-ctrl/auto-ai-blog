@@ -1,14 +1,6 @@
 {
-  "next_index": 8,
+  "next_index": 9,
   "history": [
-    {
-      "date": "2026-07-21T21:09:32+09:00",
-      "topic_index": 18,
-      "topic": "不動産投資で見るべきKPIとダッシュボード設計",
-      "title": "不動産投資のKPI大全｜手残りと異常を自動監視するダッシュボード設計",
-      "path": "sites\\real-estate\\content\\posts\\2026-07-21-bu-dong-chan-tou-zi-nokpida-quan-shou-can-ritoyi-chang-wozi-dong-jian-shi-ji.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-21T21:36:53+09:00",
       "topic_index": 19,
@@ -719,6 +711,14 @@
       "topic": "不動産投資初心者が知っておきたいキャッシュフローの考え方",
       "title": "表面利回りに惑わされない｜不動産投資の「本当の手残り」を計算・自動管理する9ステップ",
       "path": "sites\\real-estate\\content\\posts\\2026-07-23-biao-mian-li-hui-rinihuo-wasarenai-bu-dong-chan-tou-zi-no-ben-dang-noshou-can-ri.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T09:08:17+09:00",
+      "topic_index": 8,
+      "topic": "Excel業務をPythonに置き換える判断基準",
+      "title": "Excel業務はPython化すべき？判断基準・費用対効果・自動化9ステップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-23-excelye-wu-hapythonhua-suheki-pan-duan-ji-zhun-fei-yong-dui-xiao-guo-zi-dong-hua.md",
       "mode": "local"
     }
   ]
