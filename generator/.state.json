@@ -1,14 +1,6 @@
 {
-  "next_index": 48,
+  "next_index": 49,
   "history": [
-    {
-      "date": "2026-07-22T11:32:27+09:00",
-      "topic_index": 8,
-      "topic": "Excel業務をPythonに置き換える判断基準",
-      "title": "完成記事の作成に必要な情報が不足しています",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-22-wan-cheng-ji-shi-nozuo-cheng-nibi-yao-naqing-bao-kabu-zu-siteimasu.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-22T11:56:01+09:00",
       "topic_index": 9,
@@ -719,6 +711,14 @@
       "topic": "海外ニュースをAIで自動翻訳・要約する有料ニュースレターの作り方",
       "title": "海外ニュースをAIで自動翻訳・要約する有料ニュースレターの作り方｜サブスク収益を生む自動化設計",
       "path": "sites\\business\\content\\posts\\2026-07-24-hai-wai-niyusuwoaitezi-dong-fan-yi-yao-yue-suruyou-liao-niyusuretanozuo-rifang.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-24T01:54:57+09:00",
+      "topic_index": 48,
+      "topic": "BtoBリード獲得を完全自動化：スクレイピングとAI営業メールの連携",
+      "title": "BtoBリード獲得はどこまで自動化できる？スクレイピング×AI営業メールの実践設計【法令・誤送信対策付き】",
+      "path": "sites\\business\\content\\posts\\2026-07-24-btobritohuo-de-hatokomatezi-dong-hua-tekiru-sukureihinkuxaiying-ye-merunoshi-she.md",
       "mode": "local"
     }
   ]
