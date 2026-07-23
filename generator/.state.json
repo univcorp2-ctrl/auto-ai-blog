@@ -1,14 +1,6 @@
 {
-  "next_index": 45,
+  "next_index": 46,
   "history": [
-    {
-      "date": "2026-07-22T09:39:11+09:00",
-      "topic_index": 5,
-      "topic": "空室対策にAIを使うメリットと注意点",
-      "title": "家賃を下げる前に試したいAI空室対策｜賃貸経営を仕組み化する7ステップ",
-      "path": "sites\\real-estate\\content\\posts\\2026-07-22-jia-ren-woxia-keruqian-nishi-sitaiaikong-shi-dui-ce-ren-dai-jing-ying-woshi-zu.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-22T10:55:44+09:00",
       "topic_index": 6,
@@ -719,6 +711,14 @@
       "topic": "AI美女ショート動画を量産してYouTube/TikTokで収益化する戦略",
       "title": "AI美女ショート動画の収益化設計｜YouTube・TikTokで「量産判定」を避ける自動運用9ステップ",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-24-aimei-nu-siyotodong-hua-noshou-yi-hua-she-ji-youtubetiktokte-liang-chan-pan-ding.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-24T00:54:06+09:00",
+      "topic_index": 45,
+      "topic": "AIで完全自動化する「顔出しなし」YouTube・TikTokの始め方",
+      "title": "顔出しなしAIショート動画を自動運用する9ステップ｜YouTube・TikTokの品質管理・投稿・改善ロードマップ",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-24-yan-chu-sinasiaisiyotodong-hua-wozi-dong-yun-yong-suru9sutetuhu-zhi-guan-li-tou.md",
       "mode": "local"
     }
   ]
