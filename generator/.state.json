@@ -1,14 +1,6 @@
 {
-  "next_index": 27,
+  "next_index": 28,
   "history": [
-    {
-      "date": "2026-07-22T03:23:29+09:00",
-      "topic_index": 37,
-      "topic": "ルーチンワークを自動化してポイントや収益を得る仕組み作り",
-      "title": "年間83時間を取り戻すルーチンワーク自動化｜ポイント・収益につなげる8ステップ",
-      "path": "sites\\business\\content\\posts\\2026-07-22-nian-jian-83shi-jian-woqu-rili-surutinwakuzi-dong-hua-hointoshou-yi.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-22T04:21:26+09:00",
       "topic_index": 38,
@@ -719,6 +711,14 @@
       "topic": "PythonでPDF帳票から必要情報を抽出する基本設計",
       "title": "PythonでPDF帳票から情報を抽出する方法｜実測ログ付き9ステップ実践ガイド",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-23-pythontepdfzhang-piao-karaqing-bao-wochou-chu-surufang-fa-shi-ce-rokufu-jian.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T18:05:34+09:00",
+      "topic_index": 27,
+      "topic": "不動産会社のためのSEO記事設計入門",
+      "title": "「Git Push成功」で終わらせない｜AIブログ自動化を実行ログで監査する7ステップ",
+      "path": "sites\\business\\content\\posts\\2026-07-23-git-pushcheng-gong-tezhong-warasenai-aihurokuzi-dong-hua-woshi-xing-rokutejian.md",
       "mode": "local"
     }
   ]
