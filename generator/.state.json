@@ -1,14 +1,6 @@
 {
-  "next_index": 46,
+  "next_index": 47,
   "history": [
-    {
-      "date": "2026-07-22T10:55:44+09:00",
-      "topic_index": 6,
-      "topic": "家賃査定をデータで改善するための基本ステップ",
-      "title": "家賃査定をデータで改善する7ステップ｜不動産収益を自動で守る仕組みの作り方",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-22-jia-ren-cha-ding-wotetategai-shan-suru7sutetuhu-bu-dong-chan-shou-yi-wozi-dong.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-22T11:24:20+09:00",
       "topic_index": 7,
@@ -719,6 +711,14 @@
       "topic": "AIで完全自動化する「顔出しなし」YouTube・TikTokの始め方",
       "title": "顔出しなしAIショート動画を自動運用する9ステップ｜YouTube・TikTokの品質管理・投稿・改善ロードマップ",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-24-yan-chu-sinasiaisiyotodong-hua-wozi-dong-yun-yong-suru9sutetuhu-zhi-guan-li-tou.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-24T01:09:48+09:00",
+      "topic_index": 46,
+      "topic": "Pythonスクリプトを使ったメルカリ・ヤフオクの自動価格差リサーチと裁定取引",
+      "title": "Pythonでメルカリ×Yahoo!オークションの価格差を自動判定する方法｜せどり自動化を収益資産へ変える7ステップ",
+      "path": "sites\\business\\content\\posts\\2026-07-24-pythontemerukarixyahoo-okusiyonnojia-ge-chai-wozi-dong-pan-ding-surufang-fa-dong.md",
       "mode": "local"
     }
   ]
