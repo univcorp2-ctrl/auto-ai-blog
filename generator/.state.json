@@ -1,14 +1,6 @@
 {
-  "next_index": 23,
+  "next_index": 24,
   "history": [
-    {
-      "date": "2026-07-22T01:39:01+09:00",
-      "topic_index": 33,
-      "topic": "賃貸募集条件を見直すためのAIチェックリスト",
-      "title": "賃貸募集条件をAIで見直すチェックリスト｜空室対策を自動化する実務手順",
-      "path": "sites\\real-estate\\content\\posts\\2026-07-22-ren-dai-mu-ji-tiao-jian-woaitejian-zhi-sutietukurisuto-kong-shi-dui-ce-wozi-dong.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-22T01:55:19+09:00",
       "topic_index": 34,
@@ -719,6 +711,14 @@
       "topic": "AIブログ運用で品質を落とさないレビュー体制",
       "title": "AIブログの品質を落とさない自動レビュー設計｜人手を増やさず「公開・再生成・隔離」を回す8ステップ",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-23-aihurokunopin-zhi-woluo-tosanaizi-dong-rehiyushe-ji-ren-shou-wozeng-yasasu-gong.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T16:22:37+09:00",
+      "topic_index": 23,
+      "topic": "ローカルAI CLIを業務自動化に使うメリット",
+      "title": "ローカルAI CLIで業務自動化する方法｜904記事の実運用で分かった設計・失敗対策・収益化",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-23-rokaruai-cliteye-wu-zi-dong-hua-surufang-fa-904ji-shi-noshi-yun-yong-tefen-ji-ce.md",
       "mode": "local"
     }
   ]
