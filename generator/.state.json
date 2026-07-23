@@ -1,14 +1,6 @@
 {
-  "next_index": 43,
+  "next_index": 44,
   "history": [
-    {
-      "date": "2026-07-22T09:10:18+09:00",
-      "topic_index": 3,
-      "topic": "Claude vs GPT vs Gemini 徹底比較2026年版",
-      "title": "Claude vs GPT vs Gemini徹底比較2026年版｜無人AI自動化で収益資産を育てる選び方",
-      "path": "sites\\ai-tech\\content\\posts\\2026-07-22-claude-vs-gpt-vs-geminiche-di-bi-jiao-2026nian-ban-wu-ren-aizi-dong-hua-teshou.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-22T09:19:17+09:00",
       "topic_index": 4,
@@ -719,6 +711,14 @@
       "topic": "ニッチ業種向けマッチングサイトをノーコードで立ち上げる手順",
       "title": "ノーコードでニッチ業種向けマッチングサイトを作る10ステップ｜Stripe Connect・LINE連携・例外処理まで",
       "path": "sites\\business\\content\\posts\\2026-07-23-nokototenitutiye-zhong-xiang-kematutinkusaitowozuo-ru10sutetuhu-stripe-xi-li-wai.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T23:55:28+09:00",
+      "topic_index": 43,
+      "topic": "完全無人AIトレードBotのためのVPS環境構築と運用上の注意",
+      "title": "完全無人AIトレードBotのVPS環境構築｜自動トレードを止めない12ステップと安全運用",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-23-wan-quan-wu-ren-aitoretobotnovpshuan-jing-gou-zhu-zi-dong-toretowozhi-quan-yun.md",
       "mode": "local"
     }
   ]
