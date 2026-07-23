@@ -1,14 +1,6 @@
 {
-  "next_index": 26,
+  "next_index": 27,
   "history": [
-    {
-      "date": "2026-07-22T02:38:33+09:00",
-      "topic_index": 36,
-      "topic": "Pythonでウェブタスクを自動化して稼ぐ具体的な手順",
-      "title": "Pythonでウェブ副業を自動化する10ステップ｜収益導線・監視・KPIまで実測ログ付きで解説",
-      "path": "sites\\business\\content\\posts\\2026-07-22-pythonteuehufu-ye-wozi-dong-hua-suru10sutetuhu-shou-yi-dao-xian-jian-shi-ce-shuo.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-22T03:23:29+09:00",
       "topic_index": 37,
@@ -719,6 +711,14 @@
       "topic": "AIを使った競合物件リサーチの進め方",
       "title": "不動産の競合調査を半自動化する方法｜家賃・価格の変化を見逃さない7ステップ実践ガイド",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-23-bu-dong-chan-nojing-he-diao-cha-woban-zi-dong-hua-surufang-fa-jia-ren-jia-ge-hua.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T17:51:48+09:00",
+      "topic_index": 26,
+      "topic": "PythonでPDF帳票から必要情報を抽出する基本設計",
+      "title": "PythonでPDF帳票から情報を抽出する方法｜実測ログ付き9ステップ実践ガイド",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-23-pythontepdfzhang-piao-karaqing-bao-wochou-chu-surufang-fa-shi-ce-rokufu-jian.md",
       "mode": "local"
     }
   ]
