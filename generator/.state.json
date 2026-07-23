@@ -1,14 +1,6 @@
 {
-  "next_index": 14,
+  "next_index": 15,
   "history": [
-    {
-      "date": "2026-07-21T23:07:36+09:00",
-      "topic_index": 24,
-      "topic": "不動産投資シミュレーションでよくある入力ミス",
-      "title": "不動産投資シミュレーションの入力ミス12選｜黒字予測を狂わせる誤入力と自動チェック手順",
-      "path": "sites\\real-estate\\content\\posts\\2026-07-21-bu-dong-chan-tou-zi-simiyuresiyonnoru-li-misu12xuan-hei-zi-yu-ce-wokuang-ru-li.md",
-      "mode": "local"
-    },
     {
       "date": "2026-07-21T23:18:22+09:00",
       "topic_index": 25,
@@ -719,6 +711,14 @@
       "topic": "AI時代の不動産営業に必要なスキル",
       "title": "AI時代の不動産営業で差がつく7つの実務スキル｜追客・提案・集客を「自動化資産」に変える設計図",
       "path": "sites\\ai-tech\\content\\posts\\2026-07-23-aishi-dai-nobu-dong-chan-ying-ye-techai-katuku7tunoshi-wu-sukiru-zhui-ke-ti-an.md",
+      "mode": "local"
+    },
+    {
+      "date": "2026-07-23T12:09:23+09:00",
+      "topic_index": 14,
+      "topic": "PythonでCSVを自動集計する基本パターン",
+      "title": "PythonでCSV集計を自動化する実践パターン｜10万行の検証コードで手作業を「収益を育てる仕組み」に変える",
+      "path": "sites\\ai-tech\\content\\posts\\2026-07-23-pythontecsvji-ji-wozi-dong-hua-surushi-jian-hatan-10mo-xing-nojian-zheng-zuo-ye.md",
       "mode": "local"
     }
   ]
