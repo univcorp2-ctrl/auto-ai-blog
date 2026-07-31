@@ -1,0 +1,53 @@
+[
+  {
+    "program_id": "DEMO-MOBILE-001",
+    "name": "DEMO モバイル見直し相談",
+    "category": "mobile",
+    "reward_yen": 10000,
+    "epc_yen": 240,
+    "approval_rate": 0.55,
+    "approval_days": 45,
+    "listing_policy": "unknown",
+    "sns_policy": "unknown",
+    "trademark_bidding_policy": "unknown",
+    "media_registration_status": "unregistered",
+    "affiliate_url": "https://example.invalid/replace_me",
+    "disclosure_text": "PR: 本ページは広告を含みます。",
+    "last_verified_at": "2026-07-01",
+    "active": false
+  },
+  {
+    "program_id": "DEMO-FIBER-001",
+    "name": "DEMO 光回線比較相談",
+    "category": "internet",
+    "reward_yen": 15000,
+    "epc_yen": 310,
+    "approval_rate": 0.48,
+    "approval_days": 60,
+    "listing_policy": "unknown",
+    "sns_policy": "unknown",
+    "trademark_bidding_policy": "unknown",
+    "media_registration_status": "unregistered",
+    "affiliate_url": "https://example.invalid/replace_me",
+    "disclosure_text": "PR: 本ページは広告を含みます。",
+    "last_verified_at": "2026-07-01",
+    "active": false
+  },
+  {
+    "program_id": "DEMO-ENERGY-001",
+    "name": "DEMO 電力プラン見直し",
+    "category": "electricity",
+    "reward_yen": 7500,
+    "epc_yen": 160,
+    "approval_rate": 0.62,
+    "approval_days": 50,
+    "listing_policy": "unknown",
+    "sns_policy": "unknown",
+    "trademark_bidding_policy": "unknown",
+    "media_registration_status": "unregistered",
+    "affiliate_url": "https://example.invalid/replace_me",
+    "disclosure_text": "PR: 本ページは広告を含みます。",
+    "last_verified_at": "2026-07-01",
+    "active": false
+  }
+]
