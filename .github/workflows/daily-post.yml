@@ -31,7 +31,12 @@ jobs:
           pip install -r requirements.txt -r requirements-dev.txt
 
       - name: Static check for maintained affiliate code
-        run: ruff check affiliate_agent tests/test_affiliate_agent.py
+        run: |
+          ruff check \
+            affiliate_agent \
+            tests/test_affiliate_agent.py \
+            tests/test_a8_ecsales.py \
+            tests/test_a8_cli.py
 
       - name: Python tests
         run: pytest
