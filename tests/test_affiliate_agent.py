@@ -79,24 +79,9 @@ def test_diagnosis_branches_to_mobile_internet_and_electricity() -> None:
 def test_anonymous_events_aggregate_and_export() -> None:
     occurred_at = datetime(2026, 7, 31, tzinfo=timezone.utc)
     events = [
-        make_event(
-            "diagnosis_start",
-            session_id="s1",
-            variant_id="a",
-            occurred_at=occurred_at,
-        ),
-        make_event(
-            "diagnosis_complete",
-            session_id="s1",
-            variant_id="a",
-            occurred_at=occurred_at,
-        ),
-        make_event(
-            "offer_impression",
-            session_id="s1",
-            variant_id="a",
-            occurred_at=occurred_at,
-        ),
+        make_event("diagnosis_start", session_id="s1", variant_id="a", occurred_at=occurred_at),
+        make_event("diagnosis_complete", session_id="s1", variant_id="a", occurred_at=occurred_at),
+        make_event("offer_impression", session_id="s1", variant_id="a", occurred_at=occurred_at),
         make_event(
             "affiliate_click",
             session_id="s1",
