@@ -52,12 +52,11 @@ def evaluate_program(
     elif channel_name != "website" and channel_name not in ALLOWED_SOCIAL_CHANNELS:
         reasons.append("unsupported_channel")
 
-    if traffic == "paid_search":
-        if _normalise(program.listing_policy) not in PERMITTED_POLICIES:
-            reasons.append("listing_policy_not_permitted")
-        if _normalise(program.trademark_bidding_policy) != "excluded":
-            reasons.append("trademark_negative_keywords_not_confirmed")
-    elif traffic != "organic":
+    if traffic == "paid_search" and _normalise(program.listing_policy) not in PERMITTED_POLICIES:
+        reasons.append("listing_policy_not_permitted")
+    if traffic == "paid_search" and _normalise(program.trademark_bidding_policy) != "excluded":
+        reasons.append("trademark_negative_keywords_not_confirmed")
+    if traffic not in {"organic", "paid_search"}:
         reasons.append("unsupported_traffic_source")
 
     if not human_approved:
