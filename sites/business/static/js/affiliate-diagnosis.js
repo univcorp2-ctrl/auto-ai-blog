@@ -13,11 +13,7 @@
 
   const heading = document.querySelector("#diagnosis-heading");
   const submitButton = document.querySelector("#diagnosis-submit");
-  if (heading) {
-    heading.textContent = headlineVariant === "savings"
-      ? "毎月の通信費・固定費を3分で見直す"
-      : "3分入力で、見直す順番を整理する";
-  }
+  if (heading) heading.textContent = headlineVariant === "savings" ? "毎月の通信費・固定費を3分で見直す" : "3分入力で、見直す順番を整理する";
   if (submitButton) submitButton.textContent = ctaVariant === "check" ? "見直し候補を確認" : "無料診断を始める";
 
   growth.track("page_view", { page: "fixed_cost_diagnosis" }, variantId);
@@ -73,6 +69,7 @@
       fetch("/data/affiliate-programs.demo.json", { cache: "no-store" }),
       fetch("/data/affiliate-config.json", { cache: "no-store" }),
     ]);
+    if (!programsResponse.ok || !configResponse.ok) throw new Error("affiliate data load failed");
     return { programs: await programsResponse.json(), config: await configResponse.json() };
   }
 
@@ -81,46 +78,60 @@
     box.hidden = false;
     box.querySelector("[data-saving]").textContent = `${growth.formatYen(result.low)}〜${growth.formatYen(result.high)} / 月の見直し余地（概算）`;
     box.querySelector("[data-categories]").textContent = result.categories.join(" / ");
-    box.querySelector("[data-notes]").innerHTML = result.notes.map((note) => `<li>${note}</li>`).join("");
+    const list = box.querySelector("[data-notes]");
+    list.replaceChildren(...result.notes.map((note) => {
+      const item = document.createElement("li");
+      item.textContent = note;
+      return item;
+    }));
   }
 
   function renderPrograms(programs, config, categories) {
     const container = document.querySelector("#offer-list");
     const visible = programs.filter((program) => categories.includes(program.category) || categories.includes("general_review"));
-    const rows = visible.map((program) => {
-      const score = growth.scoreProgram(program, Number(config.margin || 0.55));
-      return { program, score, audit: growth.evaluateProgram(program, config) };
-    });
+    const rows = visible.map((program) => ({
+      program,
+      score: growth.scoreProgram(program, Number(config.margin || 0.55)),
+      audit: growth.evaluateProgram(program, config),
+    }));
     if (orderVariant === "score") rows.sort((a, b) => b.score.expectedClickValue - a.score.expectedClickValue);
     else rows.sort((a, b) => a.program.category.localeCompare(b.program.category, "ja"));
 
-    container.innerHTML = "";
+    container.replaceChildren();
     rows.forEach(({ program, score, audit }) => {
       const card = document.createElement("article");
       card.className = "affiliate-offer-card";
-      const reasonText = audit.eligible ? "条件確認済み" : `停止中: ${audit.reasons.join(" / ")}`;
-      card.innerHTML = `
-        <p class="affiliate-demo-badge">DEMO / 実案件ではありません</p>
-        <h3>${program.name}</h3>
-        <p>期待承認報酬: ${growth.formatYen(score.expectedApprovedReward)}</p>
-        <p>期待クリック価値: ${growth.formatYen(score.expectedClickValue)}</p>
-        <p>推奨上限CPC: ${growth.formatYen(score.recommendedMaxCpc)}（margin ${config.margin}）</p>
-        <p class="affiliate-status ${audit.eligible ? "is-ok" : "is-stop"}">${reasonText}</p>
-        <button type="button" ${audit.eligible ? "" : "disabled"}>PR案件の詳細を確認</button>
-      `;
+      const badge = document.createElement("p");
+      badge.className = "affiliate-demo-badge";
+      badge.textContent = "DEMO / 実案件ではありません";
+      const title = document.createElement("h3");
+      title.textContent = program.name;
+      const metrics = [
+        `期待承認報酬: ${growth.formatYen(score.expectedApprovedReward)}`,
+        `期待クリック価値: ${growth.formatYen(score.expectedClickValue)}`,
+        `推奨上限CPC: ${growth.formatYen(score.recommendedMaxCpc)}（margin ${config.margin}）`,
+      ].map((text) => {
+        const item = document.createElement("p");
+        item.textContent = text;
+        return item;
+      });
+      const status = document.createElement("p");
+      status.className = `affiliate-status ${audit.eligible ? "is-ok" : "is-stop"}`;
+      status.textContent = audit.eligible ? "条件確認済み" : `停止中: ${audit.reasons.join(" / ")}`;
+      const button = document.createElement("button");
+      button.type = "button";
+      button.disabled = !audit.eligible;
+      button.textContent = "PR案件の詳細を確認";
+      card.append(badge, title, ...metrics, status, button);
       if (audit.eligible) {
         growth.track("offer_impression", { program_id: program.program_id }, variantId);
-        card.querySelector("button").addEventListener("click", () => {
+        button.addEventListener("click", () => {
           const approved = globalThis.confirm("PRリンクとして外部サイトへ移動します。案件条件と申込条件を再確認してください。");
           if (!approved) return;
-          growth.track(
-            "affiliate_click",
-            {
-              program_id: program.program_id,
-              expected_approved_reward_yen: score.expectedApprovedReward,
-            },
-            variantId,
-          );
+          growth.track("affiliate_click", {
+            program_id: program.program_id,
+            expected_approved_reward_yen: score.expectedApprovedReward,
+          }, variantId);
           const target = growth.appendTracking(program.affiliate_url, program.program_id, config);
           globalThis.open(target, "_blank", "noopener,noreferrer");
         });
