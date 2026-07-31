@@ -4,7 +4,7 @@ import csv
 import io
 import json
 from collections.abc import Mapping, Sequence
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 
 from affiliate_agent.models import Event
@@ -44,7 +44,7 @@ def make_event(
         raise ValueError("payload contains personal information fields")
     return Event(
         event_name=event_name,
-        occurred_at=occurred_at or datetime.now(timezone.utc),
+        occurred_at=occurred_at or datetime.now(UTC),
         session_id=session_id,
         variant_id=variant_id,
         payload=event_payload,
