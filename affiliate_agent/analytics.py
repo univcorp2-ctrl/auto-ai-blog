@@ -3,8 +3,9 @@ from __future__ import annotations
 import csv
 import io
 import json
+from collections.abc import Mapping, Sequence
 from datetime import datetime, timezone
-from typing import Any, Mapping, Sequence
+from typing import Any
 
 from affiliate_agent.models import Event
 
