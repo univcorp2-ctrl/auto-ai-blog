@@ -4,10 +4,10 @@
 
 | field | type | purpose |
 |---|---:|---|
-| program_id | string | A8内で識別できるID。公開してよい範囲だけ保存 |
-| name | string | 運用上の案件名 |
-| category | string | mobile / internet / electricity など |
-| reward_yen | number | 発生成果報酬。税込・税別を運用メモで統一 |
+| program_id | string | 運用上の案件識別子 |
+| name | string | 案件名 |
+| category | string | mobile / internet / electricity 等 |
+| reward_yen | number | 成果報酬 |
 | epc_yen | number | A8表示値を確認日に転記 |
 | approval_rate | 0..1 | 55%なら0.55 |
 | approval_days | integer | 確定までの目安日数 |
