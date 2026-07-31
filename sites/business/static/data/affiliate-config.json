@@ -1,0 +1,13 @@
+{
+  "margin": 0.55,
+  "verification_ttl_days": 30,
+  "channel": "website",
+  "traffic_source": "organic",
+  "human_approved": false,
+  "dry_run": true,
+  "tracking_params_allowed": false,
+  "daily_budget_yen": 3000,
+  "cumulative_loss_cap_yen": 10000,
+  "minimum_sample_size": 100,
+  "goal_yen": 1000000
+}
