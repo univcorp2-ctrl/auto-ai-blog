@@ -13,9 +13,7 @@
   const FORBIDDEN_KEYS = new Set(["name", "full_name", "email", "phone", "address", "postal_code"]);
 
   function makeId(prefix) {
-    if (globalThis.crypto && globalThis.crypto.randomUUID) {
-      return `${prefix}-${globalThis.crypto.randomUUID()}`;
-    }
+    if (globalThis.crypto && globalThis.crypto.randomUUID) return `${prefix}-${globalThis.crypto.randomUUID()}`;
     return `${prefix}-${Date.now()}-${Math.random().toString(16).slice(2)}`;
   }
 
@@ -50,23 +48,19 @@
     }
   }
 
-  function cleanPayload(payload) {
-    const clean = {};
-    Object.entries(payload || {}).forEach(([key, value]) => {
-      if (!FORBIDDEN_KEYS.has(key.toLowerCase())) clean[key] = value;
-    });
-    return clean;
-  }
-
   function track(eventName, payload = {}, variant = "control") {
     if (!ALLOWED_EVENTS.has(eventName)) throw new Error(`Unsupported event: ${eventName}`);
+    const clean = {};
+    Object.entries(payload).forEach(([key, value]) => {
+      if (!FORBIDDEN_KEYS.has(key.toLowerCase())) clean[key] = value;
+    });
     const events = readEvents();
     events.push({
       event_name: eventName,
       occurred_at: new Date().toISOString(),
       session_id: visitorId(),
       variant_id: variant,
-      payload: cleanPayload(payload),
+      payload: clean,
     });
     localStorage.setItem(EVENT_KEY, JSON.stringify(events.slice(-5000)));
   }
@@ -75,23 +69,17 @@
     localStorage.removeItem(EVENT_KEY);
   }
 
-  function csvEscape(value) {
-    const text = String(value ?? "");
-    return `"${text.replaceAll('"', '""')}"`;
-  }
-
   function exportCsv() {
+    const escape = (value) => `"${String(value ?? "").replaceAll('"', '""')}"`;
     const rows = [["event_name", "occurred_at", "session_id", "variant_id", "payload_json"]];
-    readEvents().forEach((event) => {
-      rows.push([
-        event.event_name,
-        event.occurred_at,
-        event.session_id,
-        event.variant_id,
-        JSON.stringify(event.payload || {}),
-      ]);
-    });
-    return rows.map((row) => row.map(csvEscape).join(",")).join("\n");
+    readEvents().forEach((event) => rows.push([
+      event.event_name,
+      event.occurred_at,
+      event.session_id,
+      event.variant_id,
+      JSON.stringify(event.payload || {}),
+    ]));
+    return rows.map((row) => row.map(escape).join(",")).join("\n");
   }
 
   function scoreProgram(program, margin = 0.55) {
@@ -107,9 +95,8 @@
 
   function evaluateProgram(program, config) {
     const reasons = [];
-    const now = new Date();
     const verified = program.last_verified_at ? new Date(`${program.last_verified_at}T00:00:00Z`) : null;
-    const ageDays = verified ? (now - verified) / 86400000 : Number.POSITIVE_INFINITY;
+    const ageDays = verified ? (new Date() - verified) / 86400000 : Number.POSITIVE_INFINITY;
     const channel = String(config.channel || "website").toLowerCase();
     const traffic = String(config.traffic_source || "organic").toLowerCase();
     const allowedSocial = new Set(["instagram", "youtube", "tiktok", "pinterest"]);
@@ -123,14 +110,10 @@
     if (!String(program.affiliate_url || "").trim()) reasons.push("広告URLがありません");
     if (String(program.affiliate_url).includes("example.invalid")) reasons.push("広告URLがデモです");
     if (["x", "twitter"].includes(channel)) reasons.push("XへのA8広告直接掲載は対象外です");
-    if (allowedSocial.has(channel) && !permitted.has(String(program.sns_policy).toLowerCase())) {
-      reasons.push("SNS掲載条件が許可済みではありません");
-    }
+    if (allowedSocial.has(channel) && !permitted.has(String(program.sns_policy).toLowerCase())) reasons.push("SNS掲載条件が許可済みではありません");
     if (traffic === "paid_search") {
       if (!permitted.has(String(program.listing_policy).toLowerCase())) reasons.push("リスティング条件が許可済みではありません");
-      if (String(program.trademark_bidding_policy).toLowerCase() !== "excluded") {
-        reasons.push("商標除外キーワードの確認が未完了です");
-      }
+      if (String(program.trademark_bidding_policy).toLowerCase() !== "excluded") reasons.push("商標除外キーワードの確認が未完了です");
     }
     if (!config.human_approved) reasons.push("人間の公開承認がありません");
     return { eligible: reasons.length === 0, reasons };
