@@ -54,14 +54,20 @@ def build_parser() -> argparse.ArgumentParser:
     unsealed = subparsers.add_parser("unsealed")
     _add_list_arguments(unsealed, include_date=True, include_click_date=True)
 
-    subparsers.add_parser("unsealed-count")
-    subparsers.add_parser("advertiser-unsealed-counts")
+    unsealed_count = subparsers.add_parser("unsealed-count")
+    _add_output_arguments(unsealed_count)
+
+    advertiser_unsealed = subparsers.add_parser("advertiser-unsealed-counts")
+    _add_output_arguments(advertiser_unsealed)
 
     today = subparsers.add_parser("sealed-today")
     _add_list_arguments(today, include_date=False, include_click_date=False)
 
-    subparsers.add_parser("sealed-today-count")
-    subparsers.add_parser("advertiser-sealed-today-counts")
+    today_count = subparsers.add_parser("sealed-today-count")
+    _add_output_arguments(today_count)
+
+    advertiser_today = subparsers.add_parser("advertiser-sealed-today-counts")
+    _add_output_arguments(advertiser_today)
 
     sealed = subparsers.add_parser("sealed")
     _add_list_arguments(sealed, include_date=True, include_click_date=False)
@@ -102,7 +108,11 @@ def _add_list_arguments(
     parser.add_argument("--limit", type=int, default=1_000)
     if include_click_date:
         parser.add_argument("--include-click-date", action="store_true")
-    parser.add_argument("--raw", action="store_true", help="include order and media identifiers")
+    _add_output_arguments(parser)
+
+
+def _add_output_arguments(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument("--raw", action="store_true", help="include order or program identifiers")
     parser.add_argument("--output", type=Path)
 
 
@@ -117,11 +127,23 @@ def _add_mutation_arguments(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--output", type=Path)
 
 
+def _summarize_response(response: A8Response, *, source: str) -> dict[str, Any]:
+    if "count" in source:
+        counts = [int(row.get("count", 0) or 0) for row in response.results]
+        return {
+            "source": source,
+            "programs": len(response.results),
+            "count": sum(counts),
+            "maximum_program_count": max(counts, default=0),
+        }
+    return summarize_sales(response, source=source)
+
+
 def _response_payload(response: A8Response, *, source: str, raw: bool) -> dict[str, Any]:
     payload: dict[str, Any] = {
         "status_code": response.status_code,
         "message": response.message,
-        "summary": summarize_sales(response, source=source),
+        "summary": _summarize_response(response, source=source),
     }
     if raw:
         payload["results"] = list(response.results)
