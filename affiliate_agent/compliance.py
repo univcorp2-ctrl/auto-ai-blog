@@ -44,10 +44,12 @@ def evaluate_program(
 
     if channel_name in DISALLOWED_DIRECT_SOCIAL_CHANNELS:
         reasons.append("channel_not_allowed_for_direct_a8_placement")
-    elif channel_name in ALLOWED_SOCIAL_CHANNELS:
-        if _normalise(program.sns_policy) not in PERMITTED_POLICIES:
-            reasons.append("sns_policy_not_permitted")
-    elif channel_name != "website":
+    elif (
+        channel_name in ALLOWED_SOCIAL_CHANNELS
+        and _normalise(program.sns_policy) not in PERMITTED_POLICIES
+    ):
+        reasons.append("sns_policy_not_permitted")
+    elif channel_name != "website" and channel_name not in ALLOWED_SOCIAL_CHANNELS:
         reasons.append("unsupported_channel")
 
     if traffic == "paid_search":
