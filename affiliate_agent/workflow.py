@@ -1,7 +1,8 @@
 from __future__ import annotations
 
+from collections.abc import Sequence
 from datetime import date
-from typing import Any, Sequence
+from typing import Any
 
 from affiliate_agent.compliance import evaluate_program
 from affiliate_agent.models import AffiliateProgram, DiagnosisResult
