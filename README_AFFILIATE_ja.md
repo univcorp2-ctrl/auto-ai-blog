@@ -1,11 +1,11 @@
 # A8成果計測型アフィリエイト・エージェント MVP
 
-この追加機能は、既存のHugo＋Pythonブログを「記事生成」だけで終わらせず、無料診断、案件条件確認、匿名計測、実験、改善までつなぐための最小実働版です。累計100万円は目標値であり、収益を保証しません。
+既存のHugo＋Pythonブログへ、無料診断、案件条件確認、匿名計測、実験、改善を追加した最小実働版です。累計100万円は目標値であり、収益を保証しません。
 
 ## 公開ページ
 
-- `https://business-blog.pages.dev/diagnosis/`: 通信費・固定費診断
-- `https://business-blog.pages.dev/affiliate-dashboard/`: ローカル匿名イベントのファネル確認
+- `sites/business/content/diagnosis/`: 通信費・固定費診断
+- `sites/business/content/affiliate-dashboard/`: 匿名イベントと確定実績のダッシュボード
 
 ## ローカル確認
 
@@ -20,7 +20,7 @@ hugo --source sites/business --gc --minify
 
 `affiliate_agent/data/programs.demo.json` と `sites/business/static/data/affiliate-programs.demo.json` のDEMOをコピーし、program_id、案件名、カテゴリ、報酬、EPC、確定率、確定日数、リスティング条件、SNS条件、商標除外、登録媒体、広告URL、PR表示、最終確認日、activeを入力します。
 
-案件条件が不明、期限切れ、媒体未登録、PR文言なし、URL未設定、人間未承認の場合は表示・遷移を停止します。A8のログイン情報、Cookie、管理画面の自動取得は扱いません。
+案件条件が不明、期限切れ、媒体未登録、PR文言なし、URL未設定、人間未承認の場合は自動停止します。A8のログイン情報、Cookie、管理画面の自動取得は扱いません。
 
 ## 数式
 
@@ -28,7 +28,7 @@ hugo --source sites/business --gc --minify
 - 期待クリック価値 = EPC × 確定率
 - 推奨上限CPC = 期待クリック価値 × 0.55（変更可能）
 
-EPCや確定率は過去実績であり、将来の成果を保証しません。A8上の発生、未確定、確定、入金を混同せず、ダッシュボードの実績は確定報酬だけを手入力します。
+EPCや確定率は過去実績であり、将来の成果を保証しません。発生、未確定、確定、入金を混同せず、ダッシュボードの実績は確定報酬だけを手入力します。
 
 ## 100万円のKPI分解例
 
@@ -37,5 +37,3 @@ EPCや確定率は過去実績であり、将来の成果を保証しません�
 ## 人間が残すゲート
 
 広告出稿、案件提携、実リンク公開、商標除外語、PR表記、記事の事実確認、SNS投稿は必ず人間が承認します。既定設定は `dry_run=true`、`human_approved=false` です。
-
-詳細は `docs/AFFILIATE_OPERATIONS_PLAYBOOK.md` と `docs/AFFILIATE_30_DAY_PLAN.md` を参照してください。
