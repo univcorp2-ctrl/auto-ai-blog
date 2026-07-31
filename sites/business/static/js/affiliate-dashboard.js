@@ -18,9 +18,7 @@
     let simulated = 0;
     events.forEach((event) => {
       if (Object.hasOwn(counts, event.event_name)) counts[event.event_name] += 1;
-      if (event.event_name === "affiliate_click") {
-        simulated += Number(event.payload?.expected_approved_reward_yen || 0);
-      }
+      if (event.event_name === "affiliate_click") simulated += Number(event.payload?.expected_approved_reward_yen || 0);
     });
     return {
       counts,
@@ -56,10 +54,9 @@
     document.querySelector("[data-needed]").textContent = `${needed.toLocaleString("ja-JP")}件`;
     document.querySelector("#actual-revenue").value = actuals.revenue;
     document.querySelector("#actual-conversions").value = actuals.conversions;
-    const sampleWarning = summary.counts.diagnosis_complete < 100
+    document.querySelector("[data-sample-warning]").textContent = summary.counts.diagnosis_complete < 100
       ? "サンプル不足: 診断完了100件までは勝敗を確定しません。"
       : "最低サンプルに到達しました。確定報酬と媒体別差分を確認してください。";
-    document.querySelector("[data-sample-warning]").textContent = sampleWarning;
   }
 
   document.querySelector("#save-actuals").addEventListener("click", () => {
