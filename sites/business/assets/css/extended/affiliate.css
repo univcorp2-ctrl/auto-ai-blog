@@ -1,0 +1,108 @@
+.affiliate-shell {
+  --affiliate-accent: #176b55;
+  --affiliate-soft: #edf8f4;
+  --affiliate-stop: #8b2d2d;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.affiliate-disclosure,
+.affiliate-panel,
+.affiliate-result,
+.affiliate-offer-card,
+.affiliate-metric {
+  border: 1px solid color-mix(in srgb, var(--affiliate-accent) 24%, transparent);
+  border-radius: 18px;
+  padding: 1.1rem;
+  background: var(--entry);
+  box-shadow: 0 14px 35px rgb(15 40 32 / 7%);
+}
+
+.affiliate-disclosure {
+  border-left: 6px solid var(--affiliate-accent);
+  background: var(--affiliate-soft);
+  color: #173d33;
+}
+
+.affiliate-grid,
+.affiliate-metrics,
+.affiliate-offers {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.affiliate-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.affiliate-field input,
+.affiliate-field select {
+  width: 100%;
+  border: 1px solid #aebdb8;
+  border-radius: 10px;
+  padding: 0.72rem;
+  background: var(--theme);
+  color: var(--primary);
+}
+
+.affiliate-button,
+.affiliate-offer-card button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.8rem 1.2rem;
+  background: var(--affiliate-accent);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.affiliate-button:disabled,
+.affiliate-offer-card button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.affiliate-demo-badge {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.25rem 0.55rem;
+  background: #fff3cd;
+  color: #654b00;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.affiliate-status {
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.affiliate-status.is-stop {
+  color: var(--affiliate-stop);
+}
+
+.affiliate-status.is-ok {
+  color: var(--affiliate-accent);
+}
+
+.affiliate-formula {
+  overflow-wrap: anywhere;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+}
+
+.affiliate-small {
+  font-size: 0.86rem;
+  opacity: 0.82;
+}
+
+@media (max-width: 640px) {
+  .affiliate-panel,
+  .affiliate-result,
+  .affiliate-offer-card,
+  .affiliate-metric {
+    padding: 0.9rem;
+  }
+}
