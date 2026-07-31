@@ -24,9 +24,22 @@ jobs:
 
       - name: Apply safe Ruff fixes and formatting
         run: |
-          ruff check affiliate_agent tests/test_affiliate_agent.py tests/test_a8_ecsales.py --fix
-          ruff format affiliate_agent tests/test_affiliate_agent.py tests/test_a8_ecsales.py
-          ruff check affiliate_agent tests/test_affiliate_agent.py tests/test_a8_ecsales.py
+          ruff check \
+            affiliate_agent \
+            tests/test_affiliate_agent.py \
+            tests/test_a8_ecsales.py \
+            tests/test_a8_cli.py \
+            --fix
+          ruff format \
+            affiliate_agent \
+            tests/test_affiliate_agent.py \
+            tests/test_a8_ecsales.py \
+            tests/test_a8_cli.py
+          ruff check \
+            affiliate_agent \
+            tests/test_affiliate_agent.py \
+            tests/test_a8_ecsales.py \
+            tests/test_a8_cli.py
 
       - name: Commit fixes when needed
         run: |
@@ -36,6 +49,10 @@ jobs:
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add affiliate_agent tests/test_affiliate_agent.py tests/test_a8_ecsales.py
+          git add \
+            affiliate_agent \
+            tests/test_affiliate_agent.py \
+            tests/test_a8_ecsales.py \
+            tests/test_a8_cli.py
           git commit -m 'style: apply Ruff autofix'
           git push origin HEAD:main
