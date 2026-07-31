@@ -46,9 +46,7 @@ def test_compliance_is_fail_closed_and_rejects_x() -> None:
     assert stale_result.eligible is False
     assert "verification_stale" in stale_result.reasons
 
-    x_result = evaluate_program(
-        make_program(), channel="x", now=date(2026, 7, 31), human_approved=True
-    )
+    x_result = evaluate_program(make_program(), channel="x", now=date(2026, 7, 31), human_approved=True)
     assert x_result.eligible is False
     assert "channel_not_allowed_for_direct_a8_placement" in x_result.reasons
 
@@ -126,9 +124,7 @@ def test_workflow_never_auto_publishes() -> None:
             household_size=1,
         )
     )
-    result = run_workflow(
-        [make_program()], diagnosis, now=date(2026, 7, 31), human_approved=True
-    )
+    result = run_workflow([make_program()], diagnosis, now=date(2026, 7, 31), human_approved=True)
     assert result["status"] == "draft"
     assert result["publish_allowed"] is False
     assert len(result["stages"]) == 5

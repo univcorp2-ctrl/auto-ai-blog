@@ -6,7 +6,8 @@ import re
 import time
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
-from datetime import datetime, time as clock_time
+from datetime import datetime
+from datetime import time as clock_time
 from typing import Any, Protocol
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
@@ -68,9 +69,7 @@ class A8EcSalesConfig:
             timeout_seconds=float(values.get("A8_EC_TIMEOUT_SECONDS", "20")),
             calls_per_minute=int(values.get("A8_EC_CALLS_PER_MINUTE", "240")),
             allow_mutations=_as_bool(values.get("A8_EC_MUTATIONS_ENABLED", "false")),
-            block_maintenance_window=_as_bool(
-                values.get("A8_EC_BLOCK_MAINTENANCE_WINDOW", "true")
-            ),
+            block_maintenance_window=_as_bool(values.get("A8_EC_BLOCK_MAINTENANCE_WINDOW", "true")),
         )
 
 
@@ -361,10 +360,7 @@ class A8EcSalesClient:
         request_body["api_key"] = self.config.api_key
         return self._request(
             method="POST",
-            url=(
-                f"{self.config.base_url}/ins/{self.config.program_id}"
-                f"/order/{order_id}/{action}"
-            ),
+            url=(f"{self.config.base_url}/ins/{self.config.program_id}/order/{order_id}/{action}"),
             query=None,
             body=request_body,
         )

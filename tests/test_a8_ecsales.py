@@ -132,9 +132,7 @@ def test_read_request_places_key_in_query_but_summary_redacts_identifiers() -> N
 
 
 def test_a8_error_never_includes_api_key() -> None:
-    client, _transport = make_client(
-        {"status_code": 10004, "message": "認証に失敗しました。"}
-    )
+    client, _transport = make_client({"status_code": 10004, "message": "認証に失敗しました。"})
     with pytest.raises(A8ApiError) as captured:
         client.get_unsealed_count()
     assert captured.value.status_code == 10004
